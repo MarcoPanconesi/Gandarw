@@ -1,0 +1,60 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/par/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.47 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/par/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.47 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/submodules/amc_if/rtl/ddr_interface_pkg.vhd" in Library work.
+Architecture ddr_interface_pkg of Entity ddr_interface_pkg is up to date.
+Compiling vhdl file "C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/submodules/amc_if/rtl/ddr_transmitter.vhd" in Library work.
+Architecture rtl of Entity ddr_transmitter is up to date.
+Compiling vhdl file "C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/rtl/top_level_desc.vhd" in Library work.
+Compiling vhdl file "C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/rtl/G_PARAMETERS.vhd" in Library work.
+Architecture g_parameters of Entity g_parameters is up to date.
+Compiling vhdl file "C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/submodules/amc_if/rtl/divisor.vhd" in Library work.
+Architecture behavioral of Entity divisor is up to date.
+Compiling vhdl file "C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/submodules/amc_if/rtl/divisor_15.vhd" in Library work.
+Architecture behavioral of Entity divisor_15 is up to date.
+Compiling vhdl file "C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/submodules/amc_if/rtl/ana_nrm.vhd" in Library work.
+Architecture behavioral of Entity ana_nrm is up to date.
+Compiling vhdl file "C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/submodules/amc_if/rtl/ana_ilm.vhd" in Library work.
+Architecture behavioral of Entity ana_ilm is up to date.
+Compiling vhdl file "C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/submodules/amc_if/rtl/ana_tiger.vhd" in Library work.
+Architecture behavioral of Entity ana_tiger is up to date.
+Compiling vhdl file "C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/submodules/amc_if/rtl/vxs_link_trans.vhd" in Library work.
+Architecture rtl of Entity vxs_link_trans is up to date.
+Compiling vhdl file "C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/submodules/arwen_prog/ipcore/binfile_fifo_synth.vhd" in Library work.
+Architecture virtex5 of Entity binfile_fifo is up to date.
+Compiling vhdl file "C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/submodules/arwen_prog/ipcore/single_channel_aurora_xc5vsx95t_tile.vhd" in Library work.
+Architecture rtl of Entity single_channel_aurora_xc5vsx95t_tile is up to date.
+Compiling vhdl file "C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/submodules/amc_if/rtl/amc_if_8ch.vhd" in Library work.
+Entity <amc_if_8ch> compiled.
+ERROR:HDLParsers:800 - "C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/submodules/amc_if/rtl/amc_if_8ch.vhd" Line 541. Type of rbuf_din is incompatible with type of data_i_pl1.
+ERROR:HDLParsers:800 - "C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/submodules/amc_if/rtl/amc_if_8ch.vhd" Line 558. Type of do is incompatible with type of frame_data.
+ERROR:HDLParsers:800 - "C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/submodules/amc_if/rtl/amc_if_8ch.vhd" Line 566. Type of we is incompatible with type of wea_ring.
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.40 secs
+ 
+--> 
+
+Total memory usage is 4509524 kilobytes
+
+Number of errors   :    3 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

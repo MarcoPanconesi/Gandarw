@@ -1,0 +1,1639 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/par
+Ebinfile_fifo
+Z1 w1622480147
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+R0
+Z4 8../../gandalf_mem_tcs/submodules/gandalf_tcs/ipcore/binfile_fifo.vhd
+Z5 F../../gandalf_mem_tcs/submodules/gandalf_tcs/ipcore/binfile_fifo.vhd
+l0
+L43
+Vf[73:oO;<=Z21DO>W8nZn0
+!s100 QbXMldK^=j8FjGRE[6^IB2
+Z6 OL;C;10.7c;67
+31
+Z7 !s110 1655126026
+!i10b 1
+Z8 !s108 1655126026.000000
+Z9 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/gandalf_tcs/ipcore/binfile_fifo.vhd|
+Z10 !s107 ../../gandalf_mem_tcs/submodules/gandalf_tcs/ipcore/binfile_fifo.vhd|
+!i113 0
+Z11 o-explicit -93 -work mem
+Z12 tExplicit 1 NoCoverage 1 CvgOpt 0
+Abinfile_fifo_a
+Z13 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z14 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z15 DEx13 xilinxcorelib 19 fifo_generator_v9_2 0 22 8B8_e<Ijbe]:oBGBO;GaB0
+R2
+R3
+DEx4 work 12 binfile_fifo 0 22 f[73:oO;<=Z21DO>W8nZn0
+l269
+L58
+VVMa2M0nHS=^;PTQbjId2M3
+!s100 jj0C090;O6i8dcKP5bB780
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+R12
+Pddr2_chipscope
+R2
+R3
+R1
+Z16 dC:/Users/Panco/Desktop/GandArw - mio/par
+8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_chipscope.vhd
+F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_chipscope.vhd
+l0
+L64
+V?WaP^oLkaRfT_`LK2Hcb=3
+!s100 @g4:>:ZOaBYik4P;NE2IG3
+R6
+31
+Z17 !s110 1677250387
+!i10b 1
+Z18 !s108 1677250387.000000
+!s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_chipscope.vhd|
+!s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_chipscope.vhd|
+!i113 0
+R11
+Z19 tExplicit 1 CvgOpt 0
+Eddr2_ctrl
+R1
+Z20 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+R16
+Z21 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_ctrl.vhd
+Z22 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_ctrl.vhd
+l0
+L68
+VQciamJi;WA7CNB=lMlj1i1
+!s100 bSZCBM>IVfMTT9L;fZl4I2
+R6
+31
+Z23 !s110 1677250386
+!i10b 1
+Z24 !s108 1677250386.000000
+Z25 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_ctrl.vhd|
+Z26 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_ctrl.vhd|
+!i113 0
+R11
+R19
+Asyn
+R20
+R2
+R3
+DEx4 work 9 ddr2_ctrl 0 22 QciamJi;WA7CNB=lMlj1i1
+l392
+L118
+VS3IMSTlGkZGJ:c>KGe5IA2
+!s100 _]c]8kg40BHAYC6lD0QA50
+R6
+31
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 0
+R11
+R19
+Eddr2_idelay_ctrl
+R1
+Z27 DPx6 unisim 11 vcomponents 0 22 YLP1o]T?CY?Wf2_YhIXeW2
+R2
+R3
+R16
+Z28 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_idelay_ctrl.vhd
+Z29 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_idelay_ctrl.vhd
+l0
+L68
+VSV[A5AR=H]NmPM6AR6VD20
+!s100 bJzUnGT^m9?nFhGkEBHB30
+R6
+31
+R17
+!i10b 1
+R18
+Z30 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_idelay_ctrl.vhd|
+Z31 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_idelay_ctrl.vhd|
+!i113 0
+R11
+R19
+Asyn
+R27
+R2
+R3
+DEx4 work 16 ddr2_idelay_ctrl 0 22 SV[A5AR=H]NmPM6AR6VD20
+l88
+L83
+V@zc8C<CLgz1aU1J:DcTNU3
+!s100 2M6A4R=;KDJHM`VnXzB0;1
+R6
+31
+R17
+!i10b 1
+R18
+R30
+R31
+!i113 0
+R11
+R19
+Eddr2_infrastructure
+R1
+R27
+R2
+R3
+R16
+Z32 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_infrastructure.vhd
+Z33 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_infrastructure.vhd
+l0
+L65
+V3jizQ]BRT:0<WMBnc@2>>0
+!s100 STUVL81UA2b_zE56:PMFY1
+R6
+31
+R17
+!i10b 1
+R18
+Z34 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_infrastructure.vhd|
+Z35 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_infrastructure.vhd|
+!i113 0
+R11
+R19
+Asyn
+R27
+R2
+R3
+DEx4 work 19 ddr2_infrastructure 0 22 3jizQ]BRT:0<WMBnc@2>>0
+l116
+L85
+V:YJR]i]W:<3X:WJ5JXHno0
+!s100 nN]2k:2ZU3<6kKDhalNbR2
+R6
+31
+R17
+!i10b 1
+R18
+R34
+R35
+!i113 0
+R11
+R19
+Eddr2_mem_if_top
+R1
+R2
+R3
+R16
+Z36 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_mem_if_top.vhd
+Z37 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_mem_if_top.vhd
+l0
+L65
+VVEgle0XFP35D9NNmS<@C82
+!s100 R0cDb`DA^FlC:9zM5YQ_k2
+R6
+31
+R17
+!i10b 1
+R18
+Z38 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_mem_if_top.vhd|
+Z39 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_mem_if_top.vhd|
+!i113 0
+R11
+R19
+Asyn
+R2
+R3
+DEx4 work 15 ddr2_mem_if_top 0 22 VEgle0XFP35D9NNmS<@C82
+l383
+L174
+V4AoM3Nzdc89@@gX4cF@1Z0
+!s100 >oK;_<60<NKkioIRGHF4H0
+R6
+31
+R17
+!i10b 1
+R18
+R38
+R39
+!i113 0
+R11
+R19
+Eddr2_phy_calib
+R1
+R27
+R20
+R2
+R3
+R16
+Z40 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_calib.vhd
+Z41 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_calib.vhd
+l0
+L75
+V3G^d6ikg0he>6GHl<i`m02
+!s100 i1D::];AVA^<@Bn>9C9R>3
+R6
+31
+Z42 !s110 1677250384
+!i10b 1
+Z43 !s108 1677250384.000000
+Z44 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_calib.vhd|
+Z45 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_calib.vhd|
+!i113 0
+R11
+R19
+Asyn
+R27
+R20
+R2
+R3
+DEx4 work 14 ddr2_phy_calib 0 22 3G^d6ikg0he>6GHl<i`m02
+l490
+L144
+VE9LCiC=oNmgTY0E2jL:=d2
+!s100 ZY<VC]_VRh6F>JOg^l9U<1
+R6
+31
+R42
+!i10b 1
+R43
+R44
+R45
+!i113 0
+R11
+R19
+Eddr2_phy_ctl_io
+R1
+R27
+R2
+R3
+R16
+Z46 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_ctl_io.vhd
+Z47 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_ctl_io.vhd
+l0
+L67
+V=NKYAl<ZNz1^Ub:ED`F1i1
+!s100 Zgkmm`4[Xbzofh9G_0>AX0
+R6
+31
+R23
+!i10b 1
+R24
+Z48 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_ctl_io.vhd|
+Z49 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_ctl_io.vhd|
+!i113 0
+R11
+R19
+Asyn
+R27
+R2
+R3
+DEx4 work 15 ddr2_phy_ctl_io 0 22 =NKYAl<ZNz1^Ub:ED`F1i1
+l134
+L114
+VB<:UPTU]=?65G]5k4AGKh0
+!s100 PXjd:FMJo1m7zTZP97afB3
+R6
+31
+R23
+!i10b 1
+R24
+R48
+R49
+!i113 0
+R11
+R19
+Eddr2_phy_dm_iob
+R1
+R27
+R2
+R3
+R16
+Z50 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_dm_iob.vhd
+Z51 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_dm_iob.vhd
+l0
+L65
+VDZnkHmK`I<zT8]>JE[PFJ3
+!s100 6bPO`We@bC99E>Y:?5IN11
+R6
+31
+Z52 !s110 1677250383
+!i10b 1
+Z53 !s108 1677250383.000000
+Z54 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_dm_iob.vhd|
+Z55 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_dm_iob.vhd|
+!i113 0
+R11
+R19
+Asyn
+R27
+R2
+R3
+DEx4 work 15 ddr2_phy_dm_iob 0 22 DZnkHmK`I<zT8]>JE[PFJ3
+l83
+L75
+VFInUaLkJ3Wazh?3<2XhRB0
+!s100 D5E4djngd18Qj^:iXNDSK2
+R6
+31
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 0
+R11
+R19
+Eddr2_phy_dq_iob
+R1
+R27
+R2
+R3
+R16
+Z56 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_dq_iob.vhd
+Z57 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_dq_iob.vhd
+l0
+L66
+Vc:n^1iFFUO>zTlY;hbk920
+!s100 U?cfk1ZcdECJdHSIlQk]S0
+R6
+31
+R52
+!i10b 1
+R53
+Z58 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_dq_iob.vhd|
+Z59 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_dq_iob.vhd|
+!i113 0
+R11
+R19
+Asyn
+R27
+R2
+R3
+DEx4 work 15 ddr2_phy_dq_iob 0 22 c:n^1iFFUO>zTlY;hbk920
+l214
+L96
+VE;2oGRX0SA^5iYcYb:FRz0
+!s100 BN?B4N=_LK7h0OlX8m1YO0
+R6
+31
+R52
+!i10b 1
+R53
+R58
+R59
+!i113 0
+R11
+R19
+Eddr2_phy_dqs_iob
+R1
+R27
+R2
+R3
+R16
+Z60 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_dqs_iob.vhd
+Z61 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_dqs_iob.vhd
+l0
+L70
+VnOnncIA2=QzKE7I2e2a=]0
+!s100 k@Pzd?[8nN8bnB=:Gch?U3
+R6
+31
+R52
+!i10b 1
+R53
+Z62 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_dqs_iob.vhd|
+Z63 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_dqs_iob.vhd|
+!i113 0
+R11
+R19
+Asyn
+R27
+R2
+R3
+DEx4 work 16 ddr2_phy_dqs_iob 0 22 nOnncIA2=QzKE7I2e2a=]0
+l169
+L100
+VGSOe=hcZ`dALhAT[UV`061
+!s100 SHGElAnGT<]cWOITT0IRT1
+R6
+31
+R52
+!i10b 1
+R53
+R62
+R63
+!i113 0
+R11
+R19
+Eddr2_phy_init
+R1
+R27
+R20
+R2
+R3
+R16
+Z64 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_init.vhd
+Z65 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_init.vhd
+l0
+L72
+VFaA?G269L`RZXRHjL]AO22
+!s100 cDh7Z`]90ojXEY8:g19hl2
+R6
+31
+Z66 !s110 1677250385
+!i10b 1
+Z67 !s108 1677250385.000000
+Z68 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_init.vhd|
+Z69 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_init.vhd|
+!i113 0
+R11
+R19
+Asyn
+R27
+R20
+R2
+R3
+DEx4 work 13 ddr2_phy_init 0 22 FaA?G269L`RZXRHjL]AO22
+l297
+L123
+VL`oB1lFdZXR6L[@3iPV^N1
+!s100 :7jg11A=M>ZkP_Q;LgXNj2
+R6
+31
+R66
+!i10b 1
+R67
+R68
+R69
+!i113 0
+R11
+R19
+Eddr2_phy_io
+R1
+R27
+R20
+R2
+R3
+R16
+Z70 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_io.vhd
+Z71 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_io.vhd
+l0
+L67
+VPiPh`<?cMne^<bdfoNcYA3
+!s100 @elXF;0J<WiH;[WGB^NRR1
+R6
+31
+R66
+!i10b 1
+R67
+Z72 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_io.vhd|
+Z73 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_io.vhd|
+!i113 0
+R11
+R19
+Asyn
+R27
+R20
+R2
+R3
+DEx4 work 11 ddr2_phy_io 0 22 PiPh`<?cMne^<bdfoNcYA3
+l299
+L150
+Vz3l63o32mAg:=9ni=U<X]2
+!s100 _[CoMk<<_fHZo3ZZXMO2L2
+R6
+31
+R66
+!i10b 1
+R67
+R72
+R73
+!i113 0
+R11
+R19
+Eddr2_phy_top
+R1
+R2
+R3
+R16
+Z74 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_top.vhd
+Z75 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_top.vhd
+l0
+L65
+VOFWYO@>gQkFYAOLigCNod3
+!s100 >WaFJ4b>D`GJVCZm?VHad0
+R6
+31
+R23
+!i10b 1
+R24
+Z76 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_top.vhd|
+Z77 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_top.vhd|
+!i113 0
+R11
+R19
+Asyn
+R2
+R3
+DEx4 work 12 ddr2_phy_top 0 22 OFWYO@>gQkFYAOLigCNod3
+l400
+L170
+VOd9=eJ4V]id;G[HE[ZWb[0
+!s100 A0R>0FSC6]4A9i=A<GYkl0
+R6
+31
+R23
+!i10b 1
+R24
+R76
+R77
+!i113 0
+R11
+R19
+Eddr2_phy_write
+R1
+R20
+R2
+R3
+R16
+Z78 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_write.vhd
+Z79 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_write.vhd
+l0
+L67
+VWP>N`b6Q8o@C2F8DAH`ii1
+!s100 YX1IK<NVPJAbAbaOiY_>h2
+R6
+31
+R66
+!i10b 1
+R67
+Z80 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_write.vhd|
+Z81 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_phy_write.vhd|
+!i113 0
+R11
+R19
+Asyn
+R20
+R2
+R3
+DEx4 work 14 ddr2_phy_write 0 22 WP>N`b6Q8o@C2F8DAH`ii1
+l191
+L104
+VK?@BKkGfe4]eXcT<7^GW22
+!s100 8gHConiOH;mAbE>?4?gl=3
+R6
+31
+R66
+!i10b 1
+R67
+R80
+R81
+!i113 0
+R11
+R19
+Eddr2_top
+R1
+R2
+R3
+R16
+Z82 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_top.vhd
+Z83 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_top.vhd
+l0
+L67
+VfJ;J?lNIWn^Xom]RCSozD1
+!s100 Jh6lH9;O@MiZGje43D>5^3
+R6
+31
+R17
+!i10b 1
+R18
+Z84 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_top.vhd|
+Z85 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_top.vhd|
+!i113 0
+R11
+R19
+Asyn
+R2
+R3
+DEx4 work 8 ddr2_top 0 22 fJ;J?lNIWn^Xom]RCSozD1
+l285
+L175
+VimB6=DLY4T?=]ZiYHFcd@3
+!s100 8inOP5;7:9ZNnDozdEVB_1
+R6
+31
+R17
+!i10b 1
+R18
+R84
+R85
+!i113 0
+R11
+R19
+Eddr2_usr_addr_fifo
+R1
+R27
+R2
+R3
+R16
+Z86 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_usr_addr_fifo.vhd
+Z87 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_usr_addr_fifo.vhd
+l0
+L65
+VD8[ZLARVTgWc=[Wz^O[U`2
+!s100 LY1`KBK@>cdZ?]5Xnk]3N3
+R6
+31
+R66
+!i10b 1
+R67
+Z88 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_usr_addr_fifo.vhd|
+Z89 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_usr_addr_fifo.vhd|
+!i113 0
+R11
+R19
+Asyn
+R27
+R2
+R3
+DEx4 work 18 ddr2_usr_addr_fifo 0 22 D8[ZLARVTgWc=[Wz^O[U`2
+l97
+L90
+VdKN=C31=Bf6gf^XbM9Yi>2
+!s100 aIfEh9S5T@i@m9X7@5]oi1
+R6
+31
+R66
+!i10b 1
+R67
+R88
+R89
+!i113 0
+R11
+R19
+Eddr2_usr_rd
+R1
+R27
+R2
+R3
+R16
+Z90 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_usr_rd.vhd
+Z91 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_usr_rd.vhd
+l0
+L65
+VTb>HGLP<El^><oz_VS8_k0
+!s100 SHRY[2?C`hZ0Gb]I4KiF`1
+R6
+31
+R66
+!i10b 1
+R67
+Z92 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_usr_rd.vhd|
+Z93 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_usr_rd.vhd|
+!i113 0
+R11
+R19
+Asyn
+R27
+R2
+R3
+DEx4 work 11 ddr2_usr_rd 0 22 Tb>HGLP<El^><oz_VS8_k0
+l144
+L90
+VzfnT4MFNiENaok>PdS_E50
+!s100 =OoA;gdQQ34X^;=G8be4:1
+R6
+31
+R66
+!i10b 1
+R67
+R92
+R93
+!i113 0
+R11
+R19
+Eddr2_usr_top
+R1
+R2
+R3
+R16
+Z94 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_usr_top.vhd
+Z95 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_usr_top.vhd
+l0
+L62
+VLz``n2_MKD@E_98>_>nF<1
+!s100 b?[ZkdD_P_fNcOl1KO6_E3
+R6
+31
+R23
+!i10b 1
+R24
+Z96 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_usr_top.vhd|
+Z97 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_usr_top.vhd|
+!i113 0
+R11
+R19
+Asyn
+R2
+R3
+DEx4 work 12 ddr2_usr_top 0 22 Lz``n2_MKD@E_98>_>nF<1
+l176
+L107
+VdLfgPkjn6hI<KLDXZ8DTh0
+!s100 >g1IZamW2_cnh6R^7@6aH2
+R6
+31
+R23
+!i10b 1
+R24
+R96
+R97
+!i113 0
+R11
+R19
+Eddr2_usr_wr
+R1
+R27
+R2
+R3
+R16
+Z98 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_usr_wr.vhd
+Z99 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_usr_wr.vhd
+l0
+L63
+VGe?KdMUF4:nDHFIW2`A=80
+!s100 =ieAeGB;8R06jK^9zf8fe2
+R6
+31
+R66
+!i10b 1
+R43
+Z100 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_usr_wr.vhd|
+Z101 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/ddr2_usr_wr.vhd|
+!i113 0
+R11
+R19
+Asyn
+R27
+R2
+R3
+DEx4 work 11 ddr2_usr_wr 0 22 Ge?KdMUF4:nDHFIW2`A=80
+l138
+L92
+V9?o8I6TZQN@2bC_FeiL:n1
+!s100 9:Azm<XNb=bnPfA:=E[B01
+R6
+31
+R66
+!i10b 1
+R43
+R100
+R101
+!i113 0
+R11
+R19
+Eddr_if
+Z102 w1655302059
+R27
+Z103 DPx8 synopsys 10 attributes 0 22 liCm]LV3<lX4Zl>o6^8IV1
+Z104 DPx4 ieee 14 std_logic_misc 0 22 BLzBaQbXS>Q1z>5YO]m[52
+R2
+R3
+R16
+Z105 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddr_if.vhd
+Z106 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddr_if.vhd
+l0
+L111
+V4Qe6EYWU<0]T@KH]ML]z71
+!s100 Q^3]dZ>=VVJchV^7VM@o50
+R6
+31
+Z107 !s110 1677250390
+!i10b 1
+Z108 !s108 1677250390.000000
+Z109 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddr_if.vhd|
+Z110 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddr_if.vhd|
+!i113 0
+R11
+R19
+Abehavioral
+R27
+R103
+R104
+R2
+R3
+Z111 DEx4 work 6 ddr_if 0 22 4Qe6EYWU<0]T@KH]ML]z71
+l508
+L180
+VFz6i^L<eJN7`co69_;@S53
+!s100 JGXc_o3_CCgj_YZ`g[E[J3
+R6
+31
+R107
+!i10b 1
+R108
+R109
+R110
+!i113 0
+R11
+R19
+Eddr_memory_controller
+Z112 w1655474062
+R27
+R2
+R3
+R16
+Z113 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddr_memory_controller.vhd
+Z114 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddr_memory_controller.vhd
+l0
+L28
+VNXBGn^VP_8M:0Y=_f5G`D3
+!s100 dH9=P5O8dRfah^F6=ZVz60
+R6
+31
+Z115 !s110 1677250395
+!i10b 1
+Z116 !s108 1677250395.000000
+Z117 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddr_memory_controller.vhd|
+Z118 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddr_memory_controller.vhd|
+!i113 0
+R11
+R19
+Abehav
+R20
+Z119 DEx4 work 9 wb_ddr_if 0 22 R>`85b?PIOzFFl6X>S9`j2
+R103
+R104
+R111
+R27
+R2
+R3
+Z120 DEx4 work 21 ddr_memory_controller 0 22 NXBGn^VP_8M:0Y=_f5G`D3
+l156
+L102
+VQc[BQjDhUX_6OdV8K;Rjm3
+!s100 U5<U2Z9GFo`RX59AdGXF=2
+R6
+31
+R115
+!i10b 1
+R116
+R117
+R118
+!i113 0
+R11
+R19
+Pddr_pkg
+R27
+R103
+R104
+R2
+R3
+R102
+R16
+R105
+R106
+l0
+L30
+VnHQ?LMd3cU=3e_GMkDK8L1
+!s100 i:c[095^[dbWm?cJza]Hz1
+R6
+31
+R107
+!i10b 1
+R108
+R109
+R110
+!i113 0
+R11
+R19
+Egandalf_mem_tcs_icon
+Z121 w1622479990
+R2
+R3
+R16
+Z122 8../../gandalf_mem_tcs/ipcore/gandalf_mem_tcs_icon.vhd
+Z123 F../../gandalf_mem_tcs/ipcore/gandalf_mem_tcs_icon.vhd
+l0
+L21
+V0cYFJQ?X88507belXY=K80
+!s100 nK:nG2T8nLieUcWYz0Yl@2
+R6
+31
+Z124 !s110 1677250396
+!i10b 1
+Z125 !s108 1677250396.000000
+Z126 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/ipcore/gandalf_mem_tcs_icon.vhd|
+Z127 !s107 ../../gandalf_mem_tcs/ipcore/gandalf_mem_tcs_icon.vhd|
+!i113 0
+R11
+R19
+Agandalf_mem_tcs_icon_a
+R2
+R3
+DEx4 work 20 gandalf_mem_tcs_icon 0 22 0cYFJQ?X88507belXY=K80
+l30
+L29
+V:eeXGd8;9X72ckjEDklhT2
+!s100 eYNi8;KNF`7_[C7b?[Gfd0
+R6
+31
+R124
+!i10b 1
+R125
+R126
+R127
+!i113 0
+R11
+R19
+Egandalf_mem_top
+Z128 w1655137370
+R27
+R2
+R3
+R16
+Z129 8../../gandalf_mem_tcs/rtl/gandalf_mem_top.vhd
+Z130 F../../gandalf_mem_tcs/rtl/gandalf_mem_top.vhd
+l0
+L28
+VTgAmWm[IH5Medg:j3j<l93
+!s100 4A]E^I4LU_nGWd]of5;zm2
+R6
+31
+Z131 !s110 1677250397
+!i10b 1
+Z132 !s108 1677250397.000000
+Z133 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/rtl/gandalf_mem_top.vhd|
+Z134 !s107 ../../gandalf_mem_tcs/rtl/gandalf_mem_top.vhd|
+!i113 0
+R11
+R19
+Abehav
+Z135 DEx4 work 15 tranceiver_main 0 22 JZbocN27`0NM`zEb3TC3e0
+R120
+R20
+Z136 DEx4 work 13 ram_to_gtp_if 0 22 _UjCaRTBCk?]lC5DBD;=l2
+R14
+R13
+Z137 DEx4 work 9 sm_to_ram 0 22 G3F_;E21`FFQl49`FjK1`0
+R27
+R2
+R3
+Z138 DEx4 work 15 gandalf_mem_top 0 22 TgAmWm[IH5Medg:j3j<l93
+l147
+L82
+Z139 VboC2=I10NJFOZ:gRVKWI@0
+Z140 !s100 CKM<gd8?9ZbLY?g3naahE2
+R6
+31
+R131
+!i10b 1
+R132
+R133
+R134
+!i113 0
+R11
+R19
+Emgt_usrclk_source_pll
+Z141 w1654854385
+R27
+R14
+R13
+R20
+R2
+R3
+R16
+Z142 8../../gandalf_mem_tcs/ipcore/single_channel_aurora_xc5vlx30t/example_design/mgt_usrclk_source_pll.vhd
+Z143 F../../gandalf_mem_tcs/ipcore/single_channel_aurora_xc5vlx30t/example_design/mgt_usrclk_source_pll.vhd
+l0
+L75
+V9JBU[f75HLifCV6=fbz]A2
+!s100 fOJK=84MBzV?aZAQGDIZT2
+R6
+31
+Z144 !s110 1677250391
+!i10b 1
+Z145 !s108 1677250391.000000
+Z146 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/ipcore/single_channel_aurora_xc5vlx30t/example_design/mgt_usrclk_source_pll.vhd|
+Z147 !s107 ../../gandalf_mem_tcs/ipcore/single_channel_aurora_xc5vlx30t/example_design/mgt_usrclk_source_pll.vhd|
+!i113 0
+R11
+R19
+Artl
+R27
+R14
+R13
+R20
+R2
+R3
+DEx4 work 21 mgt_usrclk_source_pll 0 22 9JBU[f75HLifCV6=fbz]A2
+l123
+L104
+V0S<g6P8E4MEIeSFjBF5i20
+!s100 SW<T<gZX[Pzc8LZ4mzA^21
+R6
+31
+R144
+!i10b 1
+R145
+R146
+R147
+!i113 0
+R11
+R19
+Emig_v3_6_ddr
+R1
+Z148 DPx4 work 14 ddr2_chipscope 0 22 ?WaP^oLkaRfT_`LK2Hcb=3
+R2
+R3
+R16
+Z149 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/mig_v3_6.vhd
+Z150 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/mig_v3_6.vhd
+l0
+L73
+VfC6_8J2@_M=LiA2SX4b;F2
+!s100 B`1[YM]e?QICziEW42`]83
+R6
+31
+Z151 !s110 1677250388
+!i10b 1
+Z152 !s108 1677250388.000000
+Z153 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/mig_v3_6.vhd|
+Z154 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/ddrii_src/mig_v3_6.vhd|
+!i113 0
+R11
+R19
+Aarc_mem_interface_top
+R148
+R2
+R3
+DEx4 work 12 mig_v3_6_ddr 0 22 fC6_8J2@_M=LiA2SX4b;F2
+l479
+L299
+V5fZRKA<^czi;WJOcKH]<J3
+!s100 @ZIcYNdUL;^Yo]nPJ:SmZ0
+R6
+31
+R151
+!i10b 1
+R152
+R153
+R154
+!i113 0
+R11
+R19
+Eram_to_gtp_fifo
+Z155 w1654866615
+R2
+R3
+R16
+Z156 8../../gandalf_mem_tcs/ipcore/ram_to_gtp_fifo_synth.vhd
+Z157 F../../gandalf_mem_tcs/ipcore/ram_to_gtp_fifo_synth.vhd
+l0
+L57
+V:0@1>Gici5;72]JKUT`e60
+!s100 46LDDkn9]5flmRiJAO6Ug0
+R6
+31
+R144
+!i10b 1
+R145
+Z158 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/ipcore/ram_to_gtp_fifo_synth.vhd|
+Z159 !s107 ../../gandalf_mem_tcs/ipcore/ram_to_gtp_fifo_synth.vhd|
+!i113 0
+R11
+R19
+Avirtex5
+R2
+R3
+DEx4 work 15 ram_to_gtp_fifo 0 22 :0@1>Gici5;72]JKUT`e60
+l74
+L73
+VgFlG@a8P`cZmCMcMglJ4Z0
+!s100 ?8jZQhgL;HWkI54BLHA:M1
+R6
+31
+R144
+!i10b 1
+R145
+R158
+R159
+!i113 0
+R11
+R19
+Aram_to_gtp_fifo_a
+R13
+R14
+R15
+R2
+R3
+DEx4 work 15 ram_to_gtp_fifo 0 22 Fo=_MHIhHFXaKPnDdCKWf3
+l271
+L59
+V0RaUYQfI_9WU8HaR=4Y@e3
+!s100 1]HT9C_:z<Ug<_ddc;h6z2
+R6
+31
+!s110 1655215167
+!i10b 1
+!s108 1655215167.000000
+!s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/ipcore/ram_to_gtp_fifo.vhd|
+!s107 ../../gandalf_mem_tcs/ipcore/ram_to_gtp_fifo.vhd|
+!i113 0
+R11
+R12
+F../../gandalf_mem_tcs/ipcore/ram_to_gtp_fifo.vhd
+8../../gandalf_mem_tcs/ipcore/ram_to_gtp_fifo.vhd
+R0
+Eram_to_gtp_if
+Z160 w1655381737
+R20
+R14
+R13
+R2
+R3
+R16
+Z161 8../../gandalf_mem_tcs/rtl/ram_to_gtp_if.vhd
+Z162 F../../gandalf_mem_tcs/rtl/ram_to_gtp_if.vhd
+l0
+L29
+V_UjCaRTBCk?]lC5DBD;=l2
+!s100 P4N36F:U9ghVRbWKHK_:R2
+R6
+31
+R115
+!i10b 1
+R116
+Z163 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/rtl/ram_to_gtp_if.vhd|
+Z164 !s107 ../../gandalf_mem_tcs/rtl/ram_to_gtp_if.vhd|
+!i113 0
+R11
+R19
+Abehav
+R20
+R14
+R13
+R2
+R3
+R136
+l176
+L63
+Vd7NO^oPC^U7UNN4mA44P]1
+!s100 `9L]1OTkNa?aSk`ciKka`1
+R6
+31
+R115
+!i10b 1
+R116
+R163
+R164
+!i113 0
+R11
+R19
+Eram_to_gtp_ila
+Z165 w1653580712
+R2
+R3
+R16
+Z166 8../../gandalf_mem_tcs/ipcore/ram_to_gtp_ila.vhd
+Z167 F../../gandalf_mem_tcs/ipcore/ram_to_gtp_ila.vhd
+l0
+L21
+V>F^Y>X1OJh@jOX2d0[N]g0
+!s100 Rfch;]X`E=W8k:>cmb44Q1
+R6
+31
+R144
+!i10b 1
+R145
+Z168 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/ipcore/ram_to_gtp_ila.vhd|
+Z169 !s107 ../../gandalf_mem_tcs/ipcore/ram_to_gtp_ila.vhd|
+!i113 0
+R11
+R19
+Aram_to_gtp_ila_a
+R2
+R3
+DEx4 work 14 ram_to_gtp_ila 0 22 >F^Y>X1OJh@jOX2d0[N]g0
+l30
+L29
+Vz2U>RjSPFmizJJaNmRLXB1
+!s100 4>6DfHn<ei=@M42SNJOKj2
+R6
+31
+R144
+!i10b 1
+R145
+R168
+R169
+!i113 0
+R11
+R19
+Eselectmap_to_ram_fifo
+R121
+R2
+R3
+R16
+Z170 8../../gandalf_mem_tcs/ipcore/selectmap_to_ram_fifo_synth.vhd
+Z171 F../../gandalf_mem_tcs/ipcore/selectmap_to_ram_fifo_synth.vhd
+l0
+L57
+VBb>[j9TJR_2gTQAcDT=9j0
+!s100 3I4`_YW=2Chn`4GC8B`Df0
+R6
+31
+R144
+!i10b 1
+R145
+Z172 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/ipcore/selectmap_to_ram_fifo_synth.vhd|
+Z173 !s107 ../../gandalf_mem_tcs/ipcore/selectmap_to_ram_fifo_synth.vhd|
+!i113 0
+R11
+R19
+Avirtex5
+R2
+R3
+DEx4 work 21 selectmap_to_ram_fifo 0 22 Bb>[j9TJR_2gTQAcDT=9j0
+l72
+L71
+VK4RPBkYo7KoI83k65`oDe2
+!s100 A<fN[D^U5^:3N;;gNPIgg0
+R6
+31
+R144
+!i10b 1
+R145
+R172
+R173
+!i113 0
+R11
+R19
+Aselectmap_to_ram_fifo_a
+R13
+R14
+R15
+R2
+R3
+DEx4 work 21 selectmap_to_ram_fifo 0 22 8YQV[n2I3;>6Y@o2>_DmA3
+l267
+L57
+V5D_WzdRJFXDn]SZ?0WZ<:1
+!s100 <BFk2Ed@B3B=d?B]]8URX1
+R6
+31
+!s110 1655215166
+!i10b 1
+!s108 1655215166.000000
+!s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/ipcore/selectmap_to_ram_fifo.vhd|
+!s107 ../../gandalf_mem_tcs/ipcore/selectmap_to_ram_fifo.vhd|
+!i113 0
+R11
+R12
+F../../gandalf_mem_tcs/ipcore/selectmap_to_ram_fifo.vhd
+8../../gandalf_mem_tcs/ipcore/selectmap_to_ram_fifo.vhd
+R0
+Esingle_channel_aurora_xc5vlx30t
+R141
+R27
+R20
+R2
+R3
+R16
+Z174 8../../gandalf_mem_tcs/ipcore/single_channel_aurora_xc5vlx30t.vhd
+Z175 F../../gandalf_mem_tcs/ipcore/single_channel_aurora_xc5vlx30t.vhd
+l0
+L76
+VR@<P>_d]D@d@2ZnF]7[N12
+!s100 6GfDz7J;T1AIKHTmI3Q?U0
+R6
+31
+R144
+!i10b 1
+R145
+Z176 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/ipcore/single_channel_aurora_xc5vlx30t.vhd|
+Z177 !s107 ../../gandalf_mem_tcs/ipcore/single_channel_aurora_xc5vlx30t.vhd|
+!i113 0
+R11
+R19
+Artl
+R27
+R20
+R2
+R3
+DEx4 work 31 single_channel_aurora_xc5vlx30t 0 22 R@<P>_d]D@d@2ZnF]7[N12
+l249
+L152
+V=EYL3R0Re>KX=gzYb[CnI0
+!s100 0J=z4Qo0G`?`m^9;_hC?M0
+R6
+31
+R144
+!i10b 1
+R145
+R176
+R177
+!i113 0
+R11
+R19
+Esingle_channel_aurora_xc5vlx30t_tile
+R141
+R27
+R20
+R2
+R3
+R16
+Z178 8../../gandalf_mem_tcs/ipcore/single_channel_aurora_xc5vlx30t_tile.vhd
+Z179 F../../gandalf_mem_tcs/ipcore/single_channel_aurora_xc5vlx30t_tile.vhd
+l0
+L75
+Vb?i[@QdBffhaaRQSEBZaM0
+!s100 `1<nbW[RMlOYbEZSUkkJ13
+R6
+31
+R151
+!i10b 1
+R152
+Z180 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/ipcore/single_channel_aurora_xc5vlx30t_tile.vhd|
+Z181 !s107 ../../gandalf_mem_tcs/ipcore/single_channel_aurora_xc5vlx30t_tile.vhd|
+!i113 0
+R11
+R19
+Artl
+R27
+R20
+R2
+R3
+DEx4 work 36 single_channel_aurora_xc5vlx30t_tile 0 22 b?i[@QdBffhaaRQSEBZaM0
+l205
+L153
+VLh?gJ4LgOLO>n@Uk6>2Y;0
+!s100 LiH0aL1mP:mDJHzm;CKO@1
+R6
+31
+R151
+!i10b 1
+R152
+R180
+R181
+!i113 0
+R11
+R19
+Esm_to_ram
+Z182 w1655303931
+R14
+R13
+R2
+R3
+R16
+Z183 8../../gandalf_mem_tcs/rtl/sm_to_ram.vhd
+Z184 F../../gandalf_mem_tcs/rtl/sm_to_ram.vhd
+l0
+L27
+VG3F_;E21`FFQl49`FjK1`0
+!s100 lL@Coz7Vb:VkmGF8G@CNN1
+R6
+31
+R115
+!i10b 1
+R116
+Z185 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/rtl/sm_to_ram.vhd|
+Z186 !s107 ../../gandalf_mem_tcs/rtl/sm_to_ram.vhd|
+!i113 0
+R11
+R19
+Abehav
+R14
+R13
+R2
+R3
+R137
+l118
+L58
+VEY_VTgTbX?SHEa7ADSUCh1
+!s100 _W9NC6VK66kjT8I^:jLdE2
+R6
+31
+R115
+!i10b 1
+R116
+R185
+R186
+!i113 0
+R11
+R19
+Esm_to_ram_ila
+R121
+R2
+R3
+R16
+Z187 8../../gandalf_mem_tcs/ipcore/sm_to_ram_ila.vhd
+Z188 F../../gandalf_mem_tcs/ipcore/sm_to_ram_ila.vhd
+l0
+L21
+VNTm6B<<_3P3zlN5:gVjf43
+!s100 aPH7D^o8eZMAYDd=?N4a12
+R6
+31
+R144
+!i10b 1
+R145
+Z189 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/ipcore/sm_to_ram_ila.vhd|
+Z190 !s107 ../../gandalf_mem_tcs/ipcore/sm_to_ram_ila.vhd|
+!i113 0
+R11
+R19
+Asm_to_ram_ila_a
+R2
+R3
+DEx4 work 13 sm_to_ram_ila 0 22 NTm6B<<_3P3zlN5:gVjf43
+l31
+L30
+V_RV`od^@;o@Fj2Q4<X`SZ1
+!s100 4@zh8m8_EV1Oz<U5M@58G3
+R6
+31
+R144
+!i10b 1
+R145
+R189
+R190
+!i113 0
+R11
+R19
+Etranceiver_ila
+R121
+R2
+R3
+R16
+Z191 8../../gandalf_mem_tcs/ipcore/tranceiver_ila.vhd
+Z192 F../../gandalf_mem_tcs/ipcore/tranceiver_ila.vhd
+l0
+L21
+Vhd7RTj;LTPFi?0dD82bT^2
+!s100 9D<P50?e3UmS9M<ok:jWe0
+R6
+31
+R144
+!i10b 1
+R145
+Z193 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/ipcore/tranceiver_ila.vhd|
+Z194 !s107 ../../gandalf_mem_tcs/ipcore/tranceiver_ila.vhd|
+!i113 0
+R11
+R19
+Atranceiver_ila_a
+R2
+R3
+DEx4 work 14 tranceiver_ila 0 22 hd7RTj;LTPFi?0dD82bT^2
+l30
+L29
+VCP7SkTBk@EZ>I6[zNK7<o0
+!s100 Paie`W@OTfAYoWJ^aY;0T1
+R6
+31
+R144
+!i10b 1
+R145
+R193
+R194
+!i113 0
+R11
+R19
+Etranceiver_main
+Z195 w1654855687
+R27
+R20
+R2
+R3
+R16
+Z196 8../../gandalf_mem_tcs/rtl/tranceiver_main.vhd
+Z197 F../../gandalf_mem_tcs/rtl/tranceiver_main.vhd
+l0
+L30
+VJZbocN27`0NM`zEb3TC3e0
+!s100 oQb]4MmfOb5T0UbzBinVP0
+R6
+31
+R115
+!i10b 1
+R116
+Z198 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/rtl/tranceiver_main.vhd|
+Z199 !s107 ../../gandalf_mem_tcs/rtl/tranceiver_main.vhd|
+!i113 0
+R11
+R19
+Abehav
+R27
+R20
+R2
+R3
+R135
+l207
+L52
+VkQ28BDDNQ0C_4131U6@YP3
+!s100 Gg9CH0DMeUC:ZfM>[C]em2
+R6
+31
+R115
+!i10b 1
+R116
+R198
+R199
+!i113 0
+R11
+R19
+Ewb_ddr_if
+R1
+R20
+R2
+R3
+R16
+Z200 8../../gandalf_mem_tcs/submodules/ddr_memory/rtl/wb_ddr_if.vhd
+Z201 F../../gandalf_mem_tcs/submodules/ddr_memory/rtl/wb_ddr_if.vhd
+l0
+L28
+VR>`85b?PIOzFFl6X>S9`j2
+!s100 ;_LM]1S@MJ[KST@Ec150d3
+R6
+31
+R107
+!i10b 1
+R108
+Z202 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/rtl/wb_ddr_if.vhd|
+Z203 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/rtl/wb_ddr_if.vhd|
+!i113 0
+R11
+R19
+Abehav
+R20
+R2
+R3
+R119
+l105
+L86
+VcA[[6ASOEWA[Z7UOEF7i20
+!s100 =0WD4lj[Qad:n@EIf]U6j2
+R6
+31
+R107
+!i10b 1
+R108
+R202
+R203
+!i113 0
+R11
+R19
+Ewb_ram_ila
+R1
+R2
+R3
+R16
+Z204 8../../gandalf_mem_tcs/submodules/ddr_memory/ipcore/wb_ram_ila.vhd
+Z205 F../../gandalf_mem_tcs/submodules/ddr_memory/ipcore/wb_ram_ila.vhd
+l0
+L21
+V_12d;FCl6;?oJ>B7z`JT]0
+!s100 iH=FP=P<:U`fSl6@RHZeV1
+R6
+31
+R151
+!i10b 1
+R152
+Z206 !s90 -reportprogress|300|-explicit|-93|-work|mem|../../gandalf_mem_tcs/submodules/ddr_memory/ipcore/wb_ram_ila.vhd|
+Z207 !s107 ../../gandalf_mem_tcs/submodules/ddr_memory/ipcore/wb_ram_ila.vhd|
+!i113 0
+R11
+R19
+Awb_ram_ila_a
+R2
+R3
+DEx4 work 10 wb_ram_ila 0 22 _12d;FCl6;?oJ>B7z`JT]0
+l30
+L29
+V1QJeBJ[]b8UVZQJZWoEkm1
+!s100 mS5N[kc]3e6Vbz8jVmI`_0
+R6
+31
+R151
+!i10b 1
+R152
+R206
+R207
+!i113 0
+R11
+R19

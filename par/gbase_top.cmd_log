@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "C:/Users/Panco/Desktop/GandArw - mio/par/gbase_top.xst" -ofn "C:/Users/Panco/Desktop/GandArw - mio/par/gbase_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ../ipcore -sd ../submodules/data_out_manager/ipcore -sd ../submodules/arwen_prog/ipcore -sd ipcore_dir -nt timestamp -uc "C:/Users/Panco/Desktop/GandArw - mio/ucf/omc1.ucf" -uc "C:/Users/Panco/Desktop/GandArw - mio/ucf/slink.ucf" -uc "C:/Users/Panco/Desktop/GandArw - mio/ucf/gbase.ucf" -uc "C:/Users/Panco/Desktop/GandArw - mio/ucf/gbase_prog.ucf" -uc "C:/Users/Panco/Desktop/GandArw - mio/ucf/amc_if_8ch_tcs.ucf" -uc "C:/Users/Panco/Desktop/GandArw - mio/ucf/amc0_pin.ucf" -uc "C:/Users/Panco/Desktop/GandArw - mio/ucf/tcs.ucf" -bm ila_top.bmm -p xc5vsx95t-ff1136-2 "gbase_top.ngc" gbase_top.ngd  
+map -intstyle ise -p xc5vsx95t-ff1136-2 -w -logic_opt on -ol high -xe n -t 10 -global_opt speed -equivalent_register_removal on -mt 2 -cm area -ir off -ignore_keep_hierarchy -pr off -lc auto -power off -o gbase_top_map.ncd gbase_top.ngd gbase_top.pcf 
+par -w -intstyle ise -ol high -xe n -mt off gbase_top_map.ncd gbase_top.ncd gbase_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 100 -fastpaths -xml gbase_top.twx gbase_top.ncd -o gbase_top.twr gbase_top.pcf 
+map -intstyle ise -p xc5vsx95t-ff1136-2 -w -logic_opt on -ol high -xe n -t 10 -global_opt speed -equivalent_register_removal on -mt 2 -cm speed -ir off -ignore_keep_hierarchy -pr off -lc auto -power off -o gbase_top_map.ncd gbase_top.ngd gbase_top.pcf 
+par -w -intstyle ise -ol high -xe n -mt off gbase_top_map.ncd gbase_top.ncd gbase_top.pcf 
+trce -intstyle ise -v 3 -s 2 -n 100 -fastpaths -xml gbase_top.twx gbase_top.ncd -o gbase_top.twr gbase_top.pcf 

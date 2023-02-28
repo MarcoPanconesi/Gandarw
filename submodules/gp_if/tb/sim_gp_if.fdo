@@ -1,0 +1,42 @@
+# Create work library
+#
+vlib work
+#
+# Compile sources
+#
+vcom -explicit  -93 "../../i2c/rtl/i2c_master_bit_ctrl.vhd"
+vcom -explicit  -93 "../../i2c/rtl/i2c_master_byte_ctrl.vhd"
+vcom -explicit  -93 "../../i2c/rtl/i2c_master_top.vhd"
+vcom -explicit  -93 "../../i2c/rtl/gp_iic_wrapper.vhd"
+vcom -explicit  -93 "../../i2c/rtl/gp_iic_wrapper_wrapper.vhd"
+vcom -explicit  -93 "../../g_parameters/rtl/G_PARAMETERS.vhd"
+vcom -explicit  -93 "../rtl/gp_if.vhd"
+vcom -explicit  -93 "./gp_if_tb.vhd"
+
+#
+# Call vsim to invoke simulator
+#
+vsim -voptargs="+acc" -t 1ps  -lib work work.gp_if_tb
+#
+# Source the wave do file
+#
+do {sim_gp_if_wave.do}
+#
+# Set the window types
+#
+view wave
+view structure
+view signals
+#
+# Source the user do file
+#
+#do {two_flops_tb.udo}
+#
+# Run simulation for this time
+#
+force -freeze sim:/gp_if_tb/DUT/gp_iic_wrapper_wrapper_1/inst_iic_ports(0)/gp_iic_wrapper/wb_dat_o 00000000 0
+force -freeze sim:/gp_if_tb/DUT/gp_iic_wrapper_wrapper_1/inst_iic_ports(1)/gp_iic_wrapper/wb_dat_o 00000000 0
+run 500000ns
+#
+# End
+#

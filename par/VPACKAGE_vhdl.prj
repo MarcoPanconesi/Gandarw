@@ -1,0 +1,3 @@
+vhdl simprims "C:\Xilinx\14.7\ISE_DS\ISE\vhdl\src\simprims\simprim_Vpackage.vhd"
+vhdl work "C:\Users\fragb\OneDrive - Istituto Nazionale di Fisica Nucleare\Xil_14.7\GandArw\submodules\arwen_prog\ipcore\single_channel_aurora_xc5vsx95t_tile.vhd"
+vhdl work "C:\Users\fragb\OneDrive - Istituto Nazionale di Fisica Nucleare\Xil_14.7\GandArw\submodules\arwen_prog\ipcore\binfile_fifo_synth.vhd"

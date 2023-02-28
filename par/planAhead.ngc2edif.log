@@ -1,0 +1,1230 @@
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design gbase_top.ngc ...
+WARNING:NetListWriters:298 - No output is written to gbase_top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus cfmem_wb/a_mux0000<8 : 2> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus cfmem_wb/lock_mux0004<4 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   check_ocx.tcs_ctrl/no_sim.tcs_ctrl_1/Madd_SPILL_NUMBER_addsub0000_cy<8 : 4>
+   on block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   check_ocx.tcs_ctrl/no_sim.tcs_ctrl_1/Maddsub_flt_cnt_mux0000_cy<5 : 2> on
+   block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   check_ocx.tcs_ctrl/no_sim.tcs_ctrl_1/bos_status<3 : 0> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   check_ocx.tcs_ctrl/no_sim.tcs_ctrl_1/bos_status_mux0000<3 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus cpld_if/FastRegister<82 : 4> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus gp_if/cfmem_wb_addr_mux0000<8 : 0> on
+   block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[0].gp_iic_wrapper/next_state<32
+   : 5> on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[0].gp_iic_wrapper/next_state_mu
+   x0001<32 : 5> on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[0].gp_iic_wrapper/state_mux0001
+   <33 : 1> on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[1].gp_iic_wrapper/next_state<32
+   : 5> on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[1].gp_iic_wrapper/next_state_mu
+   x0001<32 : 5> on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[1].gp_iic_wrapper/state_mux0001
+   <33 : 1> on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus gp_if/reg_addr_mux0000<9 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus gp_if/slave_addr<6 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus gp_if/slave_addr_mux0000<6 : 1> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_mcs_amcs.inst_amc_if/cfmem_wb_addr_mux0000<8 : 6> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_mcs_amcs.inst_amc_if/inst_ana_ilm.inst_t_if.inst_vxs_link/vxs_operation_
+   mode<2 : 0> on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/reg_addr<7 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_iic_top_1/si_iic_wrapper_1/next_state<19 : 5> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_iic_top_1/si_iic_wrapper_1/next_state_mux0001<19 : 5> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_iic_top_1/si_iic_wrapper_1/reg_addr_i<7 : 0> on block gbase_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_iic_top_1/si_iic_wrapper_1/state_mux0001<20 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_load_inst/cfmem_addr_helper<9 : 0> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/si_load_inst/cfmem_wb_addr<9
+   : 0> on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/si_load_inst/reg_addr<7 : 0>
+   on block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_load_inst/reg_addr_mux0000<7 : 0> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/si_sweep_inst/cfmem_addr<9 :
+   2> on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/fine_phase_shift/next_state<9 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/fine_phase_shift/next_step_mux0000<15 : 8> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/fine_phase_shift/state<9 : 0> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/n_coarse_step_mux0000<6 : 0> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/n_coarse_steps_mux0001<13 : 9> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/n_fine_step_mux0000<4 : 0> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/n_samples_mux0001<29 : 16> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/reg_addr_coarse<7 : 0> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/si_sweep_inst/reg_addr_fine<4
+   : 0> on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus stat_if_1/cfmem_wb_addr<9 : 3> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   stat_if_1/cfmem_wb_dout_29_0_varindex0000<29 : 3> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus tranceiver_main_1/control<22 : 0> on
+   block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus tranceiver_main_1/ila_data<49 : 47> on
+   block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   vxs_if/sdr_slink_to_tiger/sendcounter_mux0000<2 : 0> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file gbase_top.edif ...
+ngc2edif: Total memory usage is 4354532 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design the_spy_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to the_spy_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file the_spy_fifo.edif ...
+ngc2edif: Total memory usage is 4322148 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design tranceiver_ila.ngc ...
+WARNING:NetListWriters:298 - No output is written to tranceiver_ila.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/iDOUT_dly<4 : 0> on block tranceiver_ila is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/iDOUT_dly<2 : 0> on block tranceiver_ila
+   is not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file tranceiver_ila.edif ...
+ngc2edif: Total memory usage is 4313956 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design to_slink_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to to_slink_fifo.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file to_slink_fifo.edif ...
+ngc2edif: Total memory usage is 4313956 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design data_out_main_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to data_out_main_fifo.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file data_out_main_fifo.edif ...
+ngc2edif: Total memory usage is 4313956 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design gbase_top.ngc ...
+WARNING:NetListWriters:298 - No output is written to gbase_top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus cfmem_wb/a_mux0000<8 : 2> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus cfmem_wb/lock_mux0004<4 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   check_ocx.tcs_ctrl/no_sim.tcs_ctrl_1/Madd_SPILL_NUMBER_addsub0000_cy<8 : 4>
+   on block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   check_ocx.tcs_ctrl/no_sim.tcs_ctrl_1/Maddsub_flt_cnt_mux0000_cy<5 : 2> on
+   block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   check_ocx.tcs_ctrl/no_sim.tcs_ctrl_1/bos_status<3 : 0> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   check_ocx.tcs_ctrl/no_sim.tcs_ctrl_1/bos_status_mux0000<3 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus cpld_if/FastRegister<82 : 4> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus gp_if/cfmem_wb_addr_mux0000<8 : 0> on
+   block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[0].gp_iic_wrapper/next_state<32
+   : 5> on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[0].gp_iic_wrapper/next_state_mu
+   x0001<32 : 5> on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[0].gp_iic_wrapper/state_mux0001
+   <33 : 1> on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[1].gp_iic_wrapper/next_state<32
+   : 5> on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[1].gp_iic_wrapper/next_state_mu
+   x0001<32 : 5> on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[1].gp_iic_wrapper/state_mux0001
+   <33 : 1> on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus gp_if/reg_addr_mux0000<9 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus gp_if/slave_addr<6 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus gp_if/slave_addr_mux0000<6 : 1> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_mcs_amcs.inst_amc_if/cfmem_wb_addr_mux0000<8 : 6> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_mcs_amcs.inst_amc_if/inst_ana_ilm.inst_t_if.inst_vxs_link/vxs_operation_
+   mode<2 : 0> on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/reg_addr<7 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_iic_top_1/si_iic_wrapper_1/next_state<19 : 5> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_iic_top_1/si_iic_wrapper_1/next_state_mux0001<19 : 5> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_iic_top_1/si_iic_wrapper_1/reg_addr_i<7 : 0> on block gbase_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_iic_top_1/si_iic_wrapper_1/state_mux0001<20 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_load_inst/cfmem_addr_helper<9 : 0> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/si_load_inst/cfmem_wb_addr<9
+   : 0> on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/si_load_inst/reg_addr<7 : 0>
+   on block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_load_inst/reg_addr_mux0000<7 : 0> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/si_sweep_inst/cfmem_addr<9 :
+   2> on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/fine_phase_shift/next_state<9 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/fine_phase_shift/next_step_mux0000<15 : 8> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/fine_phase_shift/state<9 : 0> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/n_coarse_step_mux0000<6 : 0> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/n_coarse_steps_mux0001<13 : 9> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/n_fine_step_mux0000<4 : 0> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/n_samples_mux0001<29 : 16> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/reg_addr_coarse<7 : 0> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/si_sweep_inst/reg_addr_fine<4
+   : 0> on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus stat_if_1/cfmem_wb_addr<9 : 3> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   stat_if_1/cfmem_wb_dout_29_0_varindex0000<29 : 3> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus tranceiver_main_1/control<22 : 0> on
+   block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus tranceiver_main_1/ila_data<49 : 47> on
+   block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   vxs_if/sdr_slink_to_tiger/sendcounter_mux0000<2 : 0> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file gbase_top.edif ...
+ngc2edif: Total memory usage is 4354532 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design the_spy_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to the_spy_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file the_spy_fifo.edif ...
+ngc2edif: Total memory usage is 4322148 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design tranceiver_ila.ngc ...
+WARNING:NetListWriters:298 - No output is written to tranceiver_ila.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/iDOUT_dly<4 : 0> on block tranceiver_ila is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/iDOUT_dly<2 : 0> on block tranceiver_ila
+   is not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file tranceiver_ila.edif ...
+ngc2edif: Total memory usage is 4313956 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design to_slink_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to to_slink_fifo.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file to_slink_fifo.edif ...
+ngc2edif: Total memory usage is 4313956 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design data_out_main_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to data_out_main_fifo.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file data_out_main_fifo.edif ...
+ngc2edif: Total memory usage is 4313956 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design gbase_top.ngc ...
+WARNING:NetListWriters:298 - No output is written to gbase_top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus cfmem_wb/a_mux0000<8 : 2> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus cfmem_wb/lock_mux0004<4 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   check_ocx.tcs_ctrl/no_sim.tcs_ctrl_1/Madd_SPILL_NUMBER_addsub0000_cy<8 : 4>
+   on block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   check_ocx.tcs_ctrl/no_sim.tcs_ctrl_1/Maddsub_flt_cnt_mux0000_cy<5 : 2> on
+   block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   check_ocx.tcs_ctrl/no_sim.tcs_ctrl_1/bos_status<3 : 0> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   check_ocx.tcs_ctrl/no_sim.tcs_ctrl_1/bos_status_mux0000<3 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus cpld_if/FastRegister<82 : 4> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus gp_if/cfmem_wb_addr_mux0000<8 : 0> on
+   block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[0].gp_iic_wrapper/next_state<32
+   : 5> on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[0].gp_iic_wrapper/next_state_mu
+   x0001<32 : 5> on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[0].gp_iic_wrapper/state_mux0001
+   <33 : 1> on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[1].gp_iic_wrapper/next_state<32
+   : 5> on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[1].gp_iic_wrapper/next_state_mu
+   x0001<32 : 5> on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[1].gp_iic_wrapper/state_mux0001
+   <33 : 1> on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus gp_if/reg_addr_mux0000<9 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus gp_if/slave_addr<6 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus gp_if/slave_addr_mux0000<6 : 1> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_mcs_amcs.inst_amc_if/cfmem_wb_addr_mux0000<8 : 6> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_mcs_amcs.inst_amc_if/inst_ana_ilm.inst_t_if.inst_vxs_link/vxs_operation_
+   mode<2 : 0> on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/reg_addr<7 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_iic_top_1/si_iic_wrapper_1/next_state<19 : 5> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_iic_top_1/si_iic_wrapper_1/next_state_mux0001<19 : 5> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_iic_top_1/si_iic_wrapper_1/reg_addr_i<7 : 0> on block gbase_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_iic_top_1/si_iic_wrapper_1/state_mux0001<20 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_load_inst/cfmem_addr_helper<9 : 0> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/si_load_inst/cfmem_wb_addr<9
+   : 0> on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/si_load_inst/reg_addr<7 : 0>
+   on block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_load_inst/reg_addr_mux0000<7 : 0> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/si_sweep_inst/cfmem_addr<9 :
+   2> on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/fine_phase_shift/next_state<9 : 0> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/fine_phase_shift/next_step_mux0000<15 : 8> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/fine_phase_shift/state<9 : 0> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/n_coarse_step_mux0000<6 : 0> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/n_coarse_steps_mux0001<13 : 9> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/n_fine_step_mux0000<4 : 0> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/n_samples_mux0001<29 : 16> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/reg_addr_coarse<7 : 0> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/si_sweep_inst/reg_addr_fine<4
+   : 0> on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus stat_if_1/cfmem_wb_addr<9 : 3> on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   stat_if_1/cfmem_wb_dout_29_0_varindex0000<29 : 3> on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus tranceiver_main_1/control<22 : 0> on
+   block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus tranceiver_main_1/ila_data<49 : 47> on
+   block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   vxs_if/sdr_slink_to_tiger/sendcounter_mux0000<2 : 0> on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file gbase_top.edif ...
+ngc2edif: Total memory usage is 4354532 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design the_spy_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to the_spy_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file the_spy_fifo.edif ...
+ngc2edif: Total memory usage is 4322148 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design tranceiver_ila.ngc ...
+WARNING:NetListWriters:298 - No output is written to tranceiver_ila.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/iDOUT_dly<4 : 0> on block tranceiver_ila is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/iDOUT_dly<2 : 0> on block tranceiver_ila
+   is not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file tranceiver_ila.edif ...
+ngc2edif: Total memory usage is 4313956 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design to_slink_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to to_slink_fifo.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file to_slink_fifo.edif ...
+ngc2edif: Total memory usage is 4313956 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design data_out_main_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to data_out_main_fifo.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file data_out_main_fifo.edif ...
+ngc2edif: Total memory usage is 4313956 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design gbase_top.ngc ...
+WARNING:NetListWriters:298 - No output is written to gbase_top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus cfmem_wb/a_mux0000[8 : 2] on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus cfmem_wb/lock_mux0004[4 : 0] on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   check_ocx.tcs_ctrl/no_sim.tcs_ctrl_1/Madd_SPILL_NUMBER_addsub0000_cy[8 : 4]
+   on block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   check_ocx.tcs_ctrl/no_sim.tcs_ctrl_1/Maddsub_flt_cnt_mux0000_cy[5 : 2] on
+   block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   check_ocx.tcs_ctrl/no_sim.tcs_ctrl_1/bos_status[3 : 0] on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   check_ocx.tcs_ctrl/no_sim.tcs_ctrl_1/bos_status_mux0000[3 : 0] on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus cpld_if/FastRegister[82 : 4] on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus gp_if/cfmem_wb_addr_mux0000[8 : 0] on
+   block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[0].gp_iic_wrapper/next_state[32
+   : 5] on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[0].gp_iic_wrapper/next_state_mu
+   x0001[32 : 5] on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[0].gp_iic_wrapper/state_mux0001
+   [33 : 1] on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[1].gp_iic_wrapper/next_state[32
+   : 5] on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[1].gp_iic_wrapper/next_state_mu
+   x0001[32 : 5] on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   gp_if/gp_iic_wrapper_wrapper_1/inst_iic_ports[1].gp_iic_wrapper/state_mux0001
+   [33 : 1] on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus gp_if/reg_addr_mux0000[9 : 0] on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus gp_if/slave_addr[6 : 0] on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus gp_if/slave_addr_mux0000[6 : 1] on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_mcs_amcs.inst_amc_if/cfmem_wb_addr_mux0000[8 : 6] on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_mcs_amcs.inst_amc_if/inst_ana_ilm.inst_t_if.inst_vxs_link/vxs_operation_
+   mode[2 : 0] on block gbase_top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/reg_addr[7 : 0] on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_iic_top_1/si_iic_wrapper_1/next_state[19 : 5] on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_iic_top_1/si_iic_wrapper_1/next_state_mux0001[19 : 5] on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_iic_top_1/si_iic_wrapper_1/reg_addr_i[7 : 0] on block gbase_top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_iic_top_1/si_iic_wrapper_1/state_mux0001[20 : 0] on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_load_inst/cfmem_addr_helper[9 : 0] on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/si_load_inst/cfmem_wb_addr[9
+   : 0] on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/si_load_inst/reg_addr[7 : 0]
+   on block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_load_inst/reg_addr_mux0000[7 : 0] on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/si_sweep_inst/cfmem_addr[9 :
+   2] on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/fine_phase_shift/next_state[9 : 0] on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/fine_phase_shift/next_step_mux0000[15 : 8] on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/fine_phase_shift/state[9 : 0] on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/n_coarse_step_mux0000[6 : 0] on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/n_coarse_steps_mux0001[13 : 9] on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/n_fine_step_mux0000[4 : 0] on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/n_samples_mux0001[29 : 16] on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   inst_si_if/si_sweep_inst/reg_addr_coarse[7 : 0] on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus inst_si_if/si_sweep_inst/reg_addr_fine[4
+   : 0] on block gbase_top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus stat_if_1/cfmem_wb_addr[9 : 3] on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   stat_if_1/cfmem_wb_dout_29_0_varindex0000[29 : 3] on block gbase_top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus tranceiver_main_1/control[22 : 0] on
+   block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus tranceiver_main_1/ila_data[49 : 47] on
+   block gbase_top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   vxs_if/sdr_slink_to_tiger/sendcounter_mux0000[2 : 0] on block gbase_top is
+   not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file gbase_top.edif ...
+ngc2edif: Total memory usage is 4354532 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design the_spy_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to the_spy_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file the_spy_fifo.edif ...
+ngc2edif: Total memory usage is 4322148 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design tranceiver_ila.ngc ...
+WARNING:NetListWriters:298 - No output is written to tranceiver_ila.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/iDOUT_dly<4 : 0> on block tranceiver_ila is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/iDOUT_dly<2 : 0> on block tranceiver_ila
+   is not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file tranceiver_ila.edif ...
+ngc2edif: Total memory usage is 4313956 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design to_slink_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to to_slink_fifo.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file to_slink_fifo.edif ...
+ngc2edif: Total memory usage is 4313956 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design data_out_main_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to data_out_main_fifo.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file data_out_main_fifo.edif ...
+ngc2edif: Total memory usage is 4313956 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design gbase_top.ngc ...
+WARNING:NetListWriters:298 - No output is written to gbase_top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus next_state[19 : 5] on block
+   si_iic_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus next_state_mux0001[19 : 5] on block
+   si_iic_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus reg_addr_i[7 : 0] on block
+   si_iic_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus state_mux0001[20 : 0] on block
+   si_iic_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus next_state[9 : 0] on block
+   si_phase_shift_2 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus next_step_mux0000[15 : 8] on block
+   si_phase_shift_2 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus state[9 : 0] on block si_phase_shift_2
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus n_coarse_step_mux0000[6 : 0] on block
+   sweep_ctrl is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus n_coarse_steps_mux0001[13 : 9] on block
+   sweep_ctrl is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus n_fine_step_mux0000[4 : 0] on block
+   sweep_ctrl is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus n_samples_mux0001[29 : 16] on block
+   sweep_ctrl is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus cfmem_addr_helper[9 : 0] on block
+   si_load is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus reg_addr_mux0000[7 : 0] on block si_load
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus cfmem_wb_addr_load[9 : 0] on block si_if
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus cfmem_wb_addr_sweep[9 : 0] on block
+   si_if is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus reg_addr[7 : 0] on block si_if is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus reg_addr_load[7 : 0] on block si_if is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus reg_addr_sweep[7 : 0] on block si_if is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus next_state[32 : 5] on block
+   gp_iic_wrapper_NO1 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus next_state_mux0001[32 : 5] on block
+   gp_iic_wrapper_NO1 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus state_mux0001[33 : 1] on block
+   gp_iic_wrapper_NO1 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus next_state[32 : 5] on block
+   gp_iic_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus next_state_mux0001[32 : 5] on block
+   gp_iic_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus state_mux0001[33 : 1] on block
+   gp_iic_wrapper is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Msub_counter_share0000_lut[31 : 1] on
+   block gp_if is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus reg_addr_mux0000[9 : 0] on block gp_if
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus slave_addr[6 : 0] on block gp_if is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus slave_addr_mux0000[6 : 0] on block gp_if
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Madd_shift_end_add0000_cy[3 : 0] on
+   block divisor_15_NO7 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Madd_shift_end_add0001_Madd_cy[3 : 0] on
+   block divisor_NO7 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Msub_fr_counter_share0000_cy[8 : 0] on
+   block ana_nrm_8 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Msub_prsc_cnt_share0000_cy[6 : 1] on
+   block ana_nrm_8 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus del_data_addsub0001[4 : 1] on block
+   ana_nrm_8 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus del_data_addsub0007[4 : 1] on block
+   ana_nrm_8 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus del_data_addsub0013[4 : 2] on block
+   ana_nrm_8 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus del_data_mux0006[10 : 0] on block
+   ana_nrm_8 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus event_data_mux0000[30 : 0] on block
+   ana_nrm_8 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus first_neg[14 : 3] on block ana_nrm_8 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus fr_counter_mux0000[10 : 0] on block
+   ana_nrm_8 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus fr_counter_mux0001[8 : 1] on block
+   ana_nrm_8 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus frame_t[11 : 0] on block ana_nrm_8 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus hit_cnt[3 : 0] on block ana_nrm_8 is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus last_pos[14 : 0] on block ana_nrm_8 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pre_cf_1_0_mux0001[11 : 0] on block
+   ana_nrm_8 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pre_cf_1_1_mux0001[11 : 0] on block
+   ana_nrm_8 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus prsc_cnt_mux0000[7 : 0] on block
+   ana_nrm_8 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Madd_shift_end_add0000_cy[3 : 0] on
+   block divisor_15_NO6 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Madd_shift_end_add0001_Madd_cy[3 : 0] on
+   block divisor_NO6 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Msub_fr_counter_share0000_cy[8 : 0] on
+   block ana_nrm_7 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Msub_prsc_cnt_share0000_cy[6 : 1] on
+   block ana_nrm_7 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus del_data_addsub0001[4 : 1] on block
+   ana_nrm_7 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus del_data_addsub0013[4 : 2] on block
+   ana_nrm_7 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus event_data_mux0000[30 : 0] on block
+   ana_nrm_7 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus first_neg[14 : 3] on block ana_nrm_7 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus fr_counter_mux0000[10 : 0] on block
+   ana_nrm_7 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus fr_counter_mux0001[8 : 1] on block
+   ana_nrm_7 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus frame_t[11 : 0] on block ana_nrm_7 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus hit_cnt[3 : 0] on block ana_nrm_7 is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus last_pos[14 : 0] on block ana_nrm_7 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pre_cf_1_0_mux0001[11 : 0] on block
+   ana_nrm_7 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pre_cf_1_1_mux0001[11 : 0] on block
+   ana_nrm_7 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus prsc_cnt_mux0000[7 : 0] on block
+   ana_nrm_7 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Madd_shift_end_add0000_cy[3 : 0] on
+   block divisor_15_NO5 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Madd_shift_end_add0001_Madd_cy[3 : 0] on
+   block divisor_NO5 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Msub_fr_counter_share0000_cy[8 : 0] on
+   block ana_nrm_6 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Msub_prsc_cnt_share0000_cy[6 : 1] on
+   block ana_nrm_6 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus del_data_addsub0001[4 : 1] on block
+   ana_nrm_6 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus del_data_addsub0013[4 : 2] on block
+   ana_nrm_6 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus event_data_mux0000[30 : 0] on block
+   ana_nrm_6 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus first_neg[14 : 3] on block ana_nrm_6 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus fr_counter_mux0000[10 : 0] on block
+   ana_nrm_6 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus fr_counter_mux0001[8 : 1] on block
+   ana_nrm_6 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus frame_t[11 : 0] on block ana_nrm_6 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus hit_cnt[3 : 0] on block ana_nrm_6 is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus last_pos[14 : 0] on block ana_nrm_6 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pre_cf_1_0_mux0001[11 : 0] on block
+   ana_nrm_6 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pre_cf_1_1_mux0001[11 : 0] on block
+   ana_nrm_6 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus prsc_cnt_mux0000[7 : 0] on block
+   ana_nrm_6 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Madd_shift_end_add0000_cy[3 : 0] on
+   block divisor_15_NO4 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Madd_shift_end_add0001_Madd_cy[3 : 0] on
+   block divisor_NO4 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Msub_fr_counter_share0000_cy[8 : 0] on
+   block ana_nrm_5 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Msub_prsc_cnt_share0000_cy[6 : 1] on
+   block ana_nrm_5 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus del_data_addsub0001[4 : 1] on block
+   ana_nrm_5 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus del_data_addsub0013[4 : 2] on block
+   ana_nrm_5 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus event_data_mux0000[30 : 0] on block
+   ana_nrm_5 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus first_neg[14 : 3] on block ana_nrm_5 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus fr_counter_mux0000[10 : 0] on block
+   ana_nrm_5 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus fr_counter_mux0001[8 : 1] on block
+   ana_nrm_5 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus frame_t[11 : 0] on block ana_nrm_5 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus hit_cnt[3 : 0] on block ana_nrm_5 is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus last_pos[14 : 0] on block ana_nrm_5 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pre_cf_1_0_mux0001[11 : 0] on block
+   ana_nrm_5 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pre_cf_1_1_mux0001[11 : 0] on block
+   ana_nrm_5 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus prsc_cnt_mux0000[7 : 0] on block
+   ana_nrm_5 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Madd_shift_end_add0000_cy[3 : 0] on
+   block divisor_15_NO3 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Madd_shift_end_add0001_Madd_cy[3 : 0] on
+   block divisor_NO3 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Msub_fr_counter_share0000_cy[8 : 0] on
+   block ana_nrm_4 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Msub_prsc_cnt_share0000_cy[6 : 1] on
+   block ana_nrm_4 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus del_data_addsub0001[4 : 1] on block
+   ana_nrm_4 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus del_data_addsub0013[4 : 2] on block
+   ana_nrm_4 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus event_data_mux0000[30 : 0] on block
+   ana_nrm_4 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus first_neg[14 : 3] on block ana_nrm_4 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus fr_counter_mux0000[10 : 0] on block
+   ana_nrm_4 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus fr_counter_mux0001[8 : 1] on block
+   ana_nrm_4 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus frame_t[11 : 0] on block ana_nrm_4 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus hit_cnt[3 : 0] on block ana_nrm_4 is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus last_pos[14 : 0] on block ana_nrm_4 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pre_cf_1_0_mux0001[11 : 0] on block
+   ana_nrm_4 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pre_cf_1_1_mux0001[11 : 0] on block
+   ana_nrm_4 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus prsc_cnt_mux0000[7 : 0] on block
+   ana_nrm_4 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Madd_shift_end_add0000_cy[3 : 0] on
+   block divisor_15_NO2 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Madd_shift_end_add0001_Madd_cy[3 : 0] on
+   block divisor_NO2 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Msub_fr_counter_share0000_cy[8 : 0] on
+   block ana_nrm_3 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Msub_prsc_cnt_share0000_cy[6 : 1] on
+   block ana_nrm_3 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus del_data_addsub0001[4 : 1] on block
+   ana_nrm_3 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus del_data_addsub0013[4 : 2] on block
+   ana_nrm_3 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus event_data_mux0000[30 : 0] on block
+   ana_nrm_3 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus first_neg[14 : 3] on block ana_nrm_3 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus fr_counter_mux0000[10 : 0] on block
+   ana_nrm_3 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus fr_counter_mux0001[8 : 1] on block
+   ana_nrm_3 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus frame_t[11 : 0] on block ana_nrm_3 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus hit_cnt[3 : 0] on block ana_nrm_3 is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus last_pos[14 : 0] on block ana_nrm_3 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pre_cf_1_0_mux0001[11 : 0] on block
+   ana_nrm_3 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pre_cf_1_1_mux0001[11 : 0] on block
+   ana_nrm_3 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus prsc_cnt_mux0000[7 : 0] on block
+   ana_nrm_3 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Madd_shift_end_add0000_cy[3 : 0] on
+   block divisor_15_NO1 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Madd_shift_end_add0001_Madd_cy[3 : 0] on
+   block divisor_NO1 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Msub_fr_counter_share0000_cy[8 : 0] on
+   block ana_nrm_2 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Msub_prsc_cnt_share0000_cy[6 : 1] on
+   block ana_nrm_2 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus del_data_addsub0001[4 : 1] on block
+   ana_nrm_2 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus del_data_addsub0013[4 : 2] on block
+   ana_nrm_2 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus event_data_mux0000[30 : 0] on block
+   ana_nrm_2 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus first_neg[14 : 3] on block ana_nrm_2 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus fr_counter_mux0000[10 : 0] on block
+   ana_nrm_2 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus fr_counter_mux0001[8 : 1] on block
+   ana_nrm_2 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus frame_t[11 : 0] on block ana_nrm_2 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus hit_cnt[3 : 0] on block ana_nrm_2 is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus last_pos[14 : 0] on block ana_nrm_2 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pre_cf_1_0_mux0001[11 : 0] on block
+   ana_nrm_2 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pre_cf_1_1_mux0001[11 : 0] on block
+   ana_nrm_2 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus prsc_cnt_mux0000[7 : 0] on block
+   ana_nrm_2 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Madd_shift_end_add0000_cy[3 : 0] on
+   block divisor_15 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Madd_shift_end_add0001_Madd_cy[3 : 0] on
+   block divisor is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Msub_fr_counter_share0000_cy[8 : 0] on
+   block ana_nrm_1 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Msub_prsc_cnt_share0000_cy[6 : 1] on
+   block ana_nrm_1 is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus del_data_addsub0001[4 : 1] on block
+   ana_nrm_1 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus del_data_addsub0013[4 : 2] on block
+   ana_nrm_1 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus event_data_mux0000[30 : 0] on block
+   ana_nrm_1 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus first_neg[14 : 3] on block ana_nrm_1 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus fr_counter_mux0000[10 : 0] on block
+   ana_nrm_1 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus fr_counter_mux0001[8 : 1] on block
+   ana_nrm_1 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus frame_t[11 : 0] on block ana_nrm_1 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus hit_cnt[3 : 0] on block ana_nrm_1 is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus last_pos[14 : 0] on block ana_nrm_1 is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pre_cf_1_0_mux0001[11 : 0] on block
+   ana_nrm_1 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus pre_cf_1_1_mux0001[11 : 0] on block
+   ana_nrm_1 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus prsc_cnt_mux0000[7 : 0] on block
+   ana_nrm_1 is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus Madd_all_ch_size_addsub0001_Madd_lut[12
+   : 0] on block amc_if is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus Madd_event_size_addsub0000_lut[4 : 0] on
+   block amc_if is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus sysmon_i[4 : 0] on block amc_if is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus ila_data[58 : 47] on block
+   tranceiver_main is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus sendcounter_mux0000[2 : 0] on block
+   sdr_slink is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus PhysMemoryAddr[14 : 0] on block cpld_if
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus cfmem_wb_dout_29_0_varindex0000[29 : 3]
+   on block stat_if is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus a_mux0000[9 : 0] on block wb_Np_ram is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus d_mux0000[31 : 0] on block wb_Np_ram is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus lock_mux0004[4 : 0] on block wb_Np_ram
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus lock_mux0010[5 : 0] on block wb_Np_ram
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus fastregister_i[72 : 4] on block
+   gbase_top is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus spy_din_si_if[31 : 0] on block gbase_top
+   is not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file gbase_top.edif ...
+ngc2edif: Total memory usage is 4471440 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design data_out_main_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to data_out_main_fifo.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file data_out_main_fifo.edif ...
+ngc2edif: Total memory usage is 4314012 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design to_slink_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to to_slink_fifo.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file to_slink_fifo.edif ...
+ngc2edif: Total memory usage is 4314012 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design binfile_fifo.ngc ...
+WARNING:NetListWriters:298 - No output is written to binfile_fifo.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file binfile_fifo.edif ...
+ngc2edif: Total memory usage is 4314012 kilobytes
+
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design tranceiver_ila.ngc ...
+WARNING:NetListWriters:298 - No output is written to tranceiver_ila.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/iDOUT_dly<4 : 0> on block tranceiver_ila is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/iDOUT_dly<2 : 0> on block tranceiver_ila
+   is not reconstructed, because there are some missing bus signals.
+  finished :Prep
+Writing EDIF netlist file tranceiver_ila.edif ...
+ngc2edif: Total memory usage is 4312988 kilobytes
+

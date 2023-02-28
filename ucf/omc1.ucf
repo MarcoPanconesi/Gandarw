@@ -1,0 +1,163 @@
+### ARWEN ports OMC1 #######################
+# some pins also in gbase_prog.ucf ...
+NET "arwen_data_a_?[*]" IOSTANDARD = LVDS_25;
+NET "arwen_data_b_?[*]" IOSTANDARD = LVDS_25;
+NET "arwen_data_c_?[*]" IOSTANDARD = LVDS_25;
+
+# NET "arwen_data_clk_p" LOC = AH18;                    #P2 or J8.21        "arwen_dlck1_p"  (jumperato con SCL, NET "iic_gp_scl[1]" LOC = AC24)
+# NET "arwen_data_clk_n" LOC = AG17;                    #P2 or J8.23        "arwen_dlck1_n"  (jumperato con SDA, NET "iic_gp_sda[1]" LOC = AC25)
+
+NET "mezz_b_dr_?" IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;
+NET "mezz_b_dr_p" LOC = K17;                            #P2 or J8.81        "arwen_dlck2_p"          
+NET "mezz_b_dr_n" LOC = L18;                            #P2 or J8.83        "arwen_dlck2_n"
+
+# NET "arwen_data_a_p[5]" LOC = C20;                      #P1 or J7.3
+# NET "arwen_data_a_n[5]" LOC = B20;                      #P1 or J7.1
+# NET "arwen_data_a_p[4]" LOC = E21;                      #P1 or J7.7
+# NET "arwen_data_a_n[4]" LOC = D20;                      #P1 or J7.5
+# NET "arwen_data_a_p[6]" LOC = D21;                      #P1 or J7.11
+# NET "arwen_data_a_n[6]" LOC = D22;                      #P1 or J7.9
+NET "arwen_data_a_p[0]" LOC = E19;                      #P1 or J7.15
+NET "arwen_data_a_n[0]" LOC = F19;                      #P1 or J7.13
+NET "arwen_data_a_p[1]" LOC = E18;                      #P1 or J7.19
+NET "arwen_data_a_n[1]" LOC = D19;                      #P1 or J7.17
+NET "arwen_data_a_p[2]" LOC = F18;                      #P1 or J7.21
+NET "arwen_data_a_n[2]" LOC = G18;                      #P1 or J7.19
+NET "arwen_data_a_p[3]" LOC = E17;                      #P1 or J7.25
+NET "arwen_data_a_n[3]" LOC = E16;                      #P1 or J7.23
+# NET "arwen_data_a_p[7]" LOC = G17;                      #P1 or J7.31
+# NET "arwen_data_a_n[7]" LOC = F16;                      #P1 or J7.29
+
+NET "arwen_data_b_p[18]" LOC = N8;                      #P1 or J7.48
+NET "arwen_data_b_n[18]" LOC = N7;                      #P1 or J7.46
+NET "arwen_data_b_p[22]" LOC = R11;                     #P1 or J7.52
+NET "arwen_data_b_n[22]" LOC = P10;                     #P1 or J7.50
+NET "arwen_data_b_p[23]" LOC = R6;                      #P1 or J7.56
+NET "arwen_data_b_n[23]" LOC = T6;                      #P1 or J7.54
+NET "arwen_data_b_p[16]" LOC = R7;                      #P1 or J7.60
+NET "arwen_data_b_n[16]" LOC = R8;                      #P1 or J7.58
+NET "arwen_data_b_p[17]" LOC = T8;                      #P1 or J7.64
+NET "arwen_data_b_n[17]" LOC = U7;                      #P1 or J7.62
+NET "arwen_data_b_p[19]" LOC = R9;                      #P1 or J7.68
+NET "arwen_data_b_n[19]" LOC = P9;                      #P1 or J7.66
+NET "arwen_data_b_p[20]" LOC = T9;                      #P1 or J7.72
+NET "arwen_data_b_n[20]" LOC = U10;                     #P1 or J7.70
+NET "arwen_data_b_p[21]" LOC = T10;                     #P1 or J7.76
+NET "arwen_data_b_n[21]" LOC = T11;                     #P1 or J7.74
+
+NET "arwen_data_clk_?" IOSTANDARD = LVDS_25;
+NET "arwen_data_clk_p" LOC = G15;                       #P1 or J7.80        "arwen_dlck4_p"
+NET "arwen_data_clk_n" LOC = G16;                       #P1 or J7.78        "arwen_dlck4_n"
+
+NET "arwen_data_c_p[0]" LOC = AB10;                    #P1 or J7.92    
+NET "arwen_data_c_n[0]" LOC = AA10;                    #P1 or J7.90    
+NET "arwen_data_c_p[3]" LOC = AA8;                     #P1 or J7.96
+NET "arwen_data_c_n[3]" LOC = AA9;                     #P1 or J7.94
+NET "arwen_data_c_p[4]" LOC = AC10;                    #P1 or J7.100    
+NET "arwen_data_c_n[4]" LOC = AC9;                     #P1 or J7.98
+# NET "arwen_data_c_p[5]" LOC = AC8;                     #P1 or J7.104
+# NET "arwen_data_c_n[5]" LOC = AB8;                     #P1 or J7.102
+NET "arwen_data_c_p[2]" LOC = AE8;                     #P1 or J7.108
+NET "arwen_data_c_n[2]" LOC = AD9;                     #P1 or J7.106
+# NET "arwen_data_c_p[7]" LOC = AF8;                     #P1 or J7.112
+# NET "arwen_data_c_n[7]" LOC = AE9;                     #P1 or J7.110
+# NET "arwen_data_c_p[6]" LOC = AE7;                     #P1 or J7.116
+# NET "arwen_data_c_n[6]" LOC = AF6;                     #P1 or J7.114
+NET "arwen_data_c_p[1]" LOC = AG5;                     #P1 or J7.120
+NET "arwen_data_c_n[1]" LOC = AF5;                     #P1 or J7.118
+
+NET "arwen_data_b_p[3]" LOC = G8;                       #P1 or J7.127
+NET "arwen_data_b_n[3]" LOC = H8;                       #P1 or J7.125
+NET "arwen_data_b_p[4]" LOC = E6;                       #P1 or J7.131
+NET "arwen_data_b_n[4]" LOC = E7;                       #P1 or J7.129
+NET "arwen_data_b_p[1]" LOC = F5;                       #P1 or J7.135
+NET "arwen_data_b_n[1]" LOC = F6;                       #P1 or J7.133
+NET "arwen_data_b_p[5]" LOC = G6;                       #P1 or J7.139
+NET "arwen_data_b_n[5]" LOC = G7;                       #P1 or J7.137
+NET "arwen_data_b_p[0]" LOC = H5;                       #P1 or J7.143
+NET "arwen_data_b_n[0]" LOC = G5;                       #P1 or J7.141
+NET "arwen_data_b_p[6]" LOC = M10;                      #P1 or J7.147
+NET "arwen_data_b_n[6]" LOC = L9;                       #P1 or J7.145
+NET "arwen_data_b_p[7]" LOC = M8;                       #P1 or J7.151
+NET "arwen_data_b_n[7]" LOC = L8;                       #P1 or J7.149
+NET "arwen_data_b_p[2]" LOC = N10;                      #P1 or J7.155
+NET "arwen_data_b_n[2]" LOC = N9;                       #P1 or J7.153
+
+# NET "arwen_dlck3_p" LOC = H14;                        #P1 or J7.159       "arwen_dlck3_p"
+# NET "arwen_dlck3_n" LOC = H15;                        #P1 or J7.157       "arwen_dlck3_n"
+
+NET "arwen_data_b_p[9]" LOC = C29;                      #P2 or J8.6
+NET "arwen_data_b_n[9]" LOC = B28;                      #P2 or J8.8
+NET "arwen_data_b_p[11]" LOC = A29;                     #P2 or J8.10                                                               
+NET "arwen_data_b_n[11]" LOC = A28;                     #P2 or J8.12
+NET "arwen_data_b_p[13]" LOC = B27;                     #P2 or J8.14
+NET "arwen_data_b_n[13]" LOC = A26;                     #P2 or J8.16
+NET "arwen_data_b_p[15]" LOC = D26;                     #P2 or J8.18
+NET "arwen_data_b_n[15]" LOC = C27;                     #P2 or J8.20
+NET "arwen_data_b_p[8]" LOC = B26;                      #P2 or J8.22
+NET "arwen_data_b_n[8]" LOC = A25;                      #P2 or J8.24
+NET "arwen_data_b_p[10]" LOC = B25;                     #P2 or J8.26
+NET "arwen_data_b_n[10]" LOC = C25;                     #P2 or J8.28
+NET "arwen_data_b_p[12]" LOC = C24;                     #P2 or J8.30
+NET "arwen_data_b_n[12]" LOC = D25;                     #P2 or J8.32
+NET "arwen_data_b_p[14]" LOC = A23;                     #P2 or J8.34
+NET "arwen_data_b_n[14]" LOC = A24;                     #P2 or J8.36
+
+NET "arwen_data_b_p[24]" LOC = W6;                      #P2 or J8.49   
+NET "arwen_data_b_n[24]" LOC = Y6;                      #P2 or J8.51
+NET "arwen_data_b_p[26]" LOC = AA6;                     #P2 or J8.53
+NET "arwen_data_b_n[26]" LOC = Y7;                      #P2 or J8.55
+NET "arwen_data_b_p[27]" LOC = AA5;                     #P2 or J8.57
+NET "arwen_data_b_n[27]" LOC = AB5;                     #P2 or J8.59
+NET "arwen_data_b_p[29]" LOC = AB6;                     #P2 or J8.61
+NET "arwen_data_b_n[29]" LOC = AB7;                     #P2 or J8.63
+NET "arwen_data_b_p[30]" LOC = AC4;                     #P2 or J8.65
+NET "arwen_data_b_n[30]" LOC = AC5;                     #P2 or J8.67
+NET "arwen_data_b_p[25]" LOC = AD4;                     #P2 or J8.69
+NET "arwen_data_b_n[25]" LOC = AD5;                     #P2 or J8.71
+NET "arwen_data_b_p[28]" LOC = AD6;                     #P2 or J8.73
+NET "arwen_data_b_n[28]" LOC = AE6;                     #P2 or J8.75
+NET "arwen_data_b_p[31]" LOC = AC7;                     #P2 or J8.77
+NET "arwen_data_b_n[31]" LOC = AD7;                     #P2 or J8.79
+
+
+NET "arwen_data_a_p[8]" LOC = AP22;                     #P2 or J8.85                 
+NET "arwen_data_a_n[8]" LOC = AP21;                     #P2 or J8.87 
+# NET "arwen_data_a_p[11]" LOC = AN19;                    #P2 or J8.89     
+# NET "arwen_data_a_n[11]" LOC = AP19;                    #P2 or J8.91     
+# NET "arwen_data_a_p[14]" LOC = AN13;                    #P2 or J8.93     
+# NET "arwen_data_a_n[14]" LOC = AM13;                    #P2 or J8.95     
+# NET "arwen_data_a_p[15]" LOC = AK11;                    #P2 or J8.97    
+# NET "arwen_data_a_n[15]" LOC = AJ11;                    #P2 or J8.99    
+# NET "arwen_data_a_p[10]" LOC = AF9;                     #P2 or J8.101
+# NET "arwen_data_a_n[10]" LOC = AF10;                    #P2 or J8.103    
+# NET "arwen_data_a_p[9]" LOC = AG10;                     #P2 or J8.105
+# NET "arwen_data_a_n[9]" LOC = AG11;                     #P2 or J8.107
+# NET "arwen_data_a_p[12]" LOC = AG8;                     #P2 or J8.109
+# NET "arwen_data_a_n[12]" LOC = AH8;                     #P2 or J8.111
+# NET "arwen_data_a_p[13]" LOC = AH9;                     #P2 or J8.113
+# NET "arwen_data_a_n[13]" LOC = AH10;                    #P2 or J8.115    
+
+# NET "arwen_data_c_p[12]" LOC = A13;                     #P2 or J8.130            
+# NET "arwen_data_c_n[12]" LOC = B12;                     #P2 or J8.132
+# NET "arwen_data_c_p[11]" LOC = F14;                     #P2 or J8.134
+# NET "arwen_data_c_n[11]" LOC = F15;                     #P2 or J8.136
+# NET "arwen_data_c_p[14]" LOC = D11;                     #P2 or J8.138
+# NET "arwen_data_c_n[14]" LOC = D10;                     #P2 or J8.140
+# NET "arwen_data_c_p[8]" LOC = K11;                     #P2 or J8.142
+# NET "arwen_data_c_n[8]" LOC = J11;                     #P2 or J8.144
+# NET "arwen_data_c_p[9]" LOC = H10;                     #P2 or J8.146
+# NET "arwen_data_c_n[9]" LOC = H9;                      #P2 or J8.148
+# NET "arwen_data_c_p[10]" LOC = K8;                      #P2 or J8.150
+# NET "arwen_data_c_n[10]" LOC = K9;                      #P2 or J8.152
+NET "arwen_data_c_p[15]" LOC = H7;                      #P2 or J8.154
+NET "arwen_data_c_n[15]" LOC = J7;                      #P2 or J8.156
+# NET "arwen_data_c_p[13]" LOC = J6;                      #P2 or J8.158
+# NET "arwen_data_c_n[13]" LOC = J5;                      #P2 or J8.160
+
+#SI Flags
+NET "si_b_*" IOSTANDARD = LVTTL;
+
+NET "si_b_los" LOC = AE24;                              #P2 or J8.74
+NET "si_b_lol" LOC = AD24;                              #P1 or J7.71
+NET "si_b_rst" LOC = AD25;                              #P1 or J7.69

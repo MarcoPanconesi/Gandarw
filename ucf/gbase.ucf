@@ -1,0 +1,325 @@
+#################### !!! attention !!! ###################
+# rules editing here:                                    #
+#  - one empty and one comment line per set of           #
+#    constraints                                         #
+#  - all constraints  for one net in one place           #
+#  - all lowercase                                       #
+#                                                        #
+##########################################################
+### Warning : set the bus delimiter = "[]" in the Synthesis option
+
+### 40mhz clock ###################
+NET "clk_40mhz_vdsp" TNM_NET = "clk_40mhz_vdsp";
+NET "clk_40mhz_vdsp" LOC = AH27;
+NET "clk_40mhz_vdsp" IOSTANDARD = LVTTL;
+TIMESPEC ts_clk_40mhz_vdsp = PERIOD "clk_40mhz_vdsp" 25 ns HIGH 50 % INPUT_JITTER 1 ns;
+
+### g si clock ###################
+NET "clk_si_vdspn" LOC = J17;
+NET "clk_si_vdspn" IOSTANDARD = LVDS_25;
+NET "clk_si_vdspn" DIFF_TERM = "TRUE";
+NET "clk_si_vdspp" LOC = J16;
+NET "clk_si_vdspp" IOSTANDARD = LVDS_25;
+NET "clk_si_vdspp" DIFF_TERM = "TRUE";
+NET "inst_si_if/done" TIG;                      #commentato per simulazione (Alex)
+NET "inst_mcs_amcs.inst_amc_if_mep/reset_i" TIG;
+
+### cpld_if pll ###################
+INST "cpld_if/Inst_clock_pll/PLL_ADV_INST" LOC = PLL_ADV_X0Y0;
+
+### tcs_data ###################
+NET "tcs_clk_p" LOC = AG22;
+NET "tcs_clk_n" LOC = AH22;
+NET "tcs_data_p" LOC = AH12;
+NET "tcs_data_n" LOC = AG13;
+NET "tcs_lock" LOC = AG26;
+NET "tcs_lock" IOSTANDARD = LVTTL;
+NET "tcs_rate" LOC = AF25;
+NET "tcs_rate" IOSTANDARD = LVTTL;
+
+### smux reset ###################
+#net "vsreset" iostandard = lvttl | loc = ae28;
+#net "vsreset" offset = out 0 ns valid 10 ns after "vuclk";
+# ADDED Alex
+NET "vsreset" SLEW = FAST;
+NET "vsreset" DRIVE = 8;
+NET "vsreset" IOSTANDARD = LVTTL;
+NET "vsreset" LOC = AE28;
+
+### dqa bus ######################
+NET "dqa[0]" CLOCK_DEDICATED_ROUTE = false;
+NET "dqa[0]" LOC = AB26;
+NET "dqa[0]" IOSTANDARD = LVTTL;
+NET "dqa[0]" DRIVE = 8;
+NET "dqa[0]" SLEW = SLOW;
+NET "dqa[1]" CLOCK_DEDICATED_ROUTE = false;
+NET "dqa[1]" LOC = AB25;
+NET "dqa[1]" IOSTANDARD = LVTTL;
+NET "dqa[1]" DRIVE = 8;
+NET "dqa[1]" SLEW = SLOW;
+NET "dqa[2]" CLOCK_DEDICATED_ROUTE = false;
+NET "dqa[2]" LOC = AA24;
+NET "dqa[2]" IOSTANDARD = LVTTL;
+NET "dqa[2]" DRIVE = 8;
+NET "dqa[2]" SLEW = SLOW;
+NET "dqa[3]" CLOCK_DEDICATED_ROUTE = false;
+NET "dqa[3]" LOC = Y24;
+NET "dqa[3]" IOSTANDARD = LVTTL;
+NET "dqa[3]" DRIVE = 8;
+NET "dqa[3]" SLEW = SLOW;
+NET "dqa[4]" CLOCK_DEDICATED_ROUTE = false;
+NET "dqa[4]" LOC = AC27;
+NET "dqa[4]" IOSTANDARD = LVTTL;
+NET "dqa[4]" DRIVE = 8;
+NET "dqa[4]" SLEW = SLOW;
+NET "dqa[5]" CLOCK_DEDICATED_ROUTE = false;
+NET "dqa[5]" LOC = AB27;
+NET "dqa[5]" IOSTANDARD = LVTTL;
+NET "dqa[5]" DRIVE = 8;
+NET "dqa[5]" SLEW = SLOW;
+NET "dqa[6]" CLOCK_DEDICATED_ROUTE = false;
+NET "dqa[6]" LOC = AA26;
+NET "dqa[6]" IOSTANDARD = LVTTL;
+NET "dqa[6]" DRIVE = 8;
+NET "dqa[6]" SLEW = SLOW;
+NET "dqa[7]" CLOCK_DEDICATED_ROUTE = false;
+NET "dqa[7]" LOC = AA25;
+NET "dqa[7]" IOSTANDARD = LVTTL;
+NET "dqa[7]" DRIVE = 8;
+NET "dqa[7]" SLEW = SLOW;
+
+### gp & si iic ##################
+NET "iic_gp_scl[0]" LOC = AH28;
+NET "iic_gp_scl[0]" IOSTANDARD = LVTTL;
+NET "iic_gp_scl[1]" LOC = AC24;
+NET "iic_gp_scl[1]" IOSTANDARD = LVTTL;
+NET "iic_gp_sda[0]" LOC = AG28;
+NET "iic_gp_sda[0]" IOSTANDARD = LVTTL;
+NET "iic_gp_sda[1]" LOC = AC25;
+NET "iic_gp_sda[1]" IOSTANDARD = LVTTL;
+
+NET "iic_si_scl" LOC = AD26;
+NET "iic_si_scl" IOSTANDARD = LVTTL;
+NET "iic_si_sda" LOC = AB28;
+NET "iic_si_sda" IOSTANDARD = LVTTL;
+
+### si flags ##################
+NET "si_g_rst" LOC = AE27;
+NET "si_g_rst" IOSTANDARD = LVTTL;
+NET "si_g_los" LOC = AE26;
+NET "si_g_los" IOSTANDARD = LVTTL;
+NET "si_g_lol" LOC = AF26;
+NET "si_g_lol" IOSTANDARD = LVTTL;
+
+### sweep si delay locs ##################
+#inst "inst_si_if/sweep_a/delayed_ff"   loc = ilogic_x1y208;
+#inst "inst_si_if/sweep_a/undelayed_ff" loc = ilogic_x1y209;
+#inst "inst_si_if/sweep_b/delayed_ff"   loc = ilogic_x1y202;
+#inst "inst_si_if/sweep_b/undelayed_ff" loc = ilogic_x1y203;
+#inst "inst_si_if/sweep_g/delayed_ff"   loc = ilogic_x1y210;
+#inst "inst_si_if/sweep_g/undelayed_ff" loc = ilogic_x1y211;
+#inst "inst_si_if/sweep_a/undelayed_delay" loc = iodelay_x1y208;
+#inst "inst_si_if/sweep_a/delayed_delay"   loc = iodelay_x1y209;
+#inst "inst_si_if/sweep_b/undelayed_delay" loc = iodelay_x1y202;
+#inst "inst_si_if/sweep_b/delayed_delay"   loc = iodelay_x1y203;
+#inst "inst_si_if/sweep_g/undelayed_delay" loc = iodelay_x1y210;
+#inst "inst_si_if/sweep_g/delayed_delay"   loc = iodelay_x1y211;
+### trg led ######################
+NET "trg_led[0]" LOC = AG25;
+NET "trg_led[0]" IOSTANDARD = LVTTL;
+NET "trg_led[1]" LOC = AF24;
+NET "trg_led[1]" IOSTANDARD = LVTTL;
+
+### dsp <> cpld transfer #########
+NET "va_write" LOC = AD19;
+NET "va_write" IOSTANDARD = LVTTL;
+NET "va_strobe" LOC = AE19;
+NET "va_strobe" IOSTANDARD = LVTTL;
+NET "va_ready" LOC = AE17;
+NET "va_ready" IOSTANDARD = LVTTL;
+NET "va_control" LOC = AF16;
+NET "va_control" IOSTANDARD = LVTTL;
+NET "va_ublaze" LOC = AD20;
+NET "va_ublaze" IOSTANDARD = LVTTL;
+NET "va_fifofull" LOC = AE21;
+NET "va_fifofull" IOSTANDARD = LVTTL;
+NET "va_fifoempty" LOC = AE16;
+NET "va_fifoempty" IOSTANDARD = LVTTL;
+NET "va_spyread" LOC = AF15;
+NET "va_spyread" IOSTANDARD = LVTTL;
+NET "vd[0]" LOC = L21;
+NET "vd[0]" IOSTANDARD = LVTTL;
+NET "vd[1]" LOC = L20;
+NET "vd[1]" IOSTANDARD = LVTTL;
+NET "vd[2]" LOC = L15;
+NET "vd[2]" IOSTANDARD = LVTTL;
+NET "vd[3]" LOC = L16;
+NET "vd[3]" IOSTANDARD = LVTTL;
+NET "vd[4]" LOC = J22;
+NET "vd[4]" IOSTANDARD = LVTTL;
+NET "vd[5]" LOC = K21;
+NET "vd[5]" IOSTANDARD = LVTTL;
+NET "vd[6]" LOC = K16;
+NET "vd[6]" IOSTANDARD = LVTTL;
+NET "vd[7]" LOC = J15;
+NET "vd[7]" IOSTANDARD = LVTTL;
+NET "vd[8]" LOC = G22;
+NET "vd[8]" IOSTANDARD = LVTTL;
+NET "vd[9]" LOC = H22;
+NET "vd[9]" IOSTANDARD = LVTTL;
+NET "vd[10]" LOC = L14;
+NET "vd[10]" IOSTANDARD = LVTTL;
+NET "vd[11]" LOC = K14;
+NET "vd[11]" IOSTANDARD = LVTTL;
+NET "vd[12]" LOC = K23;
+NET "vd[12]" IOSTANDARD = LVTTL;
+NET "vd[13]" LOC = K22;
+NET "vd[13]" IOSTANDARD = LVTTL;
+NET "vd[14]" LOC = J12;
+NET "vd[14]" IOSTANDARD = LVTTL;
+NET "vd[15]" LOC = H12;
+NET "vd[15]" IOSTANDARD = LVTTL;
+NET "vd[16]" LOC = G23;
+NET "vd[16]" IOSTANDARD = LVTTL;
+NET "vd[17]" LOC = H23;
+NET "vd[17]" IOSTANDARD = LVTTL;
+NET "vd[18]" LOC = K13;
+NET "vd[18]" IOSTANDARD = LVTTL;
+NET "vd[19]" LOC = K12;
+NET "vd[19]" IOSTANDARD = LVTTL;
+NET "vd[20]" LOC = AE13;
+NET "vd[20]" IOSTANDARD = LVTTL;
+NET "vd[21]" LOC = AE12;
+NET "vd[21]" IOSTANDARD = LVTTL;
+NET "vd[22]" LOC = AF23;
+NET "vd[22]" IOSTANDARD = LVTTL;
+NET "vd[23]" LOC = AG23;
+NET "vd[23]" IOSTANDARD = LVTTL;
+NET "vd[24]" LOC = AF13;
+NET "vd[24]" IOSTANDARD = LVTTL;
+NET "vd[25]" LOC = AG12;
+NET "vd[25]" IOSTANDARD = LVTTL;
+NET "vd[26]" LOC = AE22;
+NET "vd[26]" IOSTANDARD = LVTTL;
+NET "vd[27]" LOC = AE23;
+NET "vd[27]" IOSTANDARD = LVTTL;
+NET "vd[28]" LOC = AE14;
+NET "vd[28]" IOSTANDARD = LVTTL;
+NET "vd[29]" LOC = AF14;
+NET "vd[29]" IOSTANDARD = LVTTL;
+NET "vd[30]" LOC = AF20;
+NET "vd[30]" IOSTANDARD = LVTTL;
+NET "vd[31]" LOC = AF21;
+NET "vd[31]" IOSTANDARD = LVTTL;
+INST "cpld_if/MemoryIn_10" LOC = ILOGIC_X1Y189;
+INST "cpld_if/MemoryIn_11" LOC = ILOGIC_X1Y188;
+INST "cpld_if/MemoryIn_12" LOC = ILOGIC_X1Y187;
+INST "cpld_if/MemoryIn_13" LOC = ILOGIC_X1Y186;
+INST "cpld_if/MemoryIn_14" LOC = ILOGIC_X1Y185;
+INST "cpld_if/MemoryIn_15" LOC = ILOGIC_X1Y184;
+INST "cpld_if/MemoryIn_16" LOC = ILOGIC_X1Y183;
+INST "cpld_if/MemoryIn_17" LOC = ILOGIC_X1Y182;
+INST "cpld_if/MemoryIn_18" LOC = ILOGIC_X1Y181;
+INST "cpld_if/MemoryIn_19" LOC = ILOGIC_X1Y180;
+INST "cpld_if/MemoryIn_20" LOC = ILOGIC_X1Y139;
+INST "cpld_if/MemoryIn_21" LOC = ILOGIC_X1Y138;
+INST "cpld_if/MemoryIn_22" LOC = ILOGIC_X1Y137;
+INST "cpld_if/MemoryIn_23" LOC = ILOGIC_X1Y136;
+INST "cpld_if/MemoryIn_24" LOC = ILOGIC_X1Y135;
+INST "cpld_if/MemoryIn_25" LOC = ILOGIC_X1Y134;
+INST "cpld_if/MemoryIn_26" LOC = ILOGIC_X1Y133;
+INST "cpld_if/MemoryIn_27" LOC = ILOGIC_X1Y132;
+INST "cpld_if/MemoryIn_28" LOC = ILOGIC_X1Y131;
+INST "cpld_if/MemoryIn_29" LOC = ILOGIC_X1Y130;
+INST "cpld_if/MemoryIn_30" LOC = ILOGIC_X1Y129;
+INST "cpld_if/MemoryIn_31" LOC = ILOGIC_X1Y128;
+
+### vxs tiger interface ########
+# g_schematic name: net "trigger_p[0]"
+NET "vxs_a_p[0]" LOC = AP30;
+# g_schematic name: net "trigger_p[1]"
+NET "vxs_a_p[1]" LOC = AP29;
+# g_schematic name: net "trigger_p[4]"
+NET "vxs_a_p[2]" LOC = AP27;
+# g_schematic name: net "trigger_p[5]"
+NET "vxs_a_p[3]" LOC = AP26;
+# g_schematic name: net "trigger_p[2]"
+NET "vxs_a_p[4]" LOC = AM31;
+# g_schematic name: net "trigger_p[6]"
+NET "vxs_a_p[5]" LOC = AN28;
+# g_schematic name: net "trigger_p[3]"
+NET "vxs_a_p[6]" LOC = AM27;
+# g_schematic name: net "trigger_p[12]"
+NET "vxs_a_p[7]" LOC = AM26;
+# g_schematic name: net "trigger_n[0]"
+NET "vxs_a_n[0]" LOC = AP31;
+# g_schematic name: net "trigger_n[1]"
+NET "vxs_a_n[1]" LOC = AN29;
+# g_schematic name: net "trigger_n[4]"
+NET "vxs_a_n[2]" LOC = AN27;
+# g_schematic name: net "trigger_n[5]"
+NET "vxs_a_n[3]" LOC = AP25;
+# g_schematic name: net "trigger_n[2]"
+NET "vxs_a_n[4]" LOC = AL31;
+# g_schematic name: net "trigger_n[6]"
+NET "vxs_a_n[5]" LOC = AM28;
+# g_schematic name: net "trigger_n[3]"
+NET "vxs_a_n[6]" LOC = AL28;
+# g_schematic name: net "trigger_n[12]"
+NET "vxs_a_n[7]" LOC = AL26;
+# g_schematic name: net "trigger_p[10]"
+NET "vxs_b_p[0]" LOC = AN25;
+# g_schematic name: net "trigger_p[7]"
+NET "vxs_b_p[1]" LOC = AN23;
+# g_schematic name: net "trigger_p[15]"
+NET "vxs_b_p[2]" LOC = AN22;
+# g_schematic name: net "trigger_p[9]"
+NET "vxs_b_p[3]" LOC = AN18;
+# g_schematic name: net "trigger_p[14]"
+NET "vxs_b_p[4]" LOC = AL25;
+# g_schematic name: net "trigger_p[8]"
+NET "vxs_b_p[5]" LOC = AN24;
+# g_schematic name: net "trigger_p[13]"
+NET "vxs_b_p[6]" LOC = AN20;
+# g_schematic name: net "trigger_p[11]"
+NET "vxs_b_p[7]" LOC = AM21;
+# g_schematic name: net "trigger_n[10]"
+NET "vxs_b_n[0]" LOC = AM25;
+# g_schematic name: net "trigger_n[7]"
+NET "vxs_b_n[1]" LOC = AM23;
+# g_schematic name: net "trigger_n[15]"
+NET "vxs_b_n[2]" LOC = AM22;
+# g_schematic name: net "trigger_n[9]"
+NET "vxs_b_n[3]" LOC = AM18;
+# g_schematic name: net "trigger_n[14]"
+NET "vxs_b_n[4]" LOC = AL24;
+# g_schematic name: net "trigger_n[8]"
+NET "vxs_b_n[5]" LOC = AP24;
+# g_schematic name: net "trigger_n[13]"
+NET "vxs_b_n[6]" LOC = AP20;
+# g_schematic name: net "trigger_n[11]"
+NET "vxs_b_n[7]" LOC = AM20;
+NET "vxs_scl" LOC = AK27;
+NET "vxs_scl" IOSTANDARD = LVTTL;
+NET "vxs_sda" LOC = AK26;
+NET "vxs_sda" IOSTANDARD = LVTTL;
+
+## gp plug #######################
+NET "gp[0]" LOC = AH25;
+NET "gp[0]" IOSTANDARD = LVTTL;
+NET "gp[1]" LOC = AG27;
+NET "gp[1]" IOSTANDARD = LVTTL;
+NET "gp[2]" LOC = AK28;
+NET "gp[2]" IOSTANDARD = LVTTL;
+NET "gp[3]" LOC = AJ29;
+NET "gp[3]" IOSTANDARD = LVTTL;
+NET "gp[4]" LOC = AK29;
+NET "gp[4]" IOSTANDARD = LVTTL;
+#INST "si_g_clock" IBUF_DELAY_VALUE = 10;
+### TIMESPEC TS_LED = FROM "TCS_CLK155" TO  FFS("inst_trigger_led/*") TIG ;
+TIMESPEC TS_LED = FROM "SI_G_CLK_GRP" TO  FFS("inst_trigger_led/*") TIG ;
+TIMESPEC TS_EDGE_COUNT_CTRL = FROM  FFS("inst_si_if/si_sweep_inst/edge_count_state*") TO  FFS("inst_si_if/si_sweep_inst/edge_count_state_sr*") TIG ;
+TIMESPEC TS_EDGE_COUNT_CTRL_SPY = FROM  FFS("inst_si_if/si_sweep_inst/edge_count_state*") TO  FFS("inst_si_if/si_sweep_inst/edge_count_state_spy_sr*") TIG ;
+TIMESPEC TS_SPY_WRITE_STATE = FROM  FFS("inst_si_if/si_sweep_inst/spy_write_state*") TO  FFS("inst_si_if/si_sweep_inst/spy_write_state_sr*") TIG ;
+#TIMESPEC TS_EDGE_COUNT_MONITOR = FROM  FFS("inst_si_if/si_sweep_inst/edge_count_state*") TO  FFS("inst_si_if/si_sweep_inst/monitor_state*") TIG ;
+NET "data_out_fifo_ready" TIG;

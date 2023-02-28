@@ -1,0 +1,5 @@
+vhdl work "C:\Users\fragb\OneDrive - Istituto Nazionale di Fisica Nucleare\Xil_14.7\GandArw\submodules\g_parameters\rtl\G_PARAMETERS.vhd"
+vhdl work "C:\Users\fragb\OneDrive - Istituto Nazionale di Fisica Nucleare\Xil_14.7\GandArw\rtl\top_level_desc.vhd"
+vhdl work "C:\Users\fragb\OneDrive - Istituto Nazionale di Fisica Nucleare\Xil_14.7\GandArw\submodules\pll_base\rtl\pll_base.vhd"
+vhdl work "C:\Users\fragb\OneDrive - Istituto Nazionale di Fisica Nucleare\Xil_14.7\GandArw\submodules\arwen_prog\ipcore\single_channel_aurora_xc5vsx95t_tile.vhd"
+vhdl work "C:\Users\fragb\OneDrive - Istituto Nazionale di Fisica Nucleare\Xil_14.7\GandArw\submodules\arwen_prog\ipcore\binfile_fifo_synth.vhd"

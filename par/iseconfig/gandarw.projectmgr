@@ -1,0 +1,498 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="gandarw" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/amc_if - behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|submodules|amc_if|rtl|amc_if.vhd</ClosedNode>
+         <ClosedNode>/amc_if_8ch - behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|submodules|amc_if|rtl|amc_if_8ch.vhd</ClosedNode>
+         <ClosedNode>/amc_if_simple - behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|submodules|amc_if|rtl|amc_if_simple.vhd</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/arwen_prog_1 - arwen_s_prog - behav</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/cfmem_wb - wb_to_ram - Behavioral</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/easy_tcs_ctrl - easy_tcs_ctrl - behav</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/gp_if - gp_if - behav</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/gp_if - gp_if - behav/gp_iic_wrapper_wrapper_1 - gp_iic_wrapper_wrapper - Behavioral</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/gtp_if_1 - gtp_if - behav</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/inst_amc_if - amc_if - behavioral</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/inst_amc_if - amc_if - behavioral/ana_tiger_inst - ana_tiger - Behavioral</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/inst_amc_if - amc_if - behavioral/inst_ana_ilm - ana_ilm - Behavioral</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/inst_amc_if - amc_if - behavioral/inst_ana_nrm - ana_nrm - Behavioral</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/inst_amc_if - amc_if - behavioral/inst_vxs_link - vxs_link_trans - RTL</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/inst_amc_if - amc_if_8ch - behavioral</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/inst_amc_if - amc_if_8ch - behavioral/ana_tiger_inst - ana_tiger - Behavioral</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/inst_amc_if - amc_if_8ch - behavioral/inst_ana_ilm - ana_ilm - Behavioral</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/inst_amc_if - amc_if_8ch - behavioral/inst_vxs_link - vxs_link_trans - RTL</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/inst_si_if - si_if - RTL</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/inst_si_if - si_if - RTL/si_sweep_inst - sweep_ctrl - Behavioral</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/stat_if_1 - stat_if - behav</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/tcs - tcs_if - Behavorial</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/tcs_if - tcs_if - Behavorial</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/tranceiver_main_1 - tranceiver_main - behav</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd/vxs_if - vxs_interface - behav</ClosedNode>
+         <ClosedNode>/tcs_if - Behavorial C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|submodules|tcs_if|rtl|tcs_if.vhd</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>data_fifo_1 - data_out_main_fifo (C:/Users/Panco/Desktop/GandArw - mio/submodules/data_out_manager/ipcore/data_out_main_fifo.xco)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >26</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000002aa000000020000000000000000000000000200000064ffffffff000000810000000300000002000002aa0000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>data_fifo_1 - data_out_main_fifo (C:/Users/Panco/Desktop/GandArw - mio/submodules/data_out_manager/ipcore/data_out_main_fifo.xco)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Map/Generate Post-Map Static Timing</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Back-annotate Pin Locations</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Generate IBIS Model</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Generate Post-Place &amp; Route Static Timing</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001d5000000010000000100000000000000000000000064ffffffff000000810000000000000001000001d50000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000002d2000000040101000100000000000000000000000064ffffffff000000810000000000000004000001200000000100000000000000d70000000100000000000000660000000100000000000000750000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>adc.vhd</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>mem</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>work</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000000f8000000010001000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>View Compilation Log</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>View Compilation Log</CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff0000000000000002000001b7000001b701000000050100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e6000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e60000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Automatic `includes</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|Panco|Desktop|GandArw - mio|tb|testbench.vhd/Inst_tcs_tx_MEP - tcs_tx_mep - Behavioral</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|Panco|Desktop|GandArw - mio|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_cpld - vmetop - BEHAVIORAL</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|Panco|Desktop|GandArw - mio|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/arwen_prog_1 - arwen_s_prog - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|Panco|Desktop|GandArw - mio|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/cfmem_wb - wb_to_ram - Behavioral</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|Panco|Desktop|GandArw - mio|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/cpld_if - cpld_if - Behavioral</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|Panco|Desktop|GandArw - mio|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/gp_if - gp_if - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|Panco|Desktop|GandArw - mio|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/gtp_if_1 - gtp_if - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|Panco|Desktop|GandArw - mio|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/inst_amc_if_MEP - amc_if_8ch_MEP - behavioral</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|Panco|Desktop|GandArw - mio|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/inst_si_if - si_if - RTL</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|Panco|Desktop|GandArw - mio|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/stat_if_1 - stat_if - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|Panco|Desktop|GandArw - mio|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/tcs_if - tcs_if_MEP - Behavorial</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|Panco|Desktop|GandArw - mio|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/tranceiver_main_1 - tranceiver_main - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|Panco|Desktop|GandArw - mio|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/vxs_if - vxs_interface - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|Panco|Desktop|GandArw - mio|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_mem_fpga - gandalf_mem_top - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_cpld - vmetop - BEHAVIORAL</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/arwen_prog_1 - arwen_s_prog - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/cfmem_wb - wb_to_ram - Behavioral</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/cpld_if - cpld_if - Behavioral</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/data_out_manager - data_out_manager - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/easy_tcs_ctrl - easy_tcs_ctrl - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/gp_if - gp_if - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/inst_amc_if - amc_if - behavioral</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/inst_amc_if - amc_if - behavioral/ana_tiger_inst - ana_tiger - Behavioral</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/inst_amc_if - amc_if - behavioral/inst_ana_ilm - ana_ilm - Behavioral</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/inst_amc_if - amc_if - behavioral/inst_vxs_link - vxs_link_trans - RTL</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/inst_amc_if - amc_if_8ch - behavioral</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/inst_si_if - si_if - RTL</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/inst_si_if - si_if - RTL/si_iic_top_1 - si_iic_top - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/stat_if_1 - stat_if - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/tcs - tcs_if - Behavorial</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/tcs_ctrl - easy_tcs_ctrl - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/tcs_if - tcs_if - Behavorial</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/tranceiver_main_1 - tranceiver_main - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Behavioral/vxs_if - vxs_interface - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_mem_fpga - gandalf_mem_top - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_mem_fpga - gandalf_mem_top - behav/ddr_memory_controller_1 - ddr_memory_controller - behav</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_mem_fpga - gandalf_mem_top - behav/ddr_memory_controller_1 - ddr_memory_controller - behav/ddr_if_1 - ddr_if - Behavioral/u_mem_controller - mig_v3_6_ddr - arc_mem_interface_top</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_mem_fpga - gandalf_mem_top - behav/ddr_memory_controller_1 - ddr_memory_controller - behav/wb_ddr_if_1 - wb_ddr_if - behav</ClosedNode>
+         <ClosedNode>/Unassigned User Library Modules/mig_v3_6_ddr - arc_mem_interface_top</ClosedNode>
+         <ClosedNode>/amc_if - behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|submodules|amc_if|rtl|amc_if.vhd</ClosedNode>
+         <ClosedNode>/amc_if_simple - behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|submodules|amc_if|rtl|amc_if_simple.vhd</ClosedNode>
+         <ClosedNode>/ana_ilm - Behavioral C:|Users|Panco|Desktop|GandArw - mio|submodules|amc_if|rtl|ana_ilm.vhd</ClosedNode>
+         <ClosedNode>/ana_tiger - Behavioral C:|Users|Panco|Desktop|GandArw - mio|submodules|amc_if|rtl|ana_tiger.vhd</ClosedNode>
+         <ClosedNode>/arwen_s_prog_tb - behavior C:|Users|Panco|Desktop|GandArw - mio|par|arwen_s_prog_tb.vhd</ClosedNode>
+         <ClosedNode>/arwen_s_prog_tb - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|par|arwen_s_prog_tb.vhd</ClosedNode>
+         <ClosedNode>/data_out_manager - behav C:|Users|Panco|Desktop|GandArw - mio|submodules|data_out_manager|rtl|data_out_manager.vhd</ClosedNode>
+         <ClosedNode>/gbase_top - Behavioral C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|rtl|gbase_top.vhd</ClosedNode>
+         <ClosedNode>/gp_if_tb - behv C:|Users|Panco|Desktop|GandArw - mio|submodules|gp_if|tb|gp_if_tb.vhd</ClosedNode>
+         <ClosedNode>/gp_if_tb - behv C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|submodules|gp_if|tb|gp_if_tb.vhd</ClosedNode>
+         <ClosedNode>/gp_if_tb - behv C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|submodules|gp_if|tb|gp_if_tb.vhd/cpld_if - cpld_if - Behavioral</ClosedNode>
+         <ClosedNode>/tranceiver_main - behav C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|gandalf_mem_tcs|rtl|tranceiver_main.vhd</ClosedNode>
+         <ClosedNode>/wb_to_ram_tb - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|par|wb_to_ram_tb.vhd</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>GANDALF_env - behavior (C:/Users/Panco/Desktop/GandArw - mio/tb/testbench.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000238000000020000000000000000000000000200000064ffffffff000000810000000300000002000002380000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>GANDALF_env - behavior (C:/Users/Panco/Desktop/GandArw - mio/tb/testbench.vhd)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e6000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e60000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>ISim Simulator</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>ModelSim Simulator</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e6000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e60000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>ModelSim Simulator</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000265000000010000000100000000000000000000000064ffffffff000000810000000000000001000002650000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_XCO" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e6000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e60000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_PACKAGE_DECL" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001dc000000010000000100000000000000000000000064ffffffff000000810000000000000001000001dc0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_PACKAGE_BODY" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001dc000000010000000100000000000000000000000064ffffffff000000810000000000000001000001dc0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="PostRouteSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_cpld - vmetop - BEHAVIORAL</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_mem_fpga - gandalf_mem_top - behav</ClosedNode>
+         <ClosedNode>/Unassigned User Library Modules</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>GANDALF_env - behavior (C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/tb/testbench.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000376000000020000000000000000000000000200000064ffffffff000000810000000300000002000003760000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>GANDALF_env - behavior (C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/tb/testbench.vhd)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="PostRouteSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000002a4000000010000000100000000000000000000000064ffffffff000000810000000000000001000002a40000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="PostRouteSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Post-Place &amp; Route Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000002a4000000010000000100000000000000000000000064ffffffff000000810000000000000001000002a40000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Post-Place &amp; Route Model</CurrentItem>
+   </ItemView>
+   <ItemView engineview="PostMapSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/arwen_prog_1 - arwen_s_prog - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/cfmem_wb - wb_Np_ram - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/cpld_if - cpld_if_cpld_if - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/data_out_manager - data_out_manager_data_out_manager - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/gimli_if - gimli_if_gimli_if - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/gp_if - gp_if_gp_if - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/gtp_if_1 - gtp_if - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_0_inst_mcs_inst_frame_ff - FIFO_DUALCLOCK_MACRO_1_INST_7 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_0_inst_mcs_inst_ring_buf_0_inst_single_buf - BRAM_SDP_MACRO_INST_15 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_0_inst_mcs_inst_ring_buf_1_inst_single_buf - BRAM_SDP_MACRO_INST_14 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_1_inst_mcs_inst_frame_ff - FIFO_DUALCLOCK_MACRO_1_INST_6 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_1_inst_mcs_inst_ring_buf_0_inst_single_buf - BRAM_SDP_MACRO_INST_13 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_1_inst_mcs_inst_ring_buf_1_inst_single_buf - BRAM_SDP_MACRO_INST_12 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_2_inst_mcs_inst_frame_ff - FIFO_DUALCLOCK_MACRO_1_INST_5 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_2_inst_mcs_inst_ring_buf_0_inst_single_buf - BRAM_SDP_MACRO_INST_11 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_2_inst_mcs_inst_ring_buf_1_inst_single_buf - BRAM_SDP_MACRO_INST_10 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_3_inst_mcs_inst_frame_ff - FIFO_DUALCLOCK_MACRO_1_INST_4 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_3_inst_mcs_inst_ring_buf_0_inst_single_buf - BRAM_SDP_MACRO_INST_9 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_3_inst_mcs_inst_ring_buf_1_inst_single_buf - BRAM_SDP_MACRO_INST_8 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_4_inst_mcs_inst_frame_ff - FIFO_DUALCLOCK_MACRO_1_INST_3 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_4_inst_mcs_inst_ring_buf_0_inst_single_buf - BRAM_SDP_MACRO_INST_7 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_4_inst_mcs_inst_ring_buf_1_inst_single_buf - BRAM_SDP_MACRO_INST_6 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_5_inst_mcs_inst_frame_ff - FIFO_DUALCLOCK_MACRO_1_INST_2 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_5_inst_mcs_inst_ring_buf_0_inst_single_buf - BRAM_SDP_MACRO_INST_5 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_5_inst_mcs_inst_ring_buf_1_inst_single_buf - BRAM_SDP_MACRO_INST_4 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_6_inst_mcs_inst_frame_ff - FIFO_DUALCLOCK_MACRO_1_INST_1 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_6_inst_mcs_inst_ring_buf_0_inst_single_buf - BRAM_SDP_MACRO_INST_3 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_6_inst_mcs_inst_ring_buf_1_inst_single_buf - BRAM_SDP_MACRO_INST_2 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_7_inst_mcs_inst_frame_ff - FIFO_DUALCLOCK_MACRO_1 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_7_inst_mcs_inst_ring_buf_0_inst_single_buf - BRAM_SDP_MACRO_INST_1 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_amc_ports_7_inst_mcs_inst_ring_buf_1_inst_single_buf - BRAM_SDP_MACRO - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_ana_nrm_inst_rd_ch_0_inst_ana_nrm - ana_nrm_1 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_ana_nrm_inst_rd_ch_1_inst_ana_nrm - ana_nrm_2 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_ana_nrm_inst_rd_ch_2_inst_ana_nrm - ana_nrm_3 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_ana_nrm_inst_rd_ch_3_inst_ana_nrm - ana_nrm_4 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_ana_nrm_inst_rd_ch_4_inst_ana_nrm - ana_nrm_5 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_ana_nrm_inst_rd_ch_5_inst_ana_nrm - ana_nrm_6 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_ana_nrm_inst_rd_ch_6_inst_ana_nrm - ana_nrm_7 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure/inst_ana_nrm_inst_rd_ch_7_inst_ana_nrm - ana_nrm_8 - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_si_if - si_if - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_t_trg - base_pll - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_trigger_led - Trigger_LED - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/slink_if - slink_if_slink_if - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/stat_if_1 - stat_if - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/stat_if_1 - stat_if - Structure/sys_mon_1 - sys_mon - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/tcs_if - tcs_if_tcs_if - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/tranceiver_main_1 - tranceiver_main - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/vxs_if - vxs_interface - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_mem_fpga - gandalf_mem_top - behav</ClosedNode>
+         <ClosedNode>/Unassigned User Library Modules</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>GANDALF_env - behavior (C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/tb/testbench.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000025d000000020000000000000000000000000200000064ffffffff0000008100000003000000020000025d0000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>GANDALF_env - behavior (C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/tb/testbench.vhd)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="PostMapSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e6000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e60000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="PostTransSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_cpld - vmetop - BEHAVIORAL</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/arwen_prog_1 - arwen_s_prog - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/cfmem_wb - wb_Np_ram - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/cpld_if - cpld_if_cpld_if - Structure/Inst_clock_pll - clock_pll - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/data_out_manager - data_out_manager_data_out_manager - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/gimli_if - gimli_if_gimli_if - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/gp_if - gp_if_gp_if - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/gtp_if_1 - gtp_if - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_mcs_amcs_inst_amc_if - amc_if - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_si_if - si_if - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_t_trg - base_pll - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/inst_trigger_led - Trigger_LED - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/slink_if - slink_if_slink_if - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/stat_if_1 - stat_if - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/tcs_if - tcs_if_tcs_if - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/tranceiver_main_1 - tranceiver_main - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_dsp_fpga - gbase_top - Structure/vxs_if - vxs_interface - Structure</ClosedNode>
+         <ClosedNode>/GANDALF_env - behavior C:|Users|fragb|OneDrive - Istituto Nazionale di Fisica Nucleare|Xil_14.7|GandArw|tb|testbench.vhd/inst_G_module - GANDALF_module - Behavioral/inst_mem_fpga - gandalf_mem_top - behav</ClosedNode>
+         <ClosedNode>/Unassigned User Library Modules</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>GANDALF_env - behavior (C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/tb/testbench.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001d5000000020000000000000000000000000200000064ffffffff000000810000000300000002000001d50000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>GANDALF_env - behavior (C:/Users/fragb/OneDrive - Istituto Nazionale di Fisica Nucleare/Xil_14.7/GandArw/tb/testbench.vhd)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="PostTransSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000002a4000000010000000100000000000000000000000064ffffffff000000810000000000000001000002a40000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="PostTransSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001cb000000010000000100000000000000000000000064ffffffff000000810000000000000001000001cb0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="PostMapSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Post-Map Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000002a4000000010000000100000000000000000000000064ffffffff000000810000000000000001000002a40000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Post-Map Model</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_PACKAGE_BODY" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Check Syntax</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e6000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e60000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Check Syntax</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_PACKAGE_DECL" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e6000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e60000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <CopyAdditionalFiles/>
+</Project>

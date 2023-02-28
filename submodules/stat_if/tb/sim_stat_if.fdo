@@ -1,0 +1,36 @@
+# Create work library
+#
+vlib work
+#
+# Compile sources
+#
+vcom -explicit  -93 "../../g_parameters/rtl/G_PARAMETERS.vhd"
+vcom -explicit  -93 "../../../rtl/top_level_desc.vhd"
+vcom -explicit  -93 "../rtl/sys_mon.vhd"
+vcom -explicit  -93 "../rtl/stat_if.vhd"
+vcom -explicit  -93 "./stat_if_tb.vhd"
+#
+# Call vsim to invoke simulator
+#
+vsim -voptargs="+acc" -t 1ps  -lib work work.stat_if_tb
+#
+# Source the wave do file
+#
+do {sim_stat_if_wave.do}
+#
+# Set the window types
+#
+view wave
+view structure
+view signals
+#
+# Source the user do file
+#
+#do {user_do_file.udo}
+#
+# Run simulation for this time
+#
+run 2000us
+#
+# End
+#

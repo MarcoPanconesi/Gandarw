@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\fragb\OneDrive - Istituto Nazionale di Fisica Nucleare\Xil_14.7\GandArw\par\gbase_top.ncd
+OUTFILE=C:\Users\fragb\OneDrive - Istituto Nazionale di Fisica Nucleare\Xil_14.7\GandArw\par\gbase_top.bit
+FAMILY=Virtex5
+PART=xc5vsx95t-2ff1136
+WORKINGDIR=C:\Users\fragb\OneDrive - Istituto Nazionale di Fisica Nucleare\Xil_14.7\GandArw\par
+LICENSE=ISE
+USER_INFO=175570839_177743491_210736920_760

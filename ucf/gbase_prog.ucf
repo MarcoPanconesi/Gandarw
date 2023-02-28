@@ -1,0 +1,35 @@
+#################### !!! attention !!! ###################
+# rules editing here:                                    #
+#  - one empty and one comment line per set of           #
+#    constraints                                         #
+#  - all constraints  for one net in one place           #
+#  - all lowercase                                       #
+#                                                        #
+##########################################################
+### Arwen connections for programming
+NET "arwen_prog_out_p" LOC = C22;
+NET "arwen_prog_out_n" LOC = B22;
+
+NET "arwen_init_in_p" LOC = V8;
+NET "arwen_init_in_n" LOC = U8;
+
+NET "arwen_done_in_p" LOC = Y8;
+NET "arwen_done_in_n" LOC = Y9;
+
+NET "arwen_d0_p" LOC = W10;
+NET "arwen_d0_n" LOC = W9;
+
+NET "arwen_cclk_out_p" LOC = V10;
+NET "arwen_cclk_out_n" LOC = V9;
+
+# AURORA IF			#######################
+NET rxp LOC = G1;
+NET rxn LOC = H1;
+NET txp LOC = F2;
+NET txn LOC = G2;
+
+NET gtpd0_n LOC = H3;
+NET gtpd0_p LOC = H4;
+
+NET "gtpd0_p" TNM_NET = gtpd0_p;
+TIMESPEC TS_gtpd0_p = PERIOD "gtpd0_p" 77.76 MHz HIGH 50% INPUT_JITTER 100 ps;

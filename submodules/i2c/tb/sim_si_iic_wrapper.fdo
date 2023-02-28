@@ -1,0 +1,37 @@
+# Create work library
+#
+vlib work
+#
+# Compile sources
+#
+vcom -explicit  -93 "../rtl/i2c_master_bit_ctrl.vhd"
+vcom -explicit  -93 "../rtl/i2c_master_byte_ctrl.vhd"
+vcom -explicit  -93 "../rtl/i2c_master_top.vhd"
+vcom -explicit  -93 "../rtl/si_iic_wrapper.vhd"
+vcom -explicit  -93 "./si_iic_wrapper_tb.vhd"
+
+#
+# Call vsim to invoke simulator
+#
+vsim -voptargs="+acc" -t 1ps  -lib work work.si_iic_wrapper_tb
+#
+# Source the wave do file
+#
+do {si_iic_wrapper_wave.do}
+#
+# Set the window types
+#
+view wave
+view structure
+view signals
+#
+# Source the user do file
+#
+#do {two_flops_tb.udo}
+#
+# Run simulation for this time
+#
+run 500000ns
+#
+# End
+#

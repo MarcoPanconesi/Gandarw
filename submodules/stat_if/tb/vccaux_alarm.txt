@@ -1,0 +1,12 @@
+//Test alarm feature on SYSMON.
+//Vccaux moves outside upper limit after 20us
+//file <->		FPGA
+//TEMP		<-> VCCAUX VCCAUX TEMP
+//VCCAUX	<-> VCCINT
+//VCCINT  	<->	TEMP TEMP VCCAUX
+TIME TEMP VCCAUX VCCINT
+000000 40.0 2.5 1.0
+240000 92.0 2.5 1.0
+460000 96.0 2.5 0.7
+660000 -273.15 2.5 1.0
+960000 34.0 2.5 1.2

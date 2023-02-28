@@ -1,0 +1,17 @@
+# Output products list for <tcs_ctrl_icon>
+_xmsgs\pn_parser.xmsgs
+tcs_ctrl_icon.asy
+tcs_ctrl_icon.constraints\tcs_ctrl_icon.ucf
+tcs_ctrl_icon.constraints\tcs_ctrl_icon.xdc
+tcs_ctrl_icon.gise
+tcs_ctrl_icon.ngc
+tcs_ctrl_icon.sym
+tcs_ctrl_icon.ucf
+tcs_ctrl_icon.vhd
+tcs_ctrl_icon.vho
+tcs_ctrl_icon.xco
+tcs_ctrl_icon.xdc
+tcs_ctrl_icon.xise
+tcs_ctrl_icon_flist.txt
+tcs_ctrl_icon_readme.txt
+tcs_ctrl_icon_xmdf.tcl

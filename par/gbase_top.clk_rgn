@@ -1,0 +1,575 @@
+Release 14.7 - reportgen P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Fri Feb 17 17:42:34 2023
+
+
+
+######################################################################################
+# GLOBAL CLOCK NET DISTRIBUTION UCF REPORT:
+#
+# Number of Global Clock Regions : 16
+# Number of Global Clock Networks: 16
+#
+# Clock Region Assignment: SUCCESSFUL
+
+# Location of Clock Components
+INST "Inst_chipscope_icon.Inst_icon/U0/U_ICON/I_YES_BSCAN.U_BS/I_USE_SOFTBSCAN_EQ0.I_USE_XST_TCK_WORKAROUND_EQ1.U_ICON_BSCAN_BUFG/U_BUFG" LOC = "BUFGCTRL_X0Y25" ;
+INST "cpld_if/Inst_clock_pll/CLKOUT1_BUFG_INST" LOC = "BUFGCTRL_X0Y0" ;
+INST "cpld_if/Inst_clock_pll/CLKOUT2_BUFG_INST" LOC = "BUFGCTRL_X0Y1" ;
+INST "cpld_if/Inst_clock_pll/CLKOUT3_BUFG_INST" LOC = "BUFGCTRL_X0Y2" ;
+INST "tranceiver_main_1/refclkout_pll0_bufg_i" LOC = "BUFGCTRL_X0Y31" ;
+INST "tranceiver_main_1/refclkout_pll0_i/clkout0_bufg_i" LOC = "BUFGCTRL_X0Y27" ;
+INST "gimli_if/BUFG_inst" LOC = "BUFGCTRL_X0Y7" ;
+INST "tranceiver_main_1/refclkout_pll0_i/clkout1_bufg_i" LOC = "BUFGCTRL_X0Y26" ;
+INST "clk_40mhz_bufg_inst" LOC = "BUFGCTRL_X0Y8" ;
+INST "inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]_BUFG" LOC = "BUFGCTRL_X0Y28" ;
+INST "inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[2]_BUFG" LOC = "BUFGCTRL_X0Y29" ;
+INST "inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[4]_BUFG" LOC = "BUFGCTRL_X0Y6" ;
+INST "inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[5]_BUFG" LOC = "BUFGCTRL_X0Y5" ;
+INST "inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[6]_BUFG" LOC = "BUFGCTRL_X0Y4" ;
+INST "inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[7]_BUFG" LOC = "BUFGCTRL_X0Y30" ;
+INST "cpld_if/Inst_clock_pll/CLKOUT0_BUFG_INST" LOC = "BUFGCTRL_X0Y3" ;
+INST "tcs_clk_p" LOC = "AG22" ;
+INST "amc_port_p[0][14]" LOC = "L19" ;
+INST "amc_port_p[2][14]" LOC = "K18" ;
+INST "amc_port_p[4][14]" LOC = "AG21" ;
+INST "amc_port_p[5][14]" LOC = "AG18" ;
+INST "amc_port_p[6][14]" LOC = "AH20" ;
+INST "amc_port_p[7][14]" LOC = "H19" ;
+INST "gtpd0_n" LOC = "IPAD_X1Y40" ;
+INST "gtpd0_p" LOC = "IPAD_X1Y41" ;
+INST "rxn" LOC = "IPAD_X1Y36" ;
+INST "rxp" LOC = "IPAD_X1Y37" ;
+INST "txn" LOC = "OPAD_X0Y20" ;
+INST "txp" LOC = "OPAD_X0Y21" ;
+INST "cpld_if/Inst_clock_pll/PLL_ADV_INST" LOC = "PLL_ADV_X0Y0" ;
+INST "tranceiver_main_1/refclkout_pll0_i/pll_adv_i" LOC = "PLL_ADV_X0Y5" ;
+INST "tranceiver_main_1/single_channel_aurora_xc5vsx95t_1/tile0_single_channel_aurora_xc5vsx95t_i/gtp_dual_i" LOC = "GTP_DUAL_X0Y5" ;
+INST "tranceiver_main_1/tile0_refclk_ibufds_i" LOC = "BUFDS_X0Y5" ;
+
+# clk_200mhz driven by BUFGCTRL_X0Y0
+NET "clk_200mhz" TNM_NET = "TN_clk_200mhz" ;
+TIMEGRP "TN_clk_200mhz" AREA_GROUP = "CLKAG_clk_200mhz" ;
+AREA_GROUP "CLKAG_clk_200mhz" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X0Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7  ;
+
+# clk_40mhz driven by BUFGCTRL_X0Y3
+NET "clk_40mhz" TNM_NET = "TN_clk_40mhz" ;
+TIMEGRP "TN_clk_40mhz" AREA_GROUP = "CLKAG_clk_40mhz" ;
+AREA_GROUP "CLKAG_clk_40mhz" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7  ;
+
+# clk_40mhz_global driven by BUFGCTRL_X0Y8
+NET "clk_40mhz_global" TNM_NET = "TN_clk_40mhz_global" ;
+TIMEGRP "TN_clk_40mhz_global" AREA_GROUP = "CLKAG_clk_40mhz_global" ;
+AREA_GROUP "CLKAG_clk_40mhz_global" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X0Y1, CLOCKREGION_X0Y2, CLOCKREGION_X0Y3  ;
+
+# control3[0] driven by BUFGCTRL_X0Y25
+NET "control3[0]" TNM_NET = "TN_control3[0]" ;
+TIMEGRP "TN_control3[0]" AREA_GROUP = "CLKAG_control3[0]" ;
+AREA_GROUP "CLKAG_control3[0]" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7  ;
+
+# cpld_if/CLK_120MHZ_OUT driven by BUFGCTRL_X0Y1
+NET "cpld_if/CLK_120MHZ_OUT" TNM_NET = "TN_cpld_if/CLK_120MHZ_OUT" ;
+TIMEGRP "TN_cpld_if/CLK_120MHZ_OUT" AREA_GROUP = "CLKAG_cpld_if/CLK_120MHZ_OUT" ;
+AREA_GROUP "CLKAG_cpld_if/CLK_120MHZ_OUT" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7  ;
+
+# cpld_if/CLK_240MHZ driven by BUFGCTRL_X0Y2
+NET "cpld_if/CLK_240MHZ" TNM_NET = "TN_cpld_if/CLK_240MHZ" ;
+TIMEGRP "TN_cpld_if/CLK_240MHZ" AREA_GROUP = "CLKAG_cpld_if/CLK_240MHZ" ;
+AREA_GROUP "CLKAG_cpld_if/CLK_240MHZ" RANGE =   CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
+
+# gimli_tcs_clk driven by BUFGCTRL_X0Y7
+NET "gimli_tcs_clk" TNM_NET = "TN_gimli_tcs_clk" ;
+TIMEGRP "TN_gimli_tcs_clk" AREA_GROUP = "CLKAG_gimli_tcs_clk" ;
+AREA_GROUP "CLKAG_gimli_tcs_clk" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7  ;
+
+# gtp_clk driven by BUFGCTRL_X0Y27
+NET "gtp_clk" TNM_NET = "TN_gtp_clk" ;
+TIMEGRP "TN_gtp_clk" AREA_GROUP = "CLKAG_gtp_clk" ;
+AREA_GROUP "CLKAG_gtp_clk" RANGE =   CLOCKREGION_X1Y0, CLOCKREGION_X1Y1, CLOCKREGION_X1Y2, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7  ;
+
+# inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0] driven by BUFGCTRL_X0Y28
+NET "inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]" TNM_NET = "TN_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]" ;
+TIMEGRP "TN_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]" AREA_GROUP = "CLKAG_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]" ;
+AREA_GROUP "CLKAG_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7  ;
+
+# inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[2] driven by BUFGCTRL_X0Y29
+NET "inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[2]" TNM_NET = "TN_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[2]" ;
+TIMEGRP "TN_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[2]" AREA_GROUP = "CLKAG_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[2]" ;
+AREA_GROUP "CLKAG_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[2]" RANGE =   CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7  ;
+
+# inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[4]_BUFG driven by BUFGCTRL_X0Y6
+NET "inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[4]_BUFG" TNM_NET = "TN_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[4]_BUFG" ;
+TIMEGRP "TN_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[4]_BUFG" AREA_GROUP = "CLKAG_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[4]_BUFG" ;
+AREA_GROUP "CLKAG_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[4]_BUFG" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y5  ;
+
+# inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[5]_BUFG driven by BUFGCTRL_X0Y5
+NET "inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[5]_BUFG" TNM_NET = "TN_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[5]_BUFG" ;
+TIMEGRP "TN_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[5]_BUFG" AREA_GROUP = "CLKAG_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[5]_BUFG" ;
+AREA_GROUP "CLKAG_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[5]_BUFG" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2, CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4  ;
+
+# inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[6]_BUFG driven by BUFGCTRL_X0Y4
+NET "inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[6]_BUFG" TNM_NET = "TN_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[6]_BUFG" ;
+TIMEGRP "TN_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[6]_BUFG" AREA_GROUP = "CLKAG_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[6]_BUFG" ;
+AREA_GROUP "CLKAG_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[6]_BUFG" RANGE =   CLOCKREGION_X0Y3, CLOCKREGION_X1Y3, CLOCKREGION_X0Y4, CLOCKREGION_X1Y4, CLOCKREGION_X0Y5, CLOCKREGION_X1Y5, CLOCKREGION_X0Y6, CLOCKREGION_X1Y6, CLOCKREGION_X0Y7, CLOCKREGION_X1Y7  ;
+
+# inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[7]_BUFG driven by BUFGCTRL_X0Y30
+NET "inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[7]_BUFG" TNM_NET = "TN_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[7]_BUFG" ;
+TIMEGRP "TN_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[7]_BUFG" AREA_GROUP = "CLKAG_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[7]_BUFG" ;
+AREA_GROUP "CLKAG_inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[7]_BUFG" RANGE =   CLOCKREGION_X0Y0, CLOCKREGION_X1Y0, CLOCKREGION_X0Y1, CLOCKREGION_X1Y1, CLOCKREGION_X0Y2, CLOCKREGION_X1Y2  ;
+
+# tranceiver_main_1/refclkout_to_cmt driven by BUFGCTRL_X0Y31
+NET "tranceiver_main_1/refclkout_to_cmt" TNM_NET = "TN_tranceiver_main_1/refclkout_to_cmt" ;
+TIMEGRP "TN_tranceiver_main_1/refclkout_to_cmt" AREA_GROUP = "CLKAG_tranceiver_main_1/refclkout_to_cmt" ;
+AREA_GROUP "CLKAG_tranceiver_main_1/refclkout_to_cmt" RANGE =   CLOCKREGION_X0Y6, CLOCKREGION_X0Y7  ;
+
+# tranceiver_main_1/txusrclk driven by BUFGCTRL_X0Y26
+NET "tranceiver_main_1/txusrclk" TNM_NET = "TN_tranceiver_main_1/txusrclk" ;
+TIMEGRP "TN_tranceiver_main_1/txusrclk" AREA_GROUP = "CLKAG_tranceiver_main_1/txusrclk" ;
+AREA_GROUP "CLKAG_tranceiver_main_1/txusrclk" RANGE =   CLOCKREGION_X1Y5, CLOCKREGION_X1Y6, CLOCKREGION_X1Y7  ;
+
+# NOTE: 
+# This report is provided to help reproduce successful clock-region 
+# assignments. The report provides range constraints for all global 
+# clock networks, in a format that is directly usable in ucf files. 
+#
+#END of Global Clock Net Distribution UCF Constraints
+######################################################################################
+
+
+######################################################################################
+GLOBAL CLOCK NET LOADS DISTRIBUTION REPORT:
+
+Number of Global Clock Regions : 16
+Number of Global Clock Networks: 16
+
+Clock Region Assignment: SUCCESSFUL
+
+Clock-Region: <CLOCKREGION_X0Y0> 
+ key resource utilizations (used/available): global-clocks - 5/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      0 |      0 |      0 |     80 |     80 |     48 |      0 |      0 |      0 |      2 |      0 |   3360 |   3840 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      1 |clk_200mhz
+      0 |      0 |      0 |      0 |      0 |     39 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    301 |clk_40mhz
+      0 |      0 |      0 |      0 |      0 |     10 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |gimli_tcs_clk
+      9 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]
+      0 |      0 |      0 |      0 |      8 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |     10 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[4]_BUFG
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      9 |      0 |      0 |      0 |      8 |     49 |      0 |      0 |      0 |      0 |      1 |      0 |      4 |    312 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+
+Clock-Region: <CLOCKREGION_X1Y0> 
+ key resource utilizations (used/available): global-clocks - 4/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      0 |      0 |      1 |     40 |     40 |     32 |      0 |      0 |      0 |      1 |      0 |   2720 |   3520 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    179 |clk_40mhz
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     36 |      0 |control3[0]
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |gimli_tcs_clk
+      9 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      9 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     36 |    187 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+
+Clock-Region: <CLOCKREGION_X0Y1> 
+ key resource utilizations (used/available): global-clocks - 5/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      4 |      2 |      0 |     40 |     40 |     48 |      0 |      0 |      0 |      1 |      0 |   3360 |   3840 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    278 |clk_40mhz
+      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |clk_40mhz_global
+     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[5]_BUFG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     31 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[7]_BUFG
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    313 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+
+Clock-Region: <CLOCKREGION_X1Y1> 
+ key resource utilizations (used/available): global-clocks - 5/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      0 |      0 |      1 |     40 |     40 |     32 |      0 |      0 |      0 |      1 |      0 |   2720 |   3520 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    158 |clk_40mhz
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     41 |     15 |control3[0]
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     81 |gimli_tcs_clk
+     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[5]_BUFG
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     41 |    266 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+
+Clock-Region: <CLOCKREGION_X0Y2> 
+ key resource utilizations (used/available): global-clocks - 8/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      2 |      1 |      0 |     60 |     60 |     48 |      0 |      0 |      0 |      2 |      0 |   3360 |   3840 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |     12 |clk_200mhz
+      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     18 |    299 |clk_40mhz
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     10 |clk_40mhz_global
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      6 |gimli_tcs_clk
+     14 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     32 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]
+      0 |      0 |      0 |      0 |     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |      8 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[4]_BUFG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[5]_BUFG
+      0 |      0 |      0 |      0 |     48 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     27 |     20 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[7]_BUFG
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     15 |      0 |      0 |      0 |     64 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |     53 |    399 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 1
+List of local clocks in this region:
+   inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[3] driven by IOB_X1Y219 
+
+
+Clock-Region: <CLOCKREGION_X1Y2> 
+ key resource utilizations (used/available): global-clocks - 6/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     12 |      0 |      0 |      1 |     40 |     40 |     32 |      0 |      0 |      1 |      1 |      0 |   2720 |   3520 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     18 |     96 |clk_40mhz
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     42 |control3[0]
+      3 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     27 |     75 |gimli_tcs_clk
+      9 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     28 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     19 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[4]_BUFG
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     11 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[5]_BUFG
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     12 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     45 |    271 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 1
+List of local clocks in this region:
+   lut8399_1149 driven by SLICE_X75Y49 
+
+
+Clock-Region: <CLOCKREGION_X0Y3> 
+ key resource utilizations (used/available): global-clocks - 9/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      0 |      0 |      0 |     60 |     60 |     48 |      0 |      0 |      0 |      2 |     16 |   3360 |   3840 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |     72 |clk_200mhz
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |    355 |clk_40mhz
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |clk_40mhz_global
+      0 |      0 |      0 |      0 |     12 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     19 |cpld_if/CLK_240MHZ
+      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      8 |     62 |gimli_tcs_clk
+     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     16 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]
+      0 |      0 |      0 |      0 |     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |     12 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[4]_BUFG
+      0 |      0 |      0 |      0 |     48 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |     12 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[5]_BUFG
+      0 |      0 |      0 |      0 |      8 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |     22 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[6]_BUFG
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      0 |      0 |      0 |     84 |      0 |      1 |      0 |      0 |      0 |      1 |      0 |     58 |    572 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 1
+List of regional clocks in this region:
+   clk_40mhz_regional driven by BUFR_X0Y6 
+
+Number of local clocks in this region: 0
+
+
+Clock-Region: <CLOCKREGION_X1Y3> 
+ key resource utilizations (used/available): global-clocks - 6/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     12 |      0 |      0 |      1 |     40 |     40 |     32 |      0 |      0 |      0 |      1 |      0 |   2720 |   3520 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      3 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     84 |    158 |clk_40mhz
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     62 |control3[0]
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     61 |cpld_if/CLK_120MHZ_OUT
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |cpld_if/CLK_240MHZ
+      1 |      0 |      0 |      0 |      0 |      0 |      2 |      0 |      0 |      0 |      0 |      0 |     60 |    121 |gimli_tcs_clk
+      8 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     12 |      0 |      0 |      0 |      0 |      0 |      2 |      0 |      0 |      0 |      0 |      0 |    144 |    408 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 3
+List of local clocks in this region:
+   lut24110_1675 driven by SLICE_X62Y82 
+   inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[1] driven by IOB_X1Y205 
+   Inst_chipscope_icon.Inst_icon/U0/iUPDATE_OUT driven by BSCAN_X0Y0 
+
+
+Clock-Region: <CLOCKREGION_X0Y4> 
+ key resource utilizations (used/available): global-clocks - 7/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      0 |      0 |      0 |     60 |     60 |     48 |      0 |      0 |      0 |      2 |     16 |   3360 |   3840 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |     29 |clk_200mhz
+      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      6 |    132 |clk_40mhz
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |cpld_if/CLK_120MHZ_OUT
+      0 |      0 |      0 |      0 |     10 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     20 |cpld_if/CLK_240MHZ
+      1 |      0 |      0 |      0 |      0 |      0 |      3 |      0 |      0 |      0 |      0 |      0 |      6 |    146 |gimli_tcs_clk
+     14 |      0 |      0 |      0 |     48 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |    100 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]
+      0 |      0 |      0 |      0 |     24 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |     17 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[6]_BUFG
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      0 |      0 |      0 |     82 |      0 |      3 |      0 |      0 |      0 |      1 |      0 |     48 |    448 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+
+Clock-Region: <CLOCKREGION_X1Y4> 
+ key resource utilizations (used/available): global-clocks - 6/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     14 |      0 |      0 |      1 |     40 |     40 |     32 |      1 |      0 |      0 |      1 |      0 |   2720 |   3520 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      6 |     55 |clk_40mhz
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |      5 |control3[0]
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     59 |cpld_if/CLK_120MHZ_OUT
+     11 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    278 |gimli_tcs_clk
+      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      6 |     81 |gtp_clk
+      2 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     14 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |    482 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 1
+List of local clocks in this region:
+   inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[1] driven by IOB_X1Y205 
+
+
+Clock-Region: <CLOCKREGION_X0Y5> 
+ key resource utilizations (used/available): global-clocks - 7/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      2 |      1 |      0 |     60 |     60 |     48 |      0 |      0 |      0 |      2 |      0 |   3360 |   3840 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |     48 |clk_200mhz
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    121 |clk_40mhz
+      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |    206 |gimli_tcs_clk
+     15 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     30 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]
+      0 |      0 |      0 |      0 |     44 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     22 |     31 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[2]
+      0 |      0 |      0 |      0 |      8 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |      2 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[4]_BUFG
+      0 |      0 |      0 |      0 |     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      8 |      8 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[6]_BUFG
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      0 |      0 |      0 |     68 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |     36 |    446 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 0
+
+
+Clock-Region: <CLOCKREGION_X1Y5> 
+ key resource utilizations (used/available): global-clocks - 6/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     14 |      0 |      0 |      1 |     40 |     40 |     32 |      1 |      0 |      0 |      1 |      0 |   2720 |   3520 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     39 |clk_40mhz
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      3 |     65 |control3[0]
+      3 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |    140 |gimli_tcs_clk
+      2 |      0 |      0 |      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     60 |    187 |gtp_clk
+      9 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     24 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]
+      0 |      0 |      0 |      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |tranceiver_main_1/txusrclk
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     14 |      0 |      0 |      8 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     63 |    455 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 1
+List of local clocks in this region:
+   lut23527_1665 driven by SLICE_X79Y112 
+
+
+Clock-Region: <CLOCKREGION_X0Y6> 
+ key resource utilizations (used/available): global-clocks - 8/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      4 |      2 |      0 |     40 |     40 |     48 |      0 |      0 |      0 |      1 |      0 |   3360 |   3840 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |      0 |     48 |clk_200mhz
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     16 |clk_40mhz
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     32 |      0 |control3[0]
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     13 |gimli_tcs_clk
+     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]
+      0 |      0 |      0 |      0 |      4 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |     20 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[2]
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[6]_BUFG
+      0 |      0 |      1 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |tranceiver_main_1/refclkout_to_cmt
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      0 |      1 |      0 |      4 |      0 |      0 |      0 |      0 |      0 |      1 |      0 |     34 |    113 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 2
+List of local clocks in this region:
+   inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[1] driven by IOB_X1Y205 
+   inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[3] driven by IOB_X1Y219 
+
+
+Clock-Region: <CLOCKREGION_X1Y6> 
+ key resource utilizations (used/available): global-clocks - 5/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      0 |      0 |      1 |     40 |     40 |     32 |      0 |      0 |      0 |      1 |      0 |   2720 |   3520 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     38 |clk_40mhz
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     63 |     20 |control3[0]
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     20 |gimli_tcs_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     12 |    161 |gtp_clk
+     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     16 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     75 |    255 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 2
+List of local clocks in this region:
+   inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[1] driven by IOB_X1Y205 
+   inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[3] driven by IOB_X1Y219 
+
+
+Clock-Region: <CLOCKREGION_X0Y7> 
+ key resource utilizations (used/available): global-clocks - 2/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      0 |      0 |      0 |     80 |     80 |     48 |      0 |      0 |      0 |      2 |      0 |   3360 |   3840 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      0 |      0 |      0 |clk_200mhz
+     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     17 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      2 |      0 |      0 |     17 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 2
+List of local clocks in this region:
+   inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[1] driven by IOB_X1Y205 
+   inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[3] driven by IOB_X1Y219 
+
+
+Clock-Region: <CLOCKREGION_X1Y7> 
+ key resource utilizations (used/available): global-clocks - 4/10 ;
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+   BRAM |    DCM |    PLL |     GT | ILOGIC | OLOGIC |   MULT |  TEMAC |    PPC |   PCIE | IDLYCT | BUFGCT | LUTRAM |     FF | <- (Types of Resources in this  Region)
+   FIFO |        |        |        |        |        |        |        |        |        |        |        |        |        |
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      0 |      0 |      1 |     40 |     40 |     32 |      0 |      0 |      0 |      1 |      0 |   2720 |   3520 | <- (Available Resources in this Region)
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+        |        |        |        |        |        |        |        |        |        |        |        |        |        | <Global clock Net Name>
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     28 |      1 |control3[0]
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     11 |gimli_tcs_clk
+      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      4 |gtp_clk
+     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     20 |inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[0]
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+     16 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |      0 |     28 |     36 | Total 
+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+----------------------------------------
+
+Number of regional clocks in this region: 0
+
+Number of local clocks in this region: 2
+List of local clocks in this region:
+   inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[1] driven by IOB_X1Y205 
+   inst_mcs_amcs.inst_amc_if_MEP/si_a_clk[3] driven by IOB_X1Y219 
+
+
+
+# END of Global Clock Net Loads Distribution Report:
+######################################################################################
+
+

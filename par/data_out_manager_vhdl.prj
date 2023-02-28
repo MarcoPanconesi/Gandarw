@@ -1,0 +1,5 @@
+vhdl work "C:\Users\Panco\Desktop\GandArw - mio\submodules\data_out_manager\ipcore\data_out_main_fifo.vhd"
+vhdl work "C:\Users\Panco\Desktop\GandArw - mio\submodules\data_out_manager\ipcore\to_slink_fifo.vhd"
+vhdl work "C:\Users\Panco\Desktop\GandArw - mio\submodules\data_out_manager\rtl\data_out_manager.vhd"
+vhdl work "C:\Users\Panco\Desktop\GandArw - mio\submodules\arwen_prog\ipcore\single_channel_aurora_xc5vsx95t_tile.vhd"
+vhdl work "C:\Users\Panco\Desktop\GandArw - mio\submodules\arwen_prog\ipcore\binfile_fifo_synth.vhd"

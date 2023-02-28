@@ -1,0 +1,19 @@
+# Output products list for <arwen_prog_ila>
+_xmsgs\pn_parser.xmsgs
+arwen_prog_ila.asy
+arwen_prog_ila.cdc
+arwen_prog_ila.constraints\arwen_prog_ila.ucf
+arwen_prog_ila.constraints\arwen_prog_ila.xdc
+arwen_prog_ila.gise
+arwen_prog_ila.ncf
+arwen_prog_ila.ngc
+arwen_prog_ila.sym
+arwen_prog_ila.ucf
+arwen_prog_ila.vhd
+arwen_prog_ila.vho
+arwen_prog_ila.xco
+arwen_prog_ila.xdc
+arwen_prog_ila.xise
+arwen_prog_ila_flist.txt
+arwen_prog_ila_readme.txt
+arwen_prog_ila_xmdf.tcl

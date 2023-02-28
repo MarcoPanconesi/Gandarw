@@ -1,0 +1,9 @@
+# VHDL gitignore
+build/
+rtl/*~
+*#
+*.do
+*.ini
+*~
+*.wlf
+work

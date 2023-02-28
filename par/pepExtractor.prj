@@ -1,0 +1,5 @@
+work	"../rtl/G_PARAMETERS.vhd"
+work	"../rtl/top_level_desc.vhd"
+work	"../submodules/arwen_prog/ipcore/single_channel_aurora_xc5vsx95t_tile.vhd"
+work	"../submodules/cpld_interface/rtl/wb_to_ram.vhd"
+work	"ipcore_dir/wb_to_ram_ila.vhd"

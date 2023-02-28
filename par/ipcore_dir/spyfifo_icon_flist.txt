@@ -1,0 +1,16 @@
+# Output products list for <spyfifo_icon>
+_xmsgs\pn_parser.xmsgs
+spyfifo_icon.asy
+spyfifo_icon.constraints\spyfifo_icon.ucf
+spyfifo_icon.constraints\spyfifo_icon.xdc
+spyfifo_icon.gise
+spyfifo_icon.ngc
+spyfifo_icon.ucf
+spyfifo_icon.vhd
+spyfifo_icon.vho
+spyfifo_icon.xco
+spyfifo_icon.xdc
+spyfifo_icon.xise
+spyfifo_icon_flist.txt
+spyfifo_icon_readme.txt
+spyfifo_icon_xmdf.tcl

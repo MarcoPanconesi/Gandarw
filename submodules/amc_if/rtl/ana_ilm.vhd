@@ -1,0 +1,1398 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:     15:05:38 04/27/2012 
+-- Design Name:     
+-- Module Name:     ana_ilm - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description:     Front end adc in interleave sampling mode 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+library UNISIM;
+use UNISIM.VComponents.all;
+
+Library UNIMACRO;
+use UNIMACRO.vcomponents.all;
+
+USE WORK.TOP_LEVEL_DESC.ALL;
+use WORK.G_PARAMETERS.ALL;
+
+
+entity ana_ilm is
+	Generic(
+			ch_no 			: integer 
+			);
+    Port ( 	
+    		clk 			: in  STD_LOGIC;
+			frame_in_r 		: in  STD_LOGIC_VECTOR (23 downto 0);
+			frame_in_f 		: in  STD_LOGIC_VECTOR (23 downto 0);
+			frame_ff_empty 	: in  STD_LOGIC;
+			BOS				: in  STD_LOGIC;
+			baseline 		: in  STD_LOGIC_VECTOR (10 downto 0);
+			delay 			: in  STD_LOGIC_VECTOR (4 downto 0);
+			frac 			: in  STD_LOGIC_VECTOR (5 downto 0);
+			threshold		: in  STD_LOGIC_VECTOR (7 downto 0);
+			cf_max_dist_i	: in  STD_LOGIC_VECTOR (2 downto 0);
+			sec_alg_is_on	: in  STD_LOGIC;
+			before_ZC_i		: in  STD_LOGIC_VECTOR (2 downto 0);
+			after_ZC_i		: in  STD_LOGIC_VECTOR (2 downto 0);
+			prescaler_base  : in  STD_LOGIC_VECTOR (7 downto 0);
+			framewidth 		: in  STD_LOGIC_VECTOR (10 downto 0);
+			rd_frame_ff 	: out STD_LOGIC;
+			event_data_out	: out STD_LOGIC_VECTOR (30 downto 0);
+			event_ff_empty	: out STD_LOGIC;
+			event_ff_full	: out STD_LOGIC;			
+			frame_fifo_full : out STD_LOGIC;
+			rd_event_ff		: in  STD_LOGIC;
+			event_ff_clk	: in  STD_LOGIC;			
+			reset 			: in  STD_LOGIC
+			;
+		dbg_state_out  :out STD_LOGIC_VECTOR (3 downto 0)
+		);
+end ana_ilm;
+
+architecture Behavioral of ana_ilm is
+
+	COMPONENT divisor
+	PORT(
+		DATA_0_i : IN std_logic_vector(11 downto 0);
+		DATA_1_i : IN std_logic_vector(11 downto 0);
+		clk : IN std_logic;          
+		RESULT : OUT std_logic_vector(9 downto 0)
+		);
+	END COMPONENT;
+
+	COMPONENT divisor_15
+	PORT(
+		DATA_0_i : IN std_logic_vector(14 downto 0);
+		DATA_1_i : IN std_logic_vector(14 downto 0);
+		clk : IN std_logic;          
+		RESULT : OUT std_logic_vector(9 downto 0)
+		);
+	END COMPONENT;
+
+
+type state_type is (
+						st_reset,					-- reset the whole statemachine
+						st_sleep, 					-- sleep, only check statistics all the time
+						st_read_frame,
+						st_rd_coarse_t,
+						st_wait_ana,
+						st_write_ana
+						);
+
+type state_type_1 is (
+						
+						sleep,
+						no_frame_event,
+						unbuffer,
+						frame_event,
+						no_hit_no_frame_event
+						);
+
+signal ana_state 					: state_type :=st_sleep;
+signal buffer_state 				: state_type_1 :=sleep;
+
+
+signal wr_event_ff 				: std_logic:='0';
+signal rd_frame_ffi 				: STD_LOGIC:='0';
+
+--counters
+
+signal fr_counter 				: STD_LOGIC_VECTOR (10 downto 0);
+signal prsc_cnt					: Integer range 0 to 255:= 255;
+signal wd_counter					: Integer range 0 to 4;
+signal rd_fifo_cnt				: STD_LOGIC_VECTOR (9 downto 0);
+signal wr_fifo_cnt				: STD_LOGIC_VECTOR (9 downto 0);
+signal count_a 					: integer range 0 to 20:=5;
+signal hit_wr_cnt 				: STD_LOGIC_VECTOR ( 3 downto 0):=(others => '0');
+signal hit_wr_cnt_1 				: STD_LOGIC_VECTOR ( 3 downto 0):=(others => '0');
+signal Max_Amp_cnt 				: STD_LOGIC_VECTOR ( 3 downto 0):=(others => '0');
+signal Max_Amp_1_cnt 				: STD_LOGIC_VECTOR ( 3 downto 0):=(others => '0');
+signal h_res_cnt					: STD_LOGIC_VECTOR ( 3 downto 0):=(others => '0');
+signal h_res_1_cnt					: STD_LOGIC_VECTOR ( 3 downto 0):=(others => '0');
+signal frame_in_r_i 				:  STD_LOGIC_VECTOR (23 downto 0);
+signal frame_in_f_i 				:  STD_LOGIC_VECTOR (23 downto 0);
+signal frame_data 				: STD_LOGIC_VECTOR (23 downto 0):=(others => '0');
+
+subtype 	del_word 				is std_logic_vector(12 downto 0) ;   
+type 		del_words			 	is array (INTEGER range<>) of del_word;
+signal del_data 					: del_words(0 to 31):=(others => (others => '0'));
+
+subtype 	cf_word 					is signed(12 downto 0) ;  
+type 		cf_words 				is array (INTEGER range<>) of cf_word;
+
+subtype 	Amp_word 				is  STD_LOGIC_VECTOR(11 downto 0) ;   
+type 		Amp_words 				is  array (INTEGER range<>) of Amp_word ;
+
+signal cf_data						: cf_words(0 to 12):=(others => (others => '0'));
+
+signal pre_cf_0 					: cf_words(0 to 1):=(others => (others => '0'));
+signal pre_cf_1 					: cf_words(0 to 1):=(others => (others => '0'));
+signal pre_cf_del					: cf_words(0 to 1):=(others => (others => '0'));
+signal pre_cf_del_del			: cf_words(0 to 1):=(others => (others => '0'));
+signal cf_crit						: cf_words(1 to 2):=(others => (others => '0'));
+signal last_pos 					: STD_LOGIC_VECTOR (14 downto 0):=(others => '1');
+signal first_neg 					: STD_LOGIC_VECTOR (14 downto 0):=(others => '1');
+signal frame_t 					: STD_LOGIC_VECTOR (11 downto 0):=x"000";
+signal hit_cnt 					: STD_LOGIC_VECTOR ( 3 downto 0):=(others => '0');
+signal cf_hit 						:	 STD_LOGIC_VECTOR ( 2 downto 1):=(others => '0');
+
+signal 	Amp_buffer 				:	 Amp_words(0 to 8):=(others => (others => '0'));
+signal	Amp 						:	 Amp_words(0 to 3):=(others => (others => '0'));
+signal 	post_cf_hit 			:	 STD_LOGIC_VECTOR ( 2 downto 1):=(others => '0');
+signal 	cf_max_dist				:	 Integer range 0 to 8 :=3;
+
+signal	preAmp					:	 Amp_words(0 to 1):=(others => (others => '0'));
+signal 	preAmp_set        	: 	 std_logic:='0';
+signal 	MaxAmp_set        	: 	 std_logic:='0';
+signal	MaxAmp 					:   STD_LOGIC_VECTOR (11 downto 0);
+
+signal cf_1_data					: cf_words(0 to 2):=(others => (others => '0'));
+signal pre_cf_1_0 				: cf_words(0 to 1):=(others => (others => '0'));
+signal pre_cf_1_1 				: cf_words(0 to 1):=(others => (others => '0'));
+signal pre_cf_1_del				: cf_words(0 to 1):=(others => (others => '0'));
+signal pre_cf_1_del_del			: cf_words(0 to 1):=(others => (others => '0'));
+signal cf_1_crit					: cf_words(1 to 2):=(others => (others => '0'));
+signal cf_1_crit_del				: cf_words(1 to 2):=(others => (others => '0'));
+signal last_pos_1 				: STD_LOGIC_VECTOR (11 downto 0):=(others => '1');
+signal first_neg_1 				: STD_LOGIC_VECTOR (11 downto 0):=(others => '1');
+signal frame_t_1 					: STD_LOGIC_VECTOR (11 downto 0):=x"000";
+signal hit_cnt_1 					: STD_LOGIC_VECTOR ( 3 downto 0):=(others => '0');
+signal cf_1_hit 					:	 STD_LOGIC_VECTOR ( 2 downto 1):=(others => '0');
+
+signal 	Amp_1_buffer 			:	 Amp_words(0 to 6):=(others => (others => '0'));
+signal	Amp_1 					:	 Amp_words(0 to 3):=(others => (others => '0'));
+signal 	post_cf_1_hit 			:	 STD_LOGIC_VECTOR ( 2 downto 1):=(others => '0');
+signal 	cf_max_dist_1				:	 Integer range 0 to 4 :=1;
+
+signal	preAmp_1					:	 Amp_words(0 to 1):=(others => (others => '0'));
+signal 	preAmp_1_set        	: 	 std_logic:='0';
+signal 	MaxAmp_1_set        	: 	 std_logic:='0';
+signal	MaxAmp_1 					:   STD_LOGIC_VECTOR (11 downto 0);
+
+
+signal event_data 				: STD_LOGIC_VECTOR (30 downto 0):=(others => '0');
+
+signal presum 						: STD_LOGIC_VECTOR (11 downto 0):=(others => '0'); 
+signal integral					: STD_LOGIC_VECTOR (15 downto 0):=(others => '0');
+signal wr_integral				: STD_LOGIC_VECTOR (15 downto 0):=(others => '0');
+signal wr_integral_1				: STD_LOGIC_VECTOR (15 downto 0):=(others => '0');
+
+signal preamp0						: STD_LOGIC_VECTOR (11 downto 0):=(others => '0');
+signal preamp1						: STD_LOGIC_VECTOR (11 downto 0):=(others => '0');
+signal amplitude					: STD_LOGIC_VECTOR (11 downto 0):=(others => '0');
+
+signal basel						: STD_LOGIC_VECTOR (12 downto 0):="00000" & x"C8"; 
+
+signal start_int 					: std_logic:='0';
+
+signal pre_coarse_t 				: STD_LOGIC_VECTOR (37 downto 0):=(others => '0');
+signal coarse_t 					: STD_LOGIC_VECTOR (37 downto 0):=(others => '0');
+signal read_lsb					: std_logic:='0';
+signal h_res_t 					: STD_LOGIC_VECTOR (9 downto 0):=(others => '0');
+signal h_res_t_1 					: STD_LOGIC_VECTOR (9 downto 0):=(others => '0');
+
+signal delay_i						: Integer range 0 to 31;
+signal fraction					: Integer range 0 to 5;
+signal zero 						: STD_LOGIC_VECTOR ( 5 downto 0):=(others => '0');
+
+signal cal_basel					: signed(12 downto 0) ;
+signal del_cnt 					: STD_LOGIC_VECTOR ( 5 downto 0):=(others => '0');
+signal cf_active					: std_logic:='0';
+
+
+
+signal 	h_res_ready 			:	 STD_LOGIC_VECTOR ( 5 downto 0):=(others => '0');
+signal 	h_res_1_ready 			:	 STD_LOGIC_VECTOR ( 3 downto 0):=(others => '0');
+
+signal 	buffer_MaxAmp 			:	 Amp_words(0 to 15):=(others => (others => '0'));
+signal 	buffer_MaxAmp_1 			:	 Amp_words(0 to 15):=(others => (others => '0'));
+
+subtype 	buffer_frame_t_word 	is	 STD_LOGIC_VECTOR(11 downto 0)  ;   
+type 		buffer_frame_t_words is	 array (INTEGER range<>) of buffer_frame_t_word ;
+subtype 	buffer_h_time_word 	is	 STD_LOGIC_VECTOR(9 downto 0)  ;   
+type 		buffer_h_time_words 	is	 array (INTEGER range<>) of buffer_h_time_word ;
+
+signal 	buffer_frame_t 		:	 buffer_frame_t_words(0 to 15):=(others => (others => '0'));
+signal 	buffer_frame_t_1 		:	 buffer_frame_t_words(0 to 15):=(others => (others => '0'));
+
+signal 	buffer_h_time 			:	 buffer_h_time_words(0 to 15):=(others => (others => '0'));
+signal 	buffer_h_time_1 			:	 buffer_h_time_words(0 to 15):=(others => (others => '0'));
+
+
+
+signal 	buffer_din 				: STD_LOGIC_VECTOR (30 downto 0):=(others => '0');
+signal 	buffer_dout 			: STD_LOGIC_VECTOR (30 downto 0):=(others => '0');
+signal 	wr_buffer_ff 			: std_logic:='0';
+signal 	rd_buffer_ff 			: std_logic:='0';
+
+signal 	rd_buffer_fifo_cnt	: STD_LOGIC_VECTOR (9 downto 0);
+signal 	wr_buffer_fifo_cnt	: STD_LOGIC_VECTOR (9 downto 0);
+
+
+signal 	buffer_counter 		: integer range 0 to 4095;
+signal  	to_event_fifo			: std_logic:='0';
+
+
+signal 	buffer_emp 				: std_logic:='0';
+
+signal 	cf_is_written 				: std_logic:='0';
+signal wait_cf_calc					: integer range 0 to 20;
+
+signal before_ZC						: integer range 0 to 5:=1;
+signal after_ZC						: integer range 0 to 5:=5;
+
+signal cf_counter						:STD_LOGIC_VECTOR (10 downto 0):="00000000000";
+
+subtype 	pre_keep_prec_word 				is std_logic_vector(4 downto 0) ;   
+type 		pre_keep_prec_words			 	is array (INTEGER range<>) of pre_keep_prec_word;
+signal pre_keep_prec 					: pre_keep_prec_words(0 to 1):=(others => (others => '0'));
+
+subtype 	pre_keep_prec_del_word 				is std_logic_vector(2 downto 0) ;   
+type 		pre_keep_prec_del_words			 	is array (INTEGER range<>) of pre_keep_prec_del_word;
+signal pre_keep_prec_del 					: pre_keep_prec_del_words(0 to 31):=(others => (others => '0'));
+
+subtype 	keep_prec_word 				is std_logic_vector(2 downto 0) ;   
+type 		keep_prec_words			 	is array (INTEGER range<>) of keep_prec_word;
+signal 	keep_prec 					: keep_prec_words(0 to 9):=(others => (others => '0'));
+
+subtype 	pre_calc_basel_word 				is std_logic_vector(15 downto 0) ;   
+type 		pre_calc_basel_words			 	is array (INTEGER range<>) of pre_calc_basel_word;
+signal 	pre_calc_basel 					: pre_calc_basel_words(0 to 1):=(others => (others => '0'));
+
+signal 	calc_basel							: STD_LOGIC_VECTOR (11 downto 0);
+signal 	wait_calc_basel					: integer range 0 to 20:=20;
+signal bos_i:std_logic := '0';
+---debug
+signal dbg_state					: STD_LOGIC_VECTOR ( 3 downto 0):=(others => '0');
+
+begin
+
+--basel<="00"& baseline;
+
+before_ZC<=		to_integer(unsigned(before_ZC_i));
+after_ZC<=		to_integer(unsigned(after_ZC_i));
+
+cf_max_dist	<=		to_integer(unsigned(cf_max_dist_i));
+
+rd_frame_ff <= rd_frame_ffi;
+
+dbg_state_out<= dbg_state;
+
+frame_in_r_i<=frame_in_r;
+frame_in_f_i<=frame_in_f;
+
+read_frame : PROCESS(clk) 
+
+BEGIN
+	
+	if (clk'event AND clk='1') then 
+	
+		if BOS = '1' then
+			bos_i <= '1';
+		end if;
+		
+		case(ana_state) is
+		
+			when st_reset =>
+	
+				if RESET = '0' then
+					prsc_cnt <=to_integer( unsigned(prescaler_base)); --GEN_PRESCALER;												--reset frame event prescaler (prsc_cnt=0 means write debug event)
+
+					ana_state <= st_sleep;													--CHANGE STATE--
+
+				else 
+					dbg_state <= x"7";				
+					wr_event_ff	<= '0';																
+					wr_buffer_ff<= '0';
+					
+					ana_state	<=st_reset;													--CHANGE STATE--						
+				
+				end if;
+				
+			when st_sleep =>
+
+				if bos_i='1' then
+					bos_i <= '0';
+					prsc_cnt 	<= to_integer( unsigned(prescaler_base));
+				end if;
+
+
+				dbg_state <= x"1";	
+				rd_frame_ffi	<= '0';	
+				wr_buffer_ff   <= '0';
+	
+				if reset ='1' then
+					fr_counter	<= framewidth-1;											--counts num of samples to be written in buffer fifo
+					prsc_cnt 	<= to_integer( unsigned(prescaler_base));--GEN_PRESCALER											-- !!TODO: was wenn frame_ff_empty='0' und reset auf 1!!
+
+					ana_state	<=st_reset;													--CHANGE STATE--
+
+				else 
+
+					ana_state	<=st_sleep;													--CHANGE STATE--
+
+				end if;
+				
+				if frame_ff_empty = '0' then 												--there is frame data, read it from frame fifo for analysis
+					rd_frame_ffi <= '1';
+					frame_data <= frame_in_r_i(11 downto 0) & frame_in_f_i(11 downto 0);
+					fr_counter		<= framewidth-1;										--first two samples were read
+					
+					ana_state<=st_read_frame;												--CHANGE STATE--
+
+				else 
+
+					ana_state	<=st_sleep;													--CHANGE STATE--
+
+				end if;
+					
+			when st_read_frame =>															--read the frame from frame fifo for analysis, in any 128th event write the frame also to buffer fifo
+				dbg_state <= x"2";			
+				buffer_din <= b"000" & frame_data(23 downto 12) & x"0" & frame_data(11 downto 0);	
+				
+				if fr_counter /= 0 then														--if there is still something left of the frame
+					fr_counter		<= fr_counter-1;										--next two samples are read
+				
+					if rd_frame_ffi = '1' then												--two frame fifos are read at the same time each word containing two samples..				
+						rd_frame_ffi		<= '0';											--..so every second cycle new samples are read from the two fifos
+						frame_data <= frame_in_r_i(23 downto 12) 
+									     & frame_in_f_i(23 downto 12); 					--!online data format orientation
+					else 
+						rd_frame_ffi		<= '1';					
+						frame_data <= frame_in_r_i(11 downto 0) 
+										  & frame_in_f_i(11 downto 0); 					--!online data format orientation
+					end if;
+					
+					if prsc_cnt = 0 then														--write frame to buffer fifo for every 128th event
+						wr_buffer_ff		<= '1';
+					else
+						wr_buffer_ff		<= '0';
+					end if;
+					
+				else
+					rd_frame_ffi		<= '1';												--this is to read coarse time from frame FIFO
+					read_lsb 		<= '1';													--PREPARE NEXT STATE
+
+					ana_state <= st_rd_coarse_t;											--CHANGE STATE--
+
+				end if;	
+				
+			when st_rd_coarse_t =>															--the coarse time is written at the end of any frame
+			
+				dbg_state <= x"3";			
+				wr_buffer_ff		<= '0';								
+								
+				if read_lsb = '1' then 														--read lsb coarse_t
+					pre_coarse_t(20 downto 0) <= frame_in_r_i(20 downto 0);
+					read_lsb <= '0';
+				else 																				--read msb coarse_t
+					pre_coarse_t(37 downto 21) <= frame_in_r_i(16 downto 0);
+					
+					ana_state <= st_wait_ana;												--CHANGE STATE--						
+					
+				end if;
+
+				count_a <= 20;																	--PREPARE NEXT STATE (defines time to wait for last analysis result -- highres time of last hit in frame)
+
+			when st_wait_ana =>																--wait until the pulse analysis process is finished
+
+				count_a <= count_a-1;
+
+				dbg_state <= x"4";	
+				rd_frame_ffi		<= '0';													--!!muss wahrsch eins frher auf null!!
+				
+				if count_a = 2 then			
+					
+					cf_is_written<='0';
+
+					if hit_cnt = "0000"  then													--if there is now hit
+						wr_integral <= x"FFEE";													--write characteristic Integral
+						hit_wr_cnt<="0000";														--no hit is a hit :)
+						
+					else																				--if there is a hit
+						wr_integral <= integral;												--write real integral
+						hit_wr_cnt<="0001";														--PREPARE NEXT STATE set counter (hit_wr_cnt) to remember how many hits were written to buffer fifo
+						
+					end if;
+
+					if hit_cnt_1 = "0000"  then
+						wr_integral_1 <= x"FFEE";						
+						hit_wr_cnt_1<="0000";
+					else
+						wr_integral_1 <= integral;
+						hit_wr_cnt_1<="0001";
+					end if;
+
+				end if;
+
+		
+				if count_a = 1 then														        --CHANGE STATE--	
+
+					if buffer_state=sleep then
+
+						if prsc_cnt /= 0 then
+							if hit_cnt= "0000"  then				
+								buffer_state<=no_hit_no_frame_event;
+							
+								ana_state<=st_sleep;
+								prsc_cnt <= prsc_cnt-1;
+							else
+								ana_state <= st_write_ana;
+							
+							end if;
+				 
+						else 
+							ana_state <= st_write_ana;												
+						
+						end if;
+						buffer_counter<=0;
+				
+					else
+						
+						count_a<=1;
+						
+					end if;
+				
+				end if;
+
+				
+				wd_counter <= 3;																--PREPARE NEXT STATE
+
+			when st_write_ana => 	
+
+				dbg_state <= x"5";			
+				wr_buffer_ff		<= '1';													    --WRITE ENABLE to buffer fifo
+
+				if wd_counter = 3 then 			
+
+					buffer_counter<=buffer_counter+1;
+					if cf_is_written='0' then
+						buffer_din <= std_logic_vector(to_unsigned
+									 ( ch_no*2,4 ) ) & calc_basel(10 downto 0) &  wr_integral;	--first pulse-feature Slink word
+						coarse_t 	<= pre_coarse_t 
+									    + buffer_frame_t(to_integer(unsigned(hit_wr_cnt)));	    --prepare next word
+					else
+						buffer_din <= std_logic_vector(to_unsigned
+									 ( ch_no*2,4 ) ) & calc_basel(10 downto 0) & wr_integral_1;	--first pulse-feature Slink word
+						coarse_t 	<= pre_coarse_t 
+										+ buffer_frame_t_1(to_integer(unsigned(hit_wr_cnt_1)));	--prepare next word
+					end if;
+
+
+					wd_counter <= 2;
+
+				end if;
+					
+				if wd_counter = 2 then 
+					buffer_counter<=buffer_counter+1;
+					if cf_is_written='0' then													--setabel cf
+
+						buffer_din <= coarse_t(37 downto 21) & b"00" 
+										  & buffer_MaxAmp( to_integer
+										  ( unsigned(hit_wr_cnt) ) );							--second pulse-feature Slink word
+					else																		--fixed del 1 ff 1 cf
+						buffer_din <= coarse_t(37 downto 21) & b"01" 					        --mark cf del 1 ff 1
+										  & buffer_MaxAmp_1( to_integer
+									     ( unsigned(hit_wr_cnt_1) ) );						    --second pulse-feature Slink word
+					end if; 
+
+
+					wd_counter <= 1;
+
+				end if;
+					
+				if wd_counter = 1 then 				
+					buffer_counter<=buffer_counter+1;
+					if cf_is_written='0' then	
+					buffer_din <= coarse_t(20 downto 0) 
+									  & buffer_h_time( to_integer
+									  ( unsigned(hit_wr_cnt) ) );							    --third pulse-feature Slink word
+					else
+					buffer_din <= coarse_t(20 downto 0) 
+									  & buffer_h_time_1( to_integer
+									  ( unsigned(hit_wr_cnt_1) ) );						        --third pulse-feature Slink word				
+
+					end if;
+
+					if prsc_cnt /= 0 then													    --if it is NO FRAME EVENT
+
+						if cf_is_written='0' then												--if not all hits of first algo were written
+							if hit_wr_cnt=hit_cnt then											--if this is the last hit of first algo
+
+								if sec_alg_is_on='1' then
+								cf_is_written<='1';												--remember that all first algo hits are written
+								wd_counter<=3;													--start writing second algo
+								else
+								prsc_cnt <= prsc_cnt-1;	  										--update frame-event-prescaler
+								buffer_state<=no_frame_event;									--START SECOND STATEMACHINE--		
+								ana_state <= st_sleep;											--CHANGE STATE--	
+								end if;
+
+							else																--if this is not the last hit of first algo
+								hit_wr_cnt<=hit_wr_cnt+1;	
+								cf_is_written<='0';												--first algo is not completely written yet
+								wd_counter<=3;													--write next hit of first algo
+							end if;
+						else																	--if all hits of FIRST algo were written
+							if hit_wr_cnt_1=hit_cnt_1 then									    --if all hits of SECOND algo were written
+								prsc_cnt <= prsc_cnt-1;	  										--update frame-event-prescaler
+								buffer_state<=no_frame_event;									--START SECOND STATEMACHINE--		
+								ana_state <= st_sleep;											--CHANGE STATE--	
+							else
+								hit_wr_cnt_1<=hit_wr_cnt_1+1;	
+								wd_counter<=3;	
+							end if;
+						end if;
+										
+
+					else																        --if it is a FRAME EVENT									
+
+						wd_counter <= 0;											            --go to "write parameter, frame time" 
+							
+					end if;
+
+				end if;
+
+
+				if wd_counter = 0 then 					
+					buffer_counter<=buffer_counter+1;
+					if cf_is_written='0' then
+
+						buffer_din <= threshold & frac & delay 						--fourth pulse-feature Slink word (only for frame events)
+										  & buffer_frame_t(to_integer( unsigned(hit_wr_cnt) ) );
+
+						if hit_wr_cnt=hit_cnt then	
+
+							if sec_alg_is_on='1' then
+								cf_is_written<='1';												--remember that all first algo hits are written
+								wd_counter<=3;														--start writing second algo
+							else
+								prsc_cnt <= to_integer( unsigned(prescaler_base)); --GEN_PRESCALER	  										--update frame-event-prescaler
+								buffer_state<=frame_event;									--START SECOND STATEMACHINE--		
+								ana_state <= st_sleep;											--CHANGE STATE--	
+							end if;
+
+						else
+							hit_wr_cnt<=hit_wr_cnt+1;	
+							cf_is_written<='0';												--first algo is not completely written yet
+							wd_counter<=3;														--write next hit of first algo
+						end if;
+
+					else
+
+						buffer_din <= "00000000" & "000000" & "00000" 				--fourth pulse-feature Slink word (only for frame events)
+										  & buffer_frame_t_1(to_integer( unsigned(hit_wr_cnt_1) ) );
+
+						if hit_wr_cnt_1=hit_cnt_1 then										--if all hits of SECOND algo were written
+							prsc_cnt <=to_integer( unsigned(prescaler_base));--GEN_PRESCALER;	  										--reset prescaler
+							buffer_state<=frame_event;											--START SECOND STATEMACHINE--		
+							ana_state <= st_sleep;												--CHANGE STATE--	
+						else
+							hit_wr_cnt_1<=hit_wr_cnt_1+1;	
+							wd_counter<=3;	
+						end if;
+
+					end if;
+					
+
+				end if;
+				
+			when others =>
+				dbg_state <= x"6";
+				ana_state <= st_sleep;													--CHANGE STATE--
+
+
+			end case;
+
+
+		case(buffer_state) is
+
+			when no_hit_no_frame_event =>
+
+				event_data<= std_logic_vector(to_unsigned(0,31));                           --write size of event to event FIFO
+				wr_event_ff		<= '1';
+				buffer_state <=sleep;
+
+	
+			when no_frame_event =>
+				
+				if(buffer_emp='0') then														--if buffer FIFO is not empty
+				rd_buffer_ff<='1';
+				event_data<='0' & std_logic_vector(to_unsigned(buffer_counter,30));         --write size of event to event FIFO
+				wr_event_ff		<= '1';
+
+				buffer_state<=unbuffer;														--CHANGE STATE--
+
+				end if;
+
+				
+			when frame_event =>
+				buffer_counter <= buffer_counter + to_integer(unsigned(framewidth));        -- buffer_counter old ... Alex
+				if(buffer_emp='0') then														--if buffer FIFO is not empty
+				wr_event_ff		<= '1';
+				rd_buffer_ff<='1';
+				event_data<='1' & std_logic_vector(to_unsigned(buffer_counter + to_integer(unsigned(framewidth)),30));--write size of event to event FIFO
+
+				buffer_state<=unbuffer;														--CHANGE STATE--
+
+				end if;
+
+
+			when unbuffer =>
+				
+				event_data <= buffer_dout;													--write SLINK conform event data from buffer FIFO to event FIFO												
+				if buffer_counter=1 then
+				    buffer_state<=sleep;															--CHANGE STATE--
+				    rd_buffer_ff<='0';
+				else
+				    buffer_counter<=buffer_counter-1;
+				end if;
+
+			when sleep =>
+	
+				wr_event_ff<='0';
+			
+			end case;
+
+	end if;
+		
+end process;
+
+ 
+fraction 	<= to_integer(unsigned(frac));
+delay_i		<= to_integer(unsigned(delay));
+
+ana_cf : PROCESS(clk)
+
+	variable post_calc1: unsigned (12 downto 0);
+	variable post_calc2: unsigned (12 downto 0);
+	variable pre_baseline: STD_LOGIC_VECTOR(12 downto 0) ;
+
+	BEGIN
+	
+		if (clk'event AND clk='1') then
+			
+			if ana_state = st_sleep then													--do two word per cycle
+				del_cnt	<= "00" & (delay(4 downto 1)+delay(0) )+"01010";		--wait   +10		
+
+				pre_baseline :='0' & zero(fraction downto 0) & basel(10 downto fraction);
+				cal_basel <= signed(basel) - signed(pre_baseline);
+
+				hit_cnt <= "0000";
+				
+				del_data(0)<= basel;
+				del_data(0)<= basel;
+				for i in 0 to 14 loop
+				del_data(i)		<= basel;
+				end loop;
+				pre_cf_0(0) <= signed(zero(fraction downto 0)) & signed(basel(11 downto fraction));
+				pre_cf_1(0) <= signed(basel);
+				pre_cf_0(1) <= signed(zero(fraction downto 0)) & signed(basel(11 downto fraction));
+				pre_cf_1(1) <= signed(basel);
+				pre_cf_del(0)<=signed(zero(fraction downto 0)) & signed(basel(11 downto fraction))-signed(basel);						
+				pre_cf_del(1)<=signed(zero(fraction downto 0)) & signed(basel(11 downto fraction))-signed(basel);
+				cf_data(0)<=(others =>'0');					
+				cf_data(1)<=(others =>'0');	
+				for i in 0 to 8 loop
+				cf_data(i+2)<=(others =>'0');
+				cf_data(i+3)<=(others =>'0');
+				end loop;
+				cf_data(12)<=(others =>'0');
+
+				frame_t<=x"000";
+				cf_counter<="00000000000";
+
+				wait_calc_basel<=8;
+				pre_calc_basel(0)<="0000000000000000";
+				pre_calc_basel(1)<="0000000000000000";
+				
+			end if;
+			
+			if ana_state = st_read_frame  then
+				
+				if del_cnt /= 0 then	--wait for valid delay data
+					del_cnt <= del_cnt-1;
+				else
+					cf_active	<= '1';
+				end if;
+				
+				del_data(0)				<=('0' & frame_data(11 downto 0));-- '1' & x"000"; --	
+				del_data(1)				<=('0' & frame_data(23 downto 12));--'1' & x"000";-- 	
+				--del_data(0)				<='1' & x"000"; 	
+				--del_data(1)				<='1' & x"000";	
+
+				wait_cf_calc<=9;		--wait 11 -2 safety
+				
+				if wait_calc_basel/=0 then                                                                              -- Calcolo della baseline su 8 campionamenti
+                                                                                                                        -- media degli 8 campioni ilm (8 + 8)/8
+					wait_calc_basel<=wait_calc_basel-1;
+					
+					if wait_calc_basel=8 then
+					pre_calc_basel(0)<="0000"&frame_data(11 downto 0);                                                  -- carica primo campione ch 0
+					pre_calc_basel(1)<="0000"&frame_data(23 downto 12);                                                 -- carica primo campione ch 1
+					else
+					pre_calc_basel(0)<=pre_calc_basel(0)+frame_data(11 downto 0);                                       -- somma campioni ch 0
+					pre_calc_basel(1)<=pre_calc_basel(1)+frame_data(23 downto 12);                                      -- somma campioni ch 1
+					end if;
+				
+				else
+					calc_basel<=('0' & pre_calc_basel(0)(14 downto 4))+('0' & pre_calc_basel(1)(14 downto 4));          -- somma ch0/8 + ch1/8
+				end if;
+				
+
+
+			else
+				if wait_cf_calc /=0 then
+				wait_cf_calc<=wait_cf_calc-1;
+				else
+				cf_active	<= '0';
+				end if;
+
+			end if;
+
+			for i in 0 to 14 loop --delay 16 words deep 
+				del_data(i*2+2)		<= del_data(i*2);
+				del_data(i*2+3)		<= del_data(i*2+1);						
+			end loop;	
+
+
+			if ana_state /= st_sleep then
+
+			    pre_cf_0(0) <= signed(zero(fraction downto 0)) & signed(del_data(0)(11 downto fraction));
+			    pre_cf_1(0) <= signed(del_data(delay_i));
+			    pre_cf_0(1) <= signed(zero(fraction downto 0)) & signed(del_data(1)(11 downto fraction));
+			    pre_cf_1(1) <= signed(del_data(delay_i+1));
+			    pre_keep_prec(0) <= del_data(0)(fraction downto 0) & zero(3-fraction downto 0);
+			    pre_keep_prec(1) <= del_data(1)(fraction downto 0) & zero(3-fraction downto 0);
+
+			    pre_cf_del(0)<=pre_cf_0(0)-pre_cf_1(0);						
+			    pre_cf_del(1)<=pre_cf_0(1)-pre_cf_1(1);
+			    --pre_cf_del(0)<=pre_cf_1(0);							
+			    --pre_cf_del(1)<=pre_cf_1(1);
+			    pre_keep_prec_del(0) <= pre_keep_prec(0)(3 downto 1);
+			    pre_keep_prec_del(1) <= pre_keep_prec(1)(3 downto 1);		
+                
+			    cf_data(0)<=pre_cf_del(0)+ cal_basel;					
+			    cf_data(1)<=pre_cf_del(1)+ cal_basel;	
+			    keep_prec(0) <= pre_keep_prec_del(0);
+			    keep_prec(1) <= pre_keep_prec_del(1);
+
+			    for i in 0 to 7 loop
+			        keep_prec(i+2)<=keep_prec(i);
+			    end loop;
+			
+			    for i in 0 to 9 loop
+			        cf_data(i+2)<=cf_data(i);
+			    end loop;
+			    cf_data(12)<=cf_data(11);
+                
+                
+                
+			    --cf_crit(1)<=cf_data(8);
+			    --cf_crit(2)<=cf_data(9);	
+			    --cf_crit(1)<=cf_data(0);
+			    --cf_crit(2)<=cf_data(1);	
+			    cf_crit(1)<=cf_data(6+before_ZC)-cf_data(5-after_ZC);
+			    cf_crit(2)<=cf_data(7+before_ZC)-cf_data(6-after_ZC);	
+
+			
+			
+			end if;
+
+
+			if cf_active = '1' then --check only in valid cf data for zero crossing
+
+				cf_counter<=cf_counter+'1';
+				
+				if ((cf_data(8) >= 0) and (cf_data(7) < 0) and cf_crit(1)>signed(threshold))  then 
+					frame_t 	<= (cf_counter  & '0') + "01";  
+					post_calc1 :=unsigned(abs(cf_data(8)));
+					post_calc2 :=unsigned(abs(cf_data(7)));
+					last_pos 	<= std_logic_vector(post_calc1(11 downto 0)) & keep_prec(8);
+					first_neg 	<= std_logic_vector(post_calc2(11 downto 0)) & keep_prec(7);
+				
+					cf_hit(1)<='1';	
+
+					if frame_t > ((cf_counter  & '0') - "101") then
+						hit_cnt <= hit_cnt;
+					else
+						hit_cnt <= hit_cnt+1;
+					end if;
+				
+				else
+					cf_hit(1)<='0';	
+				end if;
+				
+				if ((cf_data(9) >= 0) and (cf_data(8) < 0 ) and cf_crit(2)>signed(threshold))    then   
+					frame_t 	<= ( cf_counter & '0') + "00";	
+					post_calc1 :=unsigned(abs(cf_data(9)));
+					post_calc2 :=unsigned(abs(cf_data(8)));		
+					last_pos 	<= std_logic_vector(post_calc1(11 downto 0))& keep_prec(9);
+					first_neg 	<= std_logic_vector(post_calc2(11 downto 0))& keep_prec(8);
+					cf_hit(2)<='1';	
+				
+					if frame_t > ( (cf_counter  & '0') - "110") then
+						hit_cnt <= hit_cnt;
+					else
+						hit_cnt <= hit_cnt+1;
+					end if;
+				
+				else
+					cf_hit(2)<='0';	
+				end if;
+			end if;
+				--last_pos<="000000000000000";
+				--first_neg<=first_neg+'1';
+		
+		
+		end if;	
+end process;
+
+getpreAmp : process (clk)																---- chooses 4 candidates for the MaxAmp
+
+begin
+
+if (clk'event and clk = '1') then
+
+		for i in 0 to 8 loop 															--	buffer the right del_data
+																								--	
+			Amp_buffer(i)<=del_data(delay_i+10+i-cf_max_dist)(11 downto 0);	--	
+																								--	
+		end loop;
+
+
+		if (cf_hit(1)='1' ) then	
+		
+			if Amp_buffer(0) > Amp_buffer(1) then
+				Amp(0)<=Amp_buffer(0);
+			else
+				Amp(0)<=Amp_buffer(1);
+			end if;
+
+			if Amp_buffer(2) > Amp_buffer(3) then
+				Amp(1)<=Amp_buffer(2);
+			else
+				Amp(1)<=Amp_buffer(3);
+			end if;			
+	
+			if Amp_buffer(4) > Amp_buffer(5) then
+				Amp(2)<=Amp_buffer(4);
+			else
+				Amp(2)<=Amp_buffer(5);
+			end if;
+	
+			if Amp_buffer(6) > Amp_buffer(7) then
+				Amp(3)<=Amp_buffer(6);
+			else
+				Amp(3)<=Amp_buffer(7);
+			end if;
+			
+			post_cf_hit(1)<='1';
+		
+		else
+			post_cf_hit(1)<='0';
+		end if;
+
+		if (cf_hit(2)='1' ) then	
+	
+			if Amp_buffer(1) > Amp_buffer(2) then
+				Amp(0)<=Amp_buffer(1);
+			else
+				Amp(0)<=Amp_buffer(2);
+			end if;
+
+			if Amp_buffer(3) > Amp_buffer(4) then
+				Amp(1)<=Amp_buffer(3);
+			else
+				Amp(1)<=Amp_buffer(4);
+			end if;			
+	
+			if Amp_buffer(5) > Amp_buffer(6) then
+				Amp(2)<=Amp_buffer(5);
+			else
+				Amp(2)<=Amp_buffer(6);
+			end if;
+	
+			if Amp_buffer(7) > Amp_buffer(8) then
+				Amp(3)<=Amp_buffer(7);
+			else
+				Amp(3)<=Amp_buffer(8);
+			end if;
+	
+			post_cf_hit(2)<='1';
+	
+		else
+			post_cf_hit(2)<='0';
+		end if;
+
+
+end if;
+
+end process;
+
+
+getAmp : process (clk)																	---- chooses MaxAmp
+
+begin
+
+if (clk'event and clk = '1') then
+
+	if (post_cf_hit(2)='1' or post_cf_hit(1)='1') then
+	
+
+		for i in 0 to 1 loop 
+		
+			if (Amp(2*i)>Amp(2*i+1)) then 										
+				
+				preAmp(i)<=Amp(2*i);														-- find biggest value of Amp(0) and Amp(1) => preAmp(0)
+																								-- as well as Amp(2) and Amp(3) => preAmp(1)
+			else
+				
+				preAmp(i)<=Amp(2*i+1);													
+				
+			end if;
+
+		end loop;
+
+		preAmp_set<='1';																	-- remember that preAmp was found			
+
+	else
+		
+		preAmp_set<='0';
+		
+	end if;
+
+
+	if(preAmp_set='1') then
+		
+		MaxAmp_set  <= '1';    
+		
+		if (preAmp(0)>preAmp(1)) then 												-- choose biggest value of preAmp(0) and preAmp(1)
+																								-- => MaxAmp with baseline
+			MaxAmp<=preAmp(0);
+		
+		else
+		
+			MaxAmp<=preAmp(1);
+		
+		end if;
+	
+	else
+		
+		MaxAmp_set  <= '0';  
+	
+	end if;
+
+
+end if;
+
+end process;
+
+--------
+
+
+ana_cf_1 : PROCESS(clk)
+
+	variable post_calc1: unsigned (12 downto 0);
+	variable post_calc2: unsigned (12 downto 0);
+	variable pre_baseline: STD_LOGIC_VECTOR(12 downto 0) ;
+
+	BEGIN
+	
+		if (clk'event AND clk='1') then
+
+
+			if ana_state = st_sleep then
+			hit_cnt_1<="0000";
+			end if;
+			
+
+			if ana_state = st_read_frame  then
+				
+
+				pre_cf_1_0(0) <= signed(del_data(0));
+				pre_cf_1_1(0) <= signed(del_data(1));
+				pre_cf_1_0(1) <= signed(del_data(1));
+				pre_cf_1_1(1) <= signed(del_data(2));
+	
+				
+			end if;
+		
+		
+			if cf_active = '1' then --check only in valid cf data for zero crossing
+
+				pre_cf_1_del(0)<=pre_cf_1_0(0)-pre_cf_1_1(0);								
+				pre_cf_1_del(1)<=pre_cf_1_0(1)-pre_cf_1_1(1);
+	
+				pre_cf_1_del_del(0)<=pre_cf_1_del(0);					
+				pre_cf_1_del_del(1)<=pre_cf_1_del(1);	
+
+				cf_1_data(0)<=pre_cf_1_del_del(0);										
+				cf_1_data(1)<=pre_cf_1_del_del(1);
+
+				cf_1_crit(1)<=pre_cf_1_del(1)-pre_cf_1_del(0);					
+				cf_1_crit(2)<=pre_cf_1_del_del(0)-signed(threshold);	
+				
+				cf_1_crit_del(1)<=cf_1_crit(1)-signed(threshold);
+				cf_1_crit_del(2)<=cf_1_crit(2)-pre_cf_1_del_del(1);	
+				
+				cf_1_data(2)	<= cf_1_data(0);	
+								
+					
+				if ((cf_1_data(1) > ("0000000000000")) and (cf_1_data(0) < ("0000000000000"))) and cf_1_crit_del(1)>0  then 
+				frame_t_1 	<= ((framewidth - fr_counter ) & '0') + "01";  
+				post_calc1 :=unsigned(abs(cf_data(1)));
+				post_calc2 :=unsigned(abs(cf_data(0)));
+				last_pos_1 	<= std_logic_vector(post_calc1(11 downto 0));
+				first_neg_1 	<= std_logic_vector(post_calc2(11 downto 0)) ;
+				hit_cnt_1 <= hit_cnt_1+1;
+				cf_1_hit(1)<='1';	
+				
+				else
+				cf_1_hit(1)<='0';	
+				end if;
+				
+				if ((cf_1_data(2) > ("0000000000000")) and (cf_1_data(1) < "0000000000000" )) and cf_1_crit_del(2)>0   then   
+				frame_t_1 	<= ((framewidth - fr_counter ) & '0') + "00";	
+				post_calc1 :=unsigned(abs(cf_data(2)));
+				post_calc2 :=unsigned(abs(cf_data(1)));		
+				last_pos_1 	<= std_logic_vector(post_calc1(11 downto 0));
+				first_neg_1 	<= std_logic_vector(post_calc2(11 downto 0));
+				hit_cnt_1 <= hit_cnt_1+1;
+				cf_1_hit(2)<='1';	
+				
+				else
+				cf_1_hit(2)<='0';	
+				end if;
+
+
+			end if;
+		end if;	
+end process;
+
+getpreAmp_1 : process (clk)																---- chooses 4 candidates for the MaxAmp
+
+begin
+
+if (clk'event and clk = '1') then
+
+		for i in 0 to 6 loop 															--	buffer the right del_data
+																								--	up to del_data( 12(max. delay) +10 -1(max. dist) )
+			Amp_1_buffer(i)<=del_data(1+4+i-cf_max_dist_1)(11 downto 0);	--	10 choosen because of: (5 cycles until cf_data(2) )
+																								--	*2 samples per cycle => 10
+		end loop;
+
+
+		for i in 2 to 3 loop 															-- loop over all possible hits within one cycle														
+
+			if (cf_1_hit(i-1)='1' ) then													
+
+				for j in 0 to 3 loop 
+
+					Amp_1(j)<=Amp_1_buffer(j+i);											-- save 4 Amp canidates
+																								--hit eralier => i bigger => more buffer needed
+				end loop;
+
+				post_cf_1_hit(i-1)<='1';													-- delay the hit					
+		
+			else
+
+				post_cf_1_hit(i-1)<='0';													-- delay the hit
+
+			end if;
+
+		end loop;
+
+
+end if;
+
+end process;
+
+getAmp_1 : process (clk)																	---- chooses MaxAmp
+
+begin
+
+if (clk'event and clk = '1') then
+
+	if (post_cf_1_hit(2)='1' or post_cf_1_hit(1)='1') then
+	
+
+		for i in 0 to 1 loop 
+		
+			if (Amp_1(2*i)>Amp_1(2*i+1)) then 										
+				
+				preAmp_1(i)<=Amp_1(2*i);														-- find biggest value of Amp(0) and Amp(1) => preAmp(0)
+																								-- as well as Amp(2) and Amp(3) => preAmp(1)
+			else
+				
+				preAmp_1(i)<=Amp_1(2*i+1);													
+				
+			end if;
+
+		end loop;
+
+		preAmp_1_set<='1';																	-- remember that preAmp was found			
+
+	else
+		
+		preAmp_1_set<='0';
+		
+	end if;
+
+
+	if(preAmp_1_set='1') then
+		
+		MaxAmp_1_set  <= '1';    
+		
+		if (preAmp(0)>preAmp(1)) then 												-- choose biggest value of preAmp(0) and preAmp(1)
+																								-- => MaxAmp with baseline
+			MaxAmp_1<=preAmp_1(0);
+		
+		else
+		
+			MaxAmp_1<=preAmp_1(1);
+		
+		end if;
+	
+	else
+		
+		MaxAmp_1_set  <= '0';  
+	
+	end if;
+
+
+end if;
+
+end process;
+
+
+prep_output : process (clk)															
+
+variable cnt : integer range 0 to 15;
+variable cnt_1 : integer range 0 to 15;
+
+begin
+
+	if (clk'event and clk = '1') then
+
+
+		cnt:=to_integer(unsigned(hit_cnt));
+		buffer_frame_t(cnt)<=frame_t;
+
+
+
+		
+		cnt_1:=to_integer(unsigned(hit_cnt_1));
+		buffer_frame_t_1(cnt_1)<=frame_t_1;
+
+
+		h_res_ready(0)<=MaxAmp_set;
+		for i in 0 to 4 loop
+			h_res_ready(i+1)<=h_res_ready(i);											
+		end loop;
+
+		h_res_1_ready(0)<=MaxAmp_1_set;
+		for i in 0 to 2 loop
+			h_res_1_ready(i+1)<=h_res_1_ready(i);											
+		end loop;
+
+
+		if ana_state=st_sleep then
+
+			h_res_cnt <="0000";
+			Max_Amp_cnt<="0000";
+			
+			h_res_1_cnt <="0000";
+			Max_Amp_1_cnt<="0000";
+
+		elsif cf_active='1' or ana_state=st_rd_coarse_t or ana_state=st_wait_ana then
+
+			if h_res_ready(5)='1' then
+				
+				if h_res_cnt/=hit_cnt then
+				h_res_cnt<=h_res_cnt+1;
+				buffer_h_time(to_integer(unsigned(h_res_cnt+1)))<=h_res_t;			
+				else
+				buffer_h_time(to_integer(unsigned(h_res_cnt)))<=h_res_t;
+				end if;
+			
+			end if;
+
+			if MaxAmp_set='1' then
+				
+				if Max_Amp_cnt/=hit_cnt then
+				Max_Amp_cnt<=Max_Amp_cnt+1;
+				buffer_MaxAmp(to_integer(unsigned(Max_Amp_cnt+1)))<=MaxAmp-basel(10 downto 0) ;	
+				else
+				buffer_MaxAmp(to_integer(unsigned(Max_Amp_cnt)))<=MaxAmp-basel(10 downto 0) ;		
+				end if;
+			
+			end if;
+
+			if h_res_1_ready(3)='1' then
+				h_res_1_cnt<=h_res_1_cnt+1;
+				buffer_h_time_1(to_integer(unsigned(h_res_1_cnt+1)))<=h_res_t_1;
+			end if;
+
+			if MaxAmp_1_set='1' then
+				Max_Amp_1_cnt<=Max_Amp_1_cnt+1;
+				buffer_MaxAmp_1(to_integer(unsigned(Max_Amp_1_cnt+1)))<=MaxAmp_1-basel(10 downto 0);	
+			end if;
+
+
+
+		end if;
+
+
+	end if;
+
+end process;
+
+
+	inst_divisor_1: divisor PORT MAP(  --calculates highres time & adds correction factor by Philipp Joerg
+		DATA_0_i => last_pos_1,
+		DATA_1_i => first_neg_1,
+		clk => clk,
+		RESULT => h_res_t_1
+	);
+
+
+----------
+
+
+	inst_divisor: divisor_15 PORT MAP(  --calculates highres time & adds correction factor by Philipp Joerg
+		DATA_0_i => last_pos,
+		DATA_1_i => first_neg,
+		clk => clk,
+		RESULT => h_res_t
+	);
+
+
+	
+ 
+ana_int : PROCESS(clk)
+	variable basel_sub : std_logic_vector(10 downto 0);
+	BEGIN
+	
+		if (clk'event AND clk='1') then
+			
+			if ana_state = st_sleep then
+				presum		<= (others => '0');
+				integral 	<= (others => '0');
+				preamp0		<= (others => '0');
+				preamp1		<= (others => '0');
+				amplitude	<= (others => '0');
+			end if;
+			
+			if ana_state = st_read_frame then
+			
+				start_int <='1';
+				--pre integral
+				basel_sub	:= (basel(10 downto 0) - threshold);
+				presum 		<= frame_data(23 downto 12) +  frame_data(11 downto 0) - (basel_sub(9 downto 0) & '0'); --two frame words, substract two baselines
+
+				--max amplitude
+				if frame_data(11 downto 0) > preamp0 then
+				 preamp0 <= frame_data(11 downto 0);
+				end if;
+				if frame_data(23 downto 12) > preamp1 then
+				 preamp1 <= frame_data(23 downto 12);
+				end if;
+								
+			else
+				start_int <='0';
+				presum		<= (others => '0');		
+			end if;	
+			
+			if start_int = '1' then
+				integral 	<= integral + presum;	
+				
+				if preamp0 <= preamp1 then
+				amplitude<=	preamp1 - basel(10 downto 0);
+				else
+				amplitude<=	preamp0 - basel(10 downto 0);
+				end if;
+					
+			end if;
+		 
+		
+		end if;
+		
+	end process;	
+
+	   event_fifo_inst : FIFO_DUALCLOCK_MACRO
+		   generic map (
+		      DEVICE => "VIRTEX5",            -- Target Device: "VIRTEX5", "VIRTEX6" 
+		      ALMOST_FULL_OFFSET => X"0080",  -- Sets almost full threshold
+		      ALMOST_EMPTY_OFFSET => X"0080", -- Sets the almost empty threshold
+		      DATA_WIDTH => 31,   -- Valid values are 1-72 (37-72 only valid when FIFO_SIZE="36Kb")
+		      FIFO_SIZE => "36Kb",            -- Target BRAM, "18Kb" or "36Kb" 
+		      FIRST_WORD_FALL_THROUGH => TRUE, -- Sets the FIFO FWFT to TRUE or FALSE
+		      SIM_MODE => "FAST") -- Simulation "SAFE" vs "FAST",                               -- era SAFE
+		                          -- see "Synthesis and Simulation Design Guide" for details
+		   port map (
+		      ALMOSTEMPTY => open,   		-- Output almost empty 
+		      ALMOSTFULL => open,     		-- Output almost full
+		      DO => event_data_out,       -- Output data
+		      EMPTY => event_ff_empty,  -- Output empty
+		      FULL => event_ff_full,                 -- Output full
+		      RDCOUNT => rd_fifo_cnt, 			-- Output read count
+		      RDERR => open,      			-- Output read error
+		      WRCOUNT => wr_fifo_cnt,         -- Output write count
+		      WRERR => open,               	-- Output write error
+		      DI => event_data,      -- Input data
+		      RDCLK => event_ff_clk,            -- Input read clock
+		      RDEN => rd_event_ff,    -- Input read enable
+		      RST => RESET,                 -- Input reset
+		      WRCLK => clk,               	-- Input write clock
+		      WREN => wr_event_ff           -- Input write enable
+		   );
+
+	   frame_buffer_fifo_inst : FIFO_DUALCLOCK_MACRO
+		   generic map (
+		      DEVICE => "VIRTEX5",            -- Target Device: "VIRTEX5", "VIRTEX6" 
+		      ALMOST_FULL_OFFSET => X"0080",  -- Sets almost full threshold
+		      ALMOST_EMPTY_OFFSET => X"0080", -- Sets the almost empty threshold
+		      DATA_WIDTH => 31,   -- Valid values are 1-72 (37-72 only valid when FIFO_SIZE="36Kb")
+		      FIFO_SIZE => "36Kb",            -- Target BRAM, "18Kb" or "36Kb" 
+		      FIRST_WORD_FALL_THROUGH => TRUE, -- Sets the FIFO FWFT to TRUE or FALSE
+		      SIM_MODE => "FAST") -- Simulation "SAFE" vs "FAST",                                -- era SAFE
+		                          -- see "Synthesis and Simulation Design Guide" for details
+		   port map (
+		      ALMOSTEMPTY => open,   		-- Output almost empty 
+		      ALMOSTFULL => open,     		-- Output almost full
+		      DO => buffer_dout,       -- Output data
+		      EMPTY => buffer_emp,  -- Output empty
+		      FULL => frame_fifo_full,                 -- Output full
+		      RDCOUNT => rd_buffer_fifo_cnt, 			-- Output read count
+		      RDERR => open,      			-- Output read error
+		      WRCOUNT => wr_buffer_fifo_cnt,         -- Output write count
+		      WRERR => open,               	-- Output write error
+		      DI => buffer_din,      -- Input data
+		      RDCLK => clk,            -- Input read clock
+		      RDEN => rd_buffer_ff,    -- Input read enable
+		      RST => RESET,                 -- Input reset
+		      WRCLK => clk,               	-- Input write clock
+		      WREN => wr_buffer_ff           -- Input write enable
+		   );
+		   			
+
+
+
+end Behavioral;

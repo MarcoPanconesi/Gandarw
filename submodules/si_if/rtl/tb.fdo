@@ -1,0 +1,56 @@
+vlib work
+
+vcom si_phase_shift.vhd
+vcom sweep_ctrl.vhd
+vcom si_load.vhd
+vcom si_if.vhd
+vcom tb.vhd
+
+vsim -t ps -novopt +notimingchecks work.test_bench
+# vsim -debugDB -t ps +notimingchecks work.test_bench
+
+
+
+add wave -divider -height 40 si_sweep
+add wave test_bench/uut/si_sweep_inst/*
+add wave test_bench/uut/si_sweep_inst/sim_si/*
+
+add wave -divider -height 40 fine_shift
+add wave test_bench/uut/si_sweep_inst/fine_phase_shift/*
+add wave test_bench/uut/si_sweep_inst/fine_phase_shift/step_fine/*
+add wave -divider -height 40 coarse_shift
+add wave test_bench/uut/si_sweep_inst/coarse_phase_shift/*
+add wave test_bench/uut/si_sweep_inst/coarse_phase_shift/step_coarse/*
+
+add wave -divider -height 40 si_load
+add wave test_bench/uut/si_load_inst/*
+
+add wave -divider -height 40 uut
+add wave test_bench/uut/*
+
+add wave -divider -height 40 tb
+add wave test_bench/*
+
+add list test_bench/uut/tcs_clk
+add list test_bench/uut/spy_wr
+add list -hexadecimal test_bench/uut/spy_do
+
+run 6 ms
+
+#send phase align cmd
+force -freeze sim:/test_bench/fr_phase_align_si 1 0
+force -freeze sim:/test_bench/cfmem_wb_din X"C000120C" 0
+run 1us
+force -freeze sim:/test_bench/fr_phase_align_si 0 0
+
+run 2 ms
+
+#send sweep cmd
+force -freeze sim:/test_bench/fr_sweep_si 1 0
+run 1us
+force -freeze sim:/test_bench/fr_sweep_si 0 0
+
+run 5 ms
+
+write list -window .main_pane.list.interior.cs.body /tmp/list.lst
+# tac /tmp/list.lst | gawk '{if ($3 == 1 && $4 == 1 && $1 != last) print $5;last=$1}' | tac > /tmp/spy_out

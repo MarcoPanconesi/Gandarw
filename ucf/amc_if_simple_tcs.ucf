@@ -1,0 +1,274 @@
+#################### !!! attention !!! ###################
+# rules editing here:                                    #
+#  - one empty and one comment line per set of           #
+#    constraints                                         #
+#  - all constraints  for one net in one place           #
+#  - all lowercase                                       #
+#                                                        #
+# anything wrong here will be reverted, deleted and the  #
+# author banned from  developing on gitlab.              #
+##########################################################
+### Warning : set the bus delimiter = "[]" in the Synthesis option
+
+### UCF for amc_if_simple
+
+# ignore timing for all settings
+INST "inst_mcs_amcs.inst_amc_if/src_id*" TIG;
+INST "inst_mcs_amcs.inst_amc_if/latency*" TIG;
+INST "inst_mcs_amcs.inst_amc_if/framewidth*" TIG;
+###INST "inst_mcs_amcs.inst_amc_if/framewidth_slv*" TIG;
+#inst "inst_mcs_amcs.inst_amc_if/baseline*" tig;
+INST "inst_mcs_amcs.inst_amc_if/prescaler_base*" TIG;
+INST "inst_mcs_amcs.inst_amc_if/delay*" TIG;
+INST "inst_mcs_amcs.inst_amc_if/frac*" TIG;
+INST "inst_mcs_amcs.inst_amc_if/threshold*" TIG;
+# FUCK YOU, XILINX!!! build fails if t_.. is off and
+# constraints are there FUCK YOU SO MUCH !!!
+###INST "inst_mcs_amcs.inst_amc_if/t_threshold*" TIG;
+###INST "inst_mcs_amcs.inst_amc_if/t_cf_max_dist*" TIG;
+INST "inst_mcs_amcs.inst_amc_if/cf_max_dist*" TIG;
+INST "inst_mcs_amcs.inst_amc_if/ev_num_err" TIG;
+INST "inst_mcs_amcs.inst_amc_if/flt_err" TIG;
+# ignore biterr latches timing
+#inst "inst_mcs_amcs.inst_amc_if/inst_amc_ports[*].inst_mcs.adc_bits_ddrin[*].fdre_latch_edge" tig;
+#TIMESPEC TS_FDRE_LATCH_EDGE = FROM "inst_mcs_amcs.inst_amc_if/inst_amc_ports[*].inst_mcs.adc_bits_ddrin[*].fdre_latch_edge" TO  FFS TIG ;
+
+### PER CLOCK SEPARATI in amc_if_simple o amc_if_8ch ...
+NET "amc_port_p[0][14]" TNM_NET = "SI_A_CLK0"; # era TNM_NET = FFS "SI_A_CLK"
+TIMESPEC TS_SI_A_CLK0 = PERIOD "SI_A_CLK0" 233.28 MHz  INPUT_JITTER 100ps; # era 500
+OFFSET = IN 2.143 ns VALID 2.143 ns BEFORE "amc_port_p[0][14]" RISING;
+OFFSET = IN 2.143 ns VALID 2.143 ns BEFORE "amc_port_p[0][14]" FALLING;
+
+NET "amc_port_p[1][14]" TNM_NET = "SI_A_CLK1"; # era TNM_NET = FFS "SI_A_CLK"
+TIMESPEC TS_SI_A_CLK1 = PERIOD "SI_A_CLK1" 233.28 MHz  INPUT_JITTER 100ps; # era 500
+OFFSET = IN 2.143 ns VALID 2.143 ns BEFORE "amc_port_p[1][14]" RISING;
+OFFSET = IN 2.143 ns VALID 2.143 ns BEFORE "amc_port_p[1][14]" FALLING;
+
+NET "amc_port_p[2][14]" TNM_NET = "SI_A_CLK2"; # era TNM_NET = FFS "SI_A_CLK"
+TIMESPEC TS_SI_A_CLK2 = PERIOD "SI_A_CLK2" 233.28 MHz  INPUT_JITTER 100ps; # era 500
+OFFSET = IN 2.143 ns VALID 2.143 ns BEFORE "amc_port_p[2][14]" RISING;
+OFFSET = IN 2.143 ns VALID 2.143 ns BEFORE "amc_port_p[2][14]" FALLING;
+
+NET "amc_port_p[3][14]" TNM_NET = "SI_A_CLK3"; # era TNM_NET = FFS "SI_A_CLK"
+TIMESPEC TS_SI_A_CLK3 = PERIOD "SI_A_CLK3" 233.28 MHz  INPUT_JITTER 100ps; # era 500
+OFFSET = IN 2.143 ns VALID 2.143 ns BEFORE "amc_port_p[3][14]" RISING;
+OFFSET = IN 2.143 ns VALID 2.143 ns BEFORE "amc_port_p[3][14]" FALLING;
+
+NET "amc_port_p[4][14]" TNM_NET = "SI_A_CLK4"; # era TNM_NET = FFS "SI_A_CLK"
+TIMESPEC TS_SI_A_CLK4 = PERIOD "SI_A_CLK4" 233.28 MHz  INPUT_JITTER 100ps; # era 500
+OFFSET = IN 2.143 ns VALID 2.143 ns BEFORE "amc_port_p[4][14]" RISING;
+OFFSET = IN 2.143 ns VALID 2.143 ns BEFORE "amc_port_p[4][14]" FALLING;
+
+NET "amc_port_p[5][14]" TNM_NET = "SI_A_CLK5"; # era TNM_NET = FFS "SI_A_CLK"
+TIMESPEC TS_SI_A_CLK5 = PERIOD "SI_A_CLK5" 233.28 MHz  INPUT_JITTER 100ps; # era 500
+OFFSET = IN 2.143 ns VALID 2.143 ns BEFORE "amc_port_p[5][14]" RISING;
+OFFSET = IN 2.143 ns VALID 2.143 ns BEFORE "amc_port_p[5][14]" FALLING;
+
+NET "amc_port_p[6][14]" TNM_NET = "SI_A_CLK6"; # era TNM_NET = FFS "SI_A_CLK"
+TIMESPEC TS_SI_A_CLK6 = PERIOD "SI_A_CLK6" 233.28 MHz  INPUT_JITTER 100ps; # era 500
+OFFSET = IN 2.143 ns VALID 2.143 ns BEFORE "amc_port_p[6][14]" RISING;
+OFFSET = IN 2.143 ns VALID 2.143 ns BEFORE "amc_port_p[6][14]" FALLING;
+
+NET "amc_port_p[7][14]" TNM_NET = "SI_A_CLK7"; # era TNM_NET = FFS "SI_A_CLK"
+TIMESPEC TS_SI_A_CLK7 = PERIOD "SI_A_CLK7" 233.28 MHz  INPUT_JITTER 100ps; # era 500
+OFFSET = IN 2.143 ns VALID 2.143 ns BEFORE "amc_port_p[7][14]" RISING;
+OFFSET = IN 2.143 ns VALID 2.143 ns BEFORE "amc_port_p[7][14]" FALLING;
+
+
+
+
+
+
+# location constraints to calibrate adc delays
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[0].ddr_iodelay" LOC = IODELAY_X0Y195;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[0].ddrdatainput" LOC = ILOGIC_X0Y195;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[1].ddrdatainput" LOC = ILOGIC_X0Y193;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[1].ddr_iodelay" LOC = IODELAY_X0Y193;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[2].ddr_iodelay" LOC = IODELAY_X0Y187;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[2].ddrdatainput" LOC = ILOGIC_X0Y187;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[3].ddrdatainput" LOC = ILOGIC_X0Y189;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[3].ddr_iodelay" LOC = IODELAY_X0Y189;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[4].ddrdatainput" LOC = ILOGIC_X0Y185;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[4].ddr_iodelay" LOC = IODELAY_X0Y185;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[5].ddrdatainput" LOC = ILOGIC_X0Y191;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[5].ddr_iodelay" LOC = IODELAY_X0Y191;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[6].ddrdatainput" LOC = ILOGIC_X0Y183;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[6].ddr_iodelay" LOC = IODELAY_X0Y183;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[7].ddrdatainput" LOC = ILOGIC_X0Y181;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[7].ddr_iodelay" LOC = IODELAY_X0Y181;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[8].ddrdatainput" LOC = ILOGIC_X0Y177;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[8].ddr_iodelay" LOC = IODELAY_X0Y177;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[9].ddrdatainput" LOC = ILOGIC_X0Y179;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[9].ddr_iodelay" LOC = IODELAY_X0Y179;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[10].ddrdatainput" LOC = ILOGIC_X0Y173;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[10].ddr_iodelay" LOC = IODELAY_X0Y173;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[11].ddrdatainput" LOC = ILOGIC_X0Y175;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[0].inst_mcs.adc_bits_ddrin[11].ddr_iodelay" LOC = IODELAY_X0Y175;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[0].ddrdatainput" LOC = ILOGIC_X1Y303;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[0].ddr_iodelay" LOC = IODELAY_X1Y303;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[1].ddrdatainput" LOC = ILOGIC_X0Y269;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[1].ddr_iodelay" LOC = IODELAY_X0Y269;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[2].ddrdatainput" LOC = ILOGIC_X0Y265;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[2].ddr_iodelay" LOC = IODELAY_X0Y265;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[3].ddrdatainput" LOC = ILOGIC_X1Y297;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[3].ddr_iodelay" LOC = IODELAY_X1Y297;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[4].ddrdatainput" LOC = ILOGIC_X0Y283;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[4].ddr_iodelay" LOC = IODELAY_X0Y283;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[5].ddrdatainput" LOC = ILOGIC_X0Y285;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[5].ddr_iodelay" LOC = IODELAY_X0Y285;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[6].ddrdatainput" LOC = ILOGIC_X0Y287;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[6].ddr_iodelay" LOC = IODELAY_X0Y287;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[7].ddrdatainput" LOC = ILOGIC_X0Y281;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[7].ddr_iodelay" LOC = IODELAY_X0Y281;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[8].ddrdatainput" LOC = ILOGIC_X0Y289;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[8].ddr_iodelay" LOC = IODELAY_X0Y289;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[9].ddrdatainput" LOC = ILOGIC_X1Y281;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[9].ddr_iodelay" LOC = IODELAY_X1Y281;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[10].ddrdatainput" LOC = ILOGIC_X1Y285;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[10].ddr_iodelay" LOC = IODELAY_X1Y285;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[11].ddrdatainput" LOC = ILOGIC_X1Y289;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[1].inst_mcs.adc_bits_ddrin[11].ddr_iodelay" LOC = IODELAY_X1Y289;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[0].ddrdatainput" LOC = ILOGIC_X0Y205;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[0].ddr_iodelay" LOC = IODELAY_X0Y205;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[1].ddr_iodelay" LOC = IODELAY_X0Y273;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[1].ddrdatainput" LOC = ILOGIC_X0Y273;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[2].ddr_iodelay" LOC = IODELAY_X0Y203;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[2].ddrdatainput" LOC = ILOGIC_X0Y203;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[3].ddr_iodelay" LOC = IODELAY_X0Y223;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[3].ddrdatainput" LOC = ILOGIC_X0Y223;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[4].ddr_iodelay" LOC = IODELAY_X0Y231;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[4].ddrdatainput" LOC = ILOGIC_X0Y231;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[5].ddr_iodelay" LOC = IODELAY_X0Y225;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[5].ddrdatainput" LOC = ILOGIC_X0Y225;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[6].ddr_iodelay" LOC = IODELAY_X0Y221;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[6].ddrdatainput" LOC = ILOGIC_X0Y221;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[7].ddr_iodelay" LOC = IODELAY_X0Y217;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[7].ddrdatainput" LOC = ILOGIC_X0Y217;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[8].ddr_iodelay" LOC = IODELAY_X0Y219;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[8].ddrdatainput" LOC = ILOGIC_X0Y219;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[9].ddrdatainput" LOC = ILOGIC_X0Y215;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[9].ddr_iodelay" LOC = IODELAY_X0Y215;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[10].ddr_iodelay" LOC = IODELAY_X0Y209;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[10].ddrdatainput" LOC = ILOGIC_X0Y209;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[11].ddr_iodelay" LOC = IODELAY_X0Y207;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[2].inst_mcs.adc_bits_ddrin[11].ddrdatainput" LOC = ILOGIC_X0Y207;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[0].ddr_iodelay" LOC = IODELAY_X0Y255;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[0].ddrdatainput" LOC = ILOGIC_X0Y255;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[1].ddr_iodelay" LOC = IODELAY_X0Y253;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[1].ddrdatainput" LOC = ILOGIC_X0Y253;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[2].ddr_iodelay" LOC = IODELAY_X0Y251;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[2].ddrdatainput" LOC = ILOGIC_X0Y251;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[3].ddr_iodelay" LOC = IODELAY_X0Y263;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[3].ddrdatainput" LOC = ILOGIC_X0Y263;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[4].ddr_iodelay" LOC = IODELAY_X0Y261;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[4].ddrdatainput" LOC = ILOGIC_X0Y261;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[5].ddr_iodelay" LOC = IODELAY_X0Y259;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[5].ddrdatainput" LOC = ILOGIC_X0Y259;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[6].ddr_iodelay" LOC = IODELAY_X0Y257;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[6].ddrdatainput" LOC = ILOGIC_X0Y257;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[7].ddr_iodelay" LOC = IODELAY_X0Y277;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[7].ddrdatainput" LOC = ILOGIC_X0Y277;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[8].ddr_iodelay" LOC = IODELAY_X0Y275;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[8].ddrdatainput" LOC = ILOGIC_X0Y275;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[9].ddr_iodelay" LOC = IODELAY_X0Y279;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[9].ddrdatainput" LOC = ILOGIC_X0Y279;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[10].ddr_iodelay" LOC = IODELAY_X0Y243;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[10].ddrdatainput" LOC = ILOGIC_X0Y243;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[11].ddr_iodelay" LOC = IODELAY_X0Y245;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[3].inst_mcs.adc_bits_ddrin[11].ddrdatainput" LOC = ILOGIC_X0Y245;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[0].ddr_iodelay" LOC = IODELAY_X0Y95;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[0].ddrdatainput" LOC = ILOGIC_X0Y95;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[1].ddr_iodelay" LOC = IODELAY_X0Y153;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[1].ddrdatainput" LOC = ILOGIC_X0Y153;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[2].ddr_iodelay" LOC = IODELAY_X0Y155;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[2].ddrdatainput" LOC = ILOGIC_X0Y155;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[3].ddr_iodelay" LOC = IODELAY_X0Y151;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[3].ddrdatainput" LOC = ILOGIC_X0Y151;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[4].ddr_iodelay" LOC = IODELAY_X0Y211;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[4].ddrdatainput" LOC = ILOGIC_X0Y211;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[5].ddr_iodelay" LOC = IODELAY_X0Y213;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[5].ddrdatainput" LOC = ILOGIC_X0Y213;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[6].ddr_iodelay" LOC = IODELAY_X0Y81;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[6].ddrdatainput" LOC = ILOGIC_X0Y81;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[7].ddr_iodelay" LOC = IODELAY_X0Y83;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[7].ddrdatainput" LOC = ILOGIC_X0Y83;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[8].ddr_iodelay" LOC = IODELAY_X0Y129;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[8].ddrdatainput" LOC = ILOGIC_X0Y129;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[9].ddr_iodelay" LOC = IODELAY_X0Y87;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[9].ddrdatainput" LOC = ILOGIC_X0Y87;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[10].ddr_iodelay" LOC = IODELAY_X0Y39;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[10].ddrdatainput" LOC = ILOGIC_X0Y39;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[11].ddr_iodelay" LOC = IODELAY_X0Y35;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[4].inst_mcs.adc_bits_ddrin[11].ddrdatainput" LOC = ILOGIC_X0Y35;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[0].ddr_iodelay" LOC = IODELAY_X0Y125;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[0].ddrdatainput" LOC = ILOGIC_X0Y125;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[1].ddr_iodelay" LOC = IODELAY_X0Y127;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[1].ddrdatainput" LOC = ILOGIC_X0Y127;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[2].ddr_iodelay" LOC = IODELAY_X0Y133;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[2].ddrdatainput" LOC = ILOGIC_X0Y133;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[3].ddr_iodelay" LOC = IODELAY_X0Y139;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[3].ddrdatainput" LOC = ILOGIC_X0Y139;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[4].ddr_iodelay" LOC = IODELAY_X0Y135;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[4].ddrdatainput" LOC = ILOGIC_X0Y135;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[5].ddr_iodelay" LOC = IODELAY_X0Y131;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[5].ddrdatainput" LOC = ILOGIC_X0Y131;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[6].ddr_iodelay" LOC = IODELAY_X0Y143;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[6].ddrdatainput" LOC = ILOGIC_X0Y143;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[7].ddr_iodelay" LOC = IODELAY_X0Y141;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[7].ddrdatainput" LOC = ILOGIC_X0Y141;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[8].ddrdatainput" LOC = ILOGIC_X0Y137;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[8].ddr_iodelay" LOC = IODELAY_X0Y137;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[9].ddr_iodelay" LOC = IODELAY_X0Y149;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[9].ddrdatainput" LOC = ILOGIC_X0Y149;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[10].ddr_iodelay" LOC = IODELAY_X0Y147;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[10].ddrdatainput" LOC = ILOGIC_X0Y147;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[11].ddr_iodelay" LOC = IODELAY_X0Y145;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[5].inst_mcs.adc_bits_ddrin[11].ddrdatainput" LOC = ILOGIC_X0Y145;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[0].ddr_iodelay" LOC = IODELAY_X0Y237;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[0].ddrdatainput" LOC = ILOGIC_X0Y237;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[1].ddr_iodelay" LOC = IODELAY_X0Y229;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[1].ddrdatainput" LOC = ILOGIC_X0Y229;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[2].ddr_iodelay" LOC = IODELAY_X0Y235;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[2].ddrdatainput" LOC = ILOGIC_X0Y235;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[3].ddr_iodelay" LOC = IODELAY_X0Y227;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[3].ddrdatainput" LOC = ILOGIC_X0Y227;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[4].ddr_iodelay" LOC = IODELAY_X0Y169;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[4].ddrdatainput" LOC = ILOGIC_X0Y169;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[5].ddr_iodelay" LOC = IODELAY_X0Y171;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[5].ddrdatainput" LOC = ILOGIC_X0Y171;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[6].ddr_iodelay" LOC = IODELAY_X0Y165;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[6].ddrdatainput" LOC = ILOGIC_X0Y165;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[7].ddr_iodelay" LOC = IODELAY_X0Y167;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[7].ddrdatainput" LOC = ILOGIC_X0Y167;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[8].ddr_iodelay" LOC = IODELAY_X0Y163;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[8].ddrdatainput" LOC = ILOGIC_X0Y163;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[9].ddr_iodelay" LOC = IODELAY_X0Y161;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[9].ddrdatainput" LOC = ILOGIC_X0Y161;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[10].ddr_iodelay" LOC = IODELAY_X0Y159;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[10].ddrdatainput" LOC = ILOGIC_X0Y159;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[11].ddr_iodelay" LOC = IODELAY_X0Y157;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[6].inst_mcs.adc_bits_ddrin[11].ddrdatainput" LOC = ILOGIC_X0Y157;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[0].ddr_iodelay" LOC = IODELAY_X0Y99;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[0].ddrdatainput" LOC = ILOGIC_X0Y99;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[1].ddr_iodelay" LOC = IODELAY_X0Y101;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[1].ddrdatainput" LOC = ILOGIC_X0Y101;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[2].ddrdatainput" LOC = ILOGIC_X0Y97;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[2].ddr_iodelay" LOC = IODELAY_X0Y97;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[3].ddr_iodelay" LOC = IODELAY_X0Y107;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[3].ddrdatainput" LOC = ILOGIC_X0Y107;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[4].ddr_iodelay" LOC = IODELAY_X0Y103;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[4].ddrdatainput" LOC = ILOGIC_X0Y103;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[5].ddr_iodelay" LOC = IODELAY_X0Y111;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[5].ddrdatainput" LOC = ILOGIC_X0Y111;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[6].ddr_iodelay" LOC = IODELAY_X0Y105;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[6].ddrdatainput" LOC = ILOGIC_X0Y105;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[7].ddr_iodelay" LOC = IODELAY_X0Y113;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[7].ddrdatainput" LOC = ILOGIC_X0Y113;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[8].ddrdatainput" LOC = ILOGIC_X0Y109;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[8].ddr_iodelay" LOC = IODELAY_X0Y109;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[9].ddrdatainput" LOC = ILOGIC_X0Y117;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[9].ddr_iodelay" LOC = IODELAY_X0Y117;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[10].ddrdatainput" LOC = ILOGIC_X0Y115;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[10].ddr_iodelay" LOC = IODELAY_X0Y115;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[11].ddrdatainput" LOC = ILOGIC_X0Y119;
+INST "inst_mcs_amcs.inst_amc_if/inst_amc_ports[7].inst_mcs.adc_bits_ddrin[11].ddr_iodelay" LOC = IODELAY_X0Y119;

@@ -1,0 +1,19 @@
+# Output products list for <tranceiver_ila>
+_xmsgs\pn_parser.xmsgs
+tranceiver_ila.asy
+tranceiver_ila.cdc
+tranceiver_ila.constraints\tranceiver_ila.ucf
+tranceiver_ila.constraints\tranceiver_ila.xdc
+tranceiver_ila.gise
+tranceiver_ila.ncf
+tranceiver_ila.ngc
+tranceiver_ila.sym
+tranceiver_ila.ucf
+tranceiver_ila.vhd
+tranceiver_ila.vho
+tranceiver_ila.xco
+tranceiver_ila.xdc
+tranceiver_ila.xise
+tranceiver_ila_flist.txt
+tranceiver_ila_readme.txt
+tranceiver_ila_xmdf.tcl

@@ -1,0 +1,7 @@
+vhdl work "C:\Users\Panco\Desktop\GandArw - mio\submodules\amc_if\rtl\ddr_interface_pkg.vhd"
+vhdl work "C:\Users\Panco\Desktop\GandArw - mio\rtl\top_level_desc.vhd"
+vhdl work "C:\Users\Panco\Desktop\GandArw - mio\rtl\G_PARAMETERS.vhd"
+vhdl work "C:\Users\Panco\Desktop\GandArw - mio\submodules\amc_if\rtl\data_out_logic_MEP_m.vhd"
+vhdl work "C:\Users\Panco\Desktop\GandArw - mio\submodules\amc_if\rtl\amc_if_8ch_MEP.vhd"
+vhdl work "C:\Users\Panco\Desktop\GandArw - mio\submodules\arwen_prog\ipcore\single_channel_aurora_xc5vsx95t_tile.vhd"
+vhdl work "C:\Users\Panco\Desktop\GandArw - mio\submodules\arwen_prog\ipcore\binfile_fifo_synth.vhd"

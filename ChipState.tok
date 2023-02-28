@@ -1,0 +1,13 @@
+#File version
+@FILE_VERSION=1.0.0
+# Default token value
+@DEFAULT_TOKEN=ERROR
+# Explicit token values
+st_sleep=000\b
+st_offspill=001\b
+st_calibration=010\b
+st_accept_trigger=011\b
+st_serlyzer_busy=100\b
+Undefined=101\b
+Undefined=110\b
+Undefined=111\b

@@ -1,0 +1,28 @@
+### 20MHz OCXO_Clock #######################
+NET "tcs_clk_p" TNM_NET = "TCS_CLK_P";
+TIMESPEC TS_TCS_CLK_P = PERIOD "TCS_CLK_P" 50 ns HIGH 50 %;
+
+# NET "TCS_DATA_P" OFFSET = IN 25 ns VALID 4 ns BEFORE "TCS_CLK_P";
+#TIMESPEC TS_TCS_CLKOUT = PERIOD "TCS_CLKOUT" TS_TCS_CLK_P * 4;
+#NET "inst_tcs_if/inst_tcs_trg.inst_demux/sCLKOUT" TNM_NET = "TCS_CLKOUT";			#old tcs if
+#NET "inst_tcs_if/inst_tcs_trg.inst_tcs_decode/tcsCLK" TNM_NET = "TCS_CLKOUT";		#new tcs if
+# TCS_denux Location constraints
+#INST "inst_TCS_if/inst_demux/sCLKOUT" BEL = AFF;
+#INST "inst_TCS_if/inst_demux/sCLKOUT" LOC = SLICE_X47Y72;
+#INST "inst_TCS_if/inst_demux/BUFGCE_inst" LOC = BUFGCTRL_X0Y0;
+### Added (Alex)
+NET "tcs_if/inst_tcs_decode/sCE38MHz" TNM_NET =  FFS "TCS_CE_GRP";
+### NET "clk_si_vdspp" TNM_NET =  FFS "SI_G_CLK_GRP";
+NET "*/tcs_clk" TNM_NET =  FFS "SI_G_CLK_GRP";
+
+NET "clk_si_vdspp" TNM_NET = clk_si_vdspp;
+TIMESPEC TS_clk_si_vdspp = PERIOD "clk_si_vdspp" 466.56 MHz HIGH 50% INPUT_JITTER 100 ps;
+
+NET "amc_port_p[*][14]" TNM_NET =  FFS "AMC_DRY_GRP";
+TIMESPEC TS_TCS_CE = FROM "TCS_CE_GRP" TO "TCS_CE_GRP" TS_clk_si_vdspp / 12;
+TIMESPEC TS_TCS_CE_SI_G = FROM "TCS_CE_GRP" TO "SI_G_CLK_GRP" TS_clk_si_vdspp / 2;
+TIMESPEC TS_TCS_CE_AMC_DRY = FROM "TCS_CE_GRP" TO "AMC_DRY_GRP" TS_clk_si_vdspp / 2;
+
+# FROM ARWEN
+# NET "mezz_b_dr_p" TNM_NET = "mezz_b_dr_p";
+# TIMESPEC TS_mezz_b_dr_p = PERIOD "mezz_b_dr_p" TS_clk_si_vdspp / 2 INPUT_JITTER 100ps;

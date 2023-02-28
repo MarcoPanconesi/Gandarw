@@ -1,0 +1,19 @@
+# Output products list for <load_si_ila>
+_xmsgs\pn_parser.xmsgs
+load_si_ila.asy
+load_si_ila.cdc
+load_si_ila.constraints\load_si_ila.ucf
+load_si_ila.constraints\load_si_ila.xdc
+load_si_ila.gise
+load_si_ila.ncf
+load_si_ila.ngc
+load_si_ila.sym
+load_si_ila.ucf
+load_si_ila.vhd
+load_si_ila.vho
+load_si_ila.xco
+load_si_ila.xdc
+load_si_ila.xise
+load_si_ila_flist.txt
+load_si_ila_readme.txt
+load_si_ila_xmdf.tcl

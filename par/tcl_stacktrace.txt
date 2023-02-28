@@ -1,0 +1,30 @@
+Tue Dec 07 12:47:19 CET 2021
+Trace back: invalid command name ".main_pane.wave11.interior.cs.body.pw.wf.grid.row0,wave.data"
+    while executing
+"$widget index @$x,$y"
+    (procedure "WaveABar::mouseMotionUpdate" line 19)
+    invoked from within
+"WaveABar::mouseMotionUpdate .main_pane.wave11.interior.cs.body.pw.wf.grid.row0,wave.data .main_pane.wave11.interior.cs.body.pw.wf 135 461"
+    ("after" script)
+  <2:C:/Xilinx/questasim64_10.7c/win64/tk8.6/bgerror.tcl:106: ::tkerror {invalid command name ".main_pane.wave11.interior.cs.body.pw.wf.grid.row0,wave.data"}
+  <1:proc:153: ::tk::dialog::error::bgerror {invalid command name ".main_pane.wave11.interior.cs.body.pw.wf.grid.row0,wave.data"}
+Thu Mar 17 12:51:33 CET 2022
+Trace back: invalid command name ".main_pane.wave2.interior.cs.body.pw.wf.grid.row0,wave.data"
+    while executing
+"$widget index @$x,$y"
+    (procedure "WaveABar::mouseMotionUpdate" line 19)
+    invoked from within
+"WaveABar::mouseMotionUpdate .main_pane.wave2.interior.cs.body.pw.wf.grid.row0,wave.data .main_pane.wave2.interior.cs.body.pw.wf 339 223"
+    ("after" script)
+  <2:C:/Xilinx/questasim64_10.7c/win64/tk8.6/bgerror.tcl:106: ::tkerror {invalid command name ".main_pane.wave2.interior.cs.body.pw.wf.grid.row0,wave.data"}
+  <1:eval:1: ::tk::dialog::error::bgerror {invalid command name ".main_pane.wave2.interior.cs.body.pw.wf.grid.row0,wave.data"}
+Fri Jun 17 15:46:11 CEST 2022
+Trace back: invalid command name ".main_pane.wave1.interior.cs.body.pw.wf.grid.row0,wave.data"
+    while executing
+"$widget index @$x,$y"
+    (procedure "WaveABar::mouseMotionUpdate" line 19)
+    invoked from within
+"WaveABar::mouseMotionUpdate .main_pane.wave1.interior.cs.body.pw.wf.grid.row0,wave.data .main_pane.wave1.interior.cs.body.pw.wf 165 302"
+    ("after" script)
+  <2:C:/Xilinx/questasim64_10.7c/win64/tk8.6/bgerror.tcl:106: ::tkerror {invalid command name ".main_pane.wave1.interior.cs.body.pw.wf.grid.row0,wave.data"}
+  <1:eval:1: ::tk::dialog::error::bgerror {invalid command name ".main_pane.wave1.interior.cs.body.pw.wf.grid.row0,wave.data"}

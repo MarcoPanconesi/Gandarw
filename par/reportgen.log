@@ -1,0 +1,37 @@
+Release 14.7 reportgen P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+DESKTOP-8RL1G7U::  Fri Feb 17 17:42:25 2023
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\reportgen.exe -intstyle ise
+-clock_regions -o gbase_top gbase_top.ncd 
+
+Loading device for application Rf_Device from file '5vsx95t.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\.
+   "gbase_top" is an NCD, version 3.2, device xc5vsx95t, package ff1136, speed
+-2
+ReportGen:LoadDesign: 'gbase_top.ncd'
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000
+Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+Device speed data version:  "PRODUCTION 1.73 2013-10-13".
+WARNING:Timing:3223 - Timing constraint PATH "TS_LED_path" TIG; ignored during
+   timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_TCS_CE_SI_G = MAXDELAY FROM TIMEGRP
+   "TCS_CE_GRP" TO TIMEGRP "SI_G_CLK_GRP"        TS_TCS_CLK155 * 1.5; ignored
+   during timing analysis.
+WARNING:Timing:3175 - clk_40mhz_vdsp does not clock data from vlff
+WARNING:Timing:3225 - Timing constraint COMP "vlff" OFFSET = IN 16 ns VALID 25
+   ns BEFORE COMP "clk_40mhz_vdsp"; ignored during timing analysis
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more
+   information, see the TSI report.  Please consult the Xilinx Command Line
+   Tools User Guide for information on generating a TSI report.
+
+Generating Clock Region Report: gbase_top.clk_rgn
+
+
+Number of error messages: 0
+Number of warning messages: 4
+Number of info messages: 1
+
+reportgen done!

@@ -1,0 +1,19 @@
+# Output products list for <tcs_ctrl_ila>
+_xmsgs\pn_parser.xmsgs
+tcs_ctrl_ila.asy
+tcs_ctrl_ila.cdc
+tcs_ctrl_ila.constraints\tcs_ctrl_ila.ucf
+tcs_ctrl_ila.constraints\tcs_ctrl_ila.xdc
+tcs_ctrl_ila.gise
+tcs_ctrl_ila.ncf
+tcs_ctrl_ila.ngc
+tcs_ctrl_ila.sym
+tcs_ctrl_ila.ucf
+tcs_ctrl_ila.vhd
+tcs_ctrl_ila.vho
+tcs_ctrl_ila.xco
+tcs_ctrl_ila.xdc
+tcs_ctrl_ila.xise
+tcs_ctrl_ila_flist.txt
+tcs_ctrl_ila_readme.txt
+tcs_ctrl_ila_xmdf.tcl

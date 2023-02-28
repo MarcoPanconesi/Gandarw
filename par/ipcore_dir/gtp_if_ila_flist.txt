@@ -1,0 +1,19 @@
+# Output products list for <gtp_if_ila>
+_xmsgs\pn_parser.xmsgs
+gtp_if_ila.asy
+gtp_if_ila.cdc
+gtp_if_ila.constraints\gtp_if_ila.ucf
+gtp_if_ila.constraints\gtp_if_ila.xdc
+gtp_if_ila.gise
+gtp_if_ila.ncf
+gtp_if_ila.ngc
+gtp_if_ila.sym
+gtp_if_ila.ucf
+gtp_if_ila.vhd
+gtp_if_ila.vho
+gtp_if_ila.xco
+gtp_if_ila.xdc
+gtp_if_ila.xise
+gtp_if_ila_flist.txt
+gtp_if_ila_readme.txt
+gtp_if_ila_xmdf.tcl

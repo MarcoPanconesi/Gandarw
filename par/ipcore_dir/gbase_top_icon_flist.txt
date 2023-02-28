@@ -1,0 +1,17 @@
+# Output products list for <gbase_top_icon>
+_xmsgs\pn_parser.xmsgs
+gbase_top_icon.asy
+gbase_top_icon.constraints\gbase_top_icon.ucf
+gbase_top_icon.constraints\gbase_top_icon.xdc
+gbase_top_icon.gise
+gbase_top_icon.ngc
+gbase_top_icon.sym
+gbase_top_icon.ucf
+gbase_top_icon.vhd
+gbase_top_icon.vho
+gbase_top_icon.xco
+gbase_top_icon.xdc
+gbase_top_icon.xise
+gbase_top_icon_flist.txt
+gbase_top_icon_readme.txt
+gbase_top_icon_xmdf.tcl
