@@ -1,0 +1,2 @@
+*.qpg filter=lfs diff=lfs merge=lfs -text
+*.wlf filter=lfs diff=lfs merge=lfs -text
